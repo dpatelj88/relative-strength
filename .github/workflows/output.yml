@@ -41,7 +41,7 @@ jobs:
               git add --all
               git commit -m "CI output update" || echo "nothing to commit"
               git push || echo "nothing to push"
-          - uses: actions/upload-artifact@v2
+          - uses: actions/upload-artifact@v3
             with:
               name: rs_stocks.csv
               path: output
