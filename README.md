@@ -29,7 +29,7 @@ Then all stocks are ranked from largest to smallest and a percentile is assigned
   
 
 ## Considered Stocks
-Tickers from ftp://ftp.nasdaqtrader.com/symboldirectory/nasdaqtraded.txt disregarding ETFs and all stocks where the industry and sector information couldn't be retrieved from yahoo finance.
+Tickers from (https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt) disregarding ETFs and all stocks where the industry and sector information couldn't be retrieved from yahoo finance.
 ## How To Run
 
 ### Run EXE
