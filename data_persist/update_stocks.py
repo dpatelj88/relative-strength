@@ -5,6 +5,7 @@ from time import sleep
 import requests
 import os
 from pathlib import Path
+from io import StringIO  # Added this due to error
 
 def get_ticker_info(symbol, session):
     """Function to retrieve ticker information with retry logic"""
@@ -59,7 +60,7 @@ def process_nasdaq_file():
         response.raise_for_status()
         
         # Read data into DataFrame
-        df = pd.read_csv(pd.StringIO(response.text), delimiter='|')
+        df = pd.read_csv(StringIO(response.text), delimiter='|')  # Modification here
         print(f"Retrieved {len(df)} symbols from NASDAQ")
 
         session = requests.Session()
