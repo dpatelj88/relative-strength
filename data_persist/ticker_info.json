@@ -37300,5 +37300,29 @@
       "industry": "Medical Distribution",
       "sector": "Healthcare"
     }
+  },
+  "JXG": {
+    "info": {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "OUSTW": {
+    "info": {
+      "industry": "Electronic Components",
+      "sector": "Technology"
+    }
+  },
+  "OUSTZ": {
+    "info": {
+      "industry": "Electronic Components",
+      "sector": "Technology"
+    }
+  },
+  "PHH": {
+    "info": {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive"
+    }
   }
 }
