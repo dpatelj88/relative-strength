@@ -37324,5 +37324,29 @@
       "industry": "Household & Personal Products",
       "sector": "Consumer Defensive"
     }
+  },
+  "AAMI": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "INLF": {
+    "info": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "ONC": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "PRSU": {
+    "info": {
+      "industry": "Specialty Business Services",
+      "sector": "Industrials"
+    }
   }
 }
