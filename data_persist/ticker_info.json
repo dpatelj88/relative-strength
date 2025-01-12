@@ -37348,5 +37348,23 @@
       "industry": "Specialty Business Services",
       "sector": "Industrials"
     }
+  },
+  "CEPO": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "JBTM": {
+    "info": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "TBCH": {
+    "info": {
+      "industry": "Consumer Electronics",
+      "sector": "Technology"
+    }
   }
 }
