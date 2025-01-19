@@ -37366,5 +37366,29 @@
       "industry": "Consumer Electronics",
       "sector": "Technology"
     }
+  },
+  "CNR": {
+    "info": {
+      "industry": "Thermal Coal",
+      "sector": "Energy"
+    }
+  },
+  "KBSX": {
+    "info": {
+      "industry": "Steel",
+      "sector": "Basic Materials"
+    }
+  },
+  "PCLA": {
+    "info": {
+      "industry": "Telecom Services",
+      "sector": "Communication Services"
+    }
+  },
+  "UFG": {
+    "info": {
+      "industry": "Marine Shipping",
+      "sector": "Industrials"
+    }
   }
 }
