@@ -37390,5 +37390,23 @@
       "industry": "Marine Shipping",
       "sector": "Industrials"
     }
+  },
+  "DXST": {
+    "info": {
+      "industry": "Waste Management",
+      "sector": "Industrials"
+    }
+  },
+  "MCTR": {
+    "info": {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services"
+    }
+  },
+  "XYZ": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
   }
 }
