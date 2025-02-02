@@ -37408,5 +37408,29 @@
       "industry": "Software - Infrastructure",
       "sector": "Technology"
     }
+  },
+  "AAPG": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ACCS": {
+    "info": {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services"
+    }
+  },
+  "AEVAW": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "LAR": {
+    "info": {
+      "industry": "Other Industrial Metals & Mining",
+      "sector": "Basic Materials"
+    }
   }
 }
