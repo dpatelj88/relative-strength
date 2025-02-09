@@ -37432,5 +37432,35 @@
       "industry": "Other Industrial Metals & Mining",
       "sector": "Basic Materials"
     }
+  },
+  "COLAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "DRDBW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "EFSI": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "EPWK": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "PLUT": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
   }
 }
