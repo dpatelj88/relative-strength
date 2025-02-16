@@ -37462,5 +37462,569 @@
       "industry": "Capital Markets",
       "sector": "Financial Services"
     }
+  },
+  "AARD": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ACOG": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "AGH": {
+    "info": {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "ALDF": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALDFU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALDFW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AMOD": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "AMODW": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "ANNA": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "ANNAW": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "ASPC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BBNX": {
+    "info": {
+      "industry": "Medical Devices",
+      "sector": "Healthcare"
+    }
+  },
+  "BEAG": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BHST": {
+    "info": {
+      "industry": "Packaged Foods",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "BLNE": {
+    "info": {
+      "industry": "Beverages - Wineries & Distilleries",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "BZAI": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "BZAIW": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "CCIR": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCIRW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CJMB": {
+    "info": {
+      "industry": "Integrated Freight & Logistics",
+      "sector": "Industrials"
+    }
+  },
+  "CNCK": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "CNCKW": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "COOT": {
+    "info": {
+      "industry": "Packaged Foods",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "COOTW": {
+    "info": {
+      "industry": "Packaged Foods",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "CSAI": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "DGNX": {
+    "info": {
+      "industry": "Consulting Services",
+      "sector": "Industrials"
+    }
+  },
+  "DVLT": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "DXF": {
+    "info": {
+      "industry": "Credit Services",
+      "sector": "Financial Services"
+    }
+  },
+  "ENFY": {
+    "info": {
+      "industry": "Agricultural Inputs",
+      "sector": "Basic Materials"
+    }
+  },
+  "EXOZ": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "FBGL": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "FGL": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "FGMC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "FGMCU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "FLOC": {
+    "info": {
+      "industry": "Oil & Gas Equipment & Services",
+      "sector": "Energy"
+    }
+  },
+  "FMTO": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "GITS": {
+    "info": {
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services"
+    }
+  },
+  "GMHS": {
+    "info": {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services"
+    }
+  },
+  "HCAI": {
+    "info": {
+      "industry": "Farm & Heavy Construction Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "HSPT": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "HTLM": {
+    "info": {
+      "industry": "Specialty Retail",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "HURA": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "INR": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "IPM": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "KFIIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "KRMN": {
+    "info": {
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials"
+    }
+  },
+  "LNKS": {
+    "info": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials"
+    }
+  },
+  "MAGN": {
+    "info": {
+      "industry": "Paper & Paper Products",
+      "sector": "Basic Materials"
+    }
+  },
+  "MASK": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "MAZE": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "MSIF": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "MSPR": {
+    "info": {
+      "industry": "Health Information Services",
+      "sector": "Healthcare"
+    }
+  },
+  "MSPRW": {
+    "info": {
+      "industry": "Health Information Services",
+      "sector": "Healthcare"
+    }
+  },
+  "MSPRZ": {
+    "info": {
+      "industry": "Health Information Services",
+      "sector": "Healthcare"
+    }
+  },
+  "MTSR": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "NAYA": {
+    "info": {
+      "industry": "Medical Devices",
+      "sector": "Healthcare"
+    }
+  },
+  "NEHC": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "NEHCW": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "NEUP": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "NHPAP": {
+    "info": {
+      "industry": "REIT - Healthcare Facilities",
+      "sector": "Real Estate"
+    }
+  },
+  "NHPBP": {
+    "info": {
+      "industry": "REIT - Healthcare Facilities",
+      "sector": "Real Estate"
+    }
+  },
+  "NIVF": {
+    "info": {
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare"
+    }
+  },
+  "NIVFW": {
+    "info": {
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare"
+    }
+  },
+  "NOEM": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "NOEMW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "NPB": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "NXXT": {
+    "info": {
+      "industry": "Utilities - Renewable",
+      "sector": "Utilities"
+    }
+  },
+  "ODYS": {
+    "info": {
+      "industry": "Scientific & Technical Instruments",
+      "sector": "Technology"
+    }
+  },
+  "PTLE": {
+    "info": {
+      "industry": "Specialty Retail",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "PVLA": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "RAIN": {
+    "info": {
+      "industry": "Pollution & Treatment Controls",
+      "sector": "Industrials"
+    }
+  },
+  "RAINW": {
+    "info": {
+      "industry": "Pollution & Treatment Controls",
+      "sector": "Industrials"
+    }
+  },
+  "RNTX": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "SAIL": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "SFD": {
+    "info": {
+      "industry": "Farm Products",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "SKBL": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "STAI": {
+    "info": {
+      "industry": "Building Products & Equipment",
+      "sector": "Industrials"
+    }
+  },
+  "STRK": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "SUNE": {
+    "info": {
+      "industry": "Solar",
+      "sector": "Technology"
+    }
+  },
+  "TDAC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "TDACU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "TDACW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "TOPP": {
+    "info": {
+      "industry": "Trucking",
+      "sector": "Industrials"
+    }
+  },
+  "TTAN": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "TWNP": {
+    "info": {
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "UMBFP": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "VG": {
+    "info": {
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy"
+    }
+  },
+  "XHLD": {
+    "info": {
+      "industry": "Broadcasting",
+      "sector": "Communication Services"
+    }
+  },
+  "XIFR": {
+    "info": {
+      "industry": "Utilities - Renewable",
+      "sector": "Utilities"
+    }
+  },
+  "YHC": {
+    "info": {
+      "industry": "Beverages - Wineries & Distilleries",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "ZBAI": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "ZJK": {
+    "info": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "ZSPC": {
+    "info": {
+      "industry": "Computer Hardware",
+      "sector": "Technology"
+    }
+  },
+  "ZYBT": {
+    "info": {
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "sector": "Healthcare"
+    }
   }
 }
