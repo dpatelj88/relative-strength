@@ -38026,5 +38026,77 @@
       "industry": "Drug Manufacturers - Specialty & Generic",
       "sector": "Healthcare"
     }
+  },
+  "CLIK": {
+    "info": {
+      "industry": "Personal Services",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "DMN": {
+    "info": {
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "FLD": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "FLDDW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "GCL": {
+    "info": {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services"
+    }
+  },
+  "GCLWW": {
+    "info": {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services"
+    }
+  },
+  "MRP": {
+    "info": {
+      "industry": "REIT - Residential",
+      "sector": "Real Estate"
+    }
+  },
+  "NNNN": {
+    "info": {
+      "industry": "Medical Instruments & Supplies",
+      "sector": "Healthcare"
+    }
+  },
+  "SGI": {
+    "info": {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "TIC": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "VRM": {
+    "info": {
+      "industry": "Auto & Truck Dealerships",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "WGRX": {
+    "info": {
+      "industry": "Pharmaceutical Retailers",
+      "sector": "Healthcare"
+    }
   }
 }
