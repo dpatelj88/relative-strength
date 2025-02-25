@@ -261,20 +261,34 @@ def load_prices_from_tda(securities, api_key, info = {}):
 
 
 def get_yf_data(security, start_date, end_date):
-        ticker_data = {}
-        ticker = security["ticker"]
-        escaped_ticker = escape_ticker(ticker)
-        df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=True)
+    ticker_data = {}
+    ticker = security["ticker"]
+    escaped_ticker = escape_ticker(ticker)
+    
+    try:
+        # Télécharger les données avec auto_adjust=True (cela gère déjà les ajustements)
+        df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=True, progress=False)
+        
+        # Vérifier si le DataFrame est vide
+        if df.empty:
+            print(f"Aucune donnée trouvée pour {ticker}, possible délistage ou symbole incorrect")
+            return None
+        
+        # Convertir en dictionnaire avec gestion de la nouvelle structure
         yahoo_response = df.to_dict()
+        
+        # Extraire les timestamps et les données OHLCV
         timestamps = list(yahoo_response["Open"].keys())
         timestamps = list(map(lambda timestamp: int(timestamp.timestamp()), timestamps))
+        
         opens = list(yahoo_response["Open"].values())
         closes = list(yahoo_response["Close"].values())
         lows = list(yahoo_response["Low"].values())
         highs = list(yahoo_response["High"].values())
         volumes = list(yahoo_response["Volume"].values())
+        
+        # Créer les bougies
         candles = []
-
         for i in range(0, len(opens)):
             candle = {}
             candle["open"] = opens[i]
@@ -284,10 +298,13 @@ def get_yf_data(security, start_date, end_date):
             candle["volume"] = volumes[i]
             candle["datetime"] = timestamps[i]
             candles.append(candle)
-
+            
         ticker_data["candles"] = candles
         enrich_ticker_data(ticker_data, security)
         return ticker_data
+    except Exception as e:
+        print(f"Erreur lors du téléchargement pour {ticker}: {str(e)}")
+        return None
 
 def load_prices_from_yahoo(securities, info = {}):
     print("*** Loading Stocks from Yahoo Finance ***")
@@ -296,21 +313,44 @@ def load_prices_from_yahoo(securities, info = {}):
     start_date = today - dt.timedelta(days=1*365+183) # 183 = 6 months
     tickers_dict = {}
     load_times = []
+    failed_tickers = []
+    
     for idx, security in enumerate(securities):
         ticker = security["ticker"]
         r_start = time.time()
+        
         ticker_data = get_yf_data(security, start_date, today)
-        if not ticker in TICKER_INFO_DICT:
-            load_ticker_info(ticker, TICKER_INFO_DICT)
-            write_ticker_info_file(TICKER_INFO_DICT)
-        ticker_data["industry"] = TICKER_INFO_DICT[ticker]["info"]["industry"]
+        
+        # Si le téléchargement a échoué, passer au ticker suivant
+        if ticker_data is None:
+            failed_tickers.append(ticker)
+            continue
+            
+        # Gestion de l'industrie
+        try:
+            if not ticker in TICKER_INFO_DICT:
+                load_ticker_info(ticker, TICKER_INFO_DICT)
+                write_ticker_info_file(TICKER_INFO_DICT)
+            ticker_data["industry"] = TICKER_INFO_DICT[ticker]["info"]["industry"]
+        except Exception as e:
+            print(f"Erreur lors du chargement des infos pour {ticker}: {str(e)}")
+            ticker_data["industry"] = "Unknown"
+        
+        # Calcul du temps restant
         now = time.time()
         current_load_time = now - r_start
         load_times.append(current_load_time)
-        remaining_seconds = remaining_seconds = get_remaining_seconds(load_times, idx, len(securities))
+        remaining_seconds = get_remaining_seconds(load_times, idx, len(securities))
         print_data_progress(ticker, security["universe"], idx, securities, "", time.time() - start, remaining_seconds)
         tickers_dict[ticker] = ticker_data
+    
+    # Afficher un résumé des échecs
+    if failed_tickers:
+        print(f"Échec pour {len(failed_tickers)} tickers: {', '.join(failed_tickers[:10])}{'...' if len(failed_tickers) > 10 else ''}")
+    
+    # Enregistrer les données
     write_price_history_file(tickers_dict)
+    return tickers_dict
 
 def save_data(source, securities, api_key, info = {}):
     if source == "YAHOO":
