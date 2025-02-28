@@ -266,7 +266,7 @@ def get_yf_data(security, start_date, end_date):
     escaped_ticker = escape_ticker(ticker)
     
     try:
-        # Download data with auto_adjust=True (this already handles adjustments)
+        # Download data with auto_adjust=True
         df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=True, progress=False)
         
         # Check if DataFrame is empty
@@ -274,29 +274,32 @@ def get_yf_data(security, start_date, end_date):
             print(f"No data found for {ticker}, symbol may be delisted or incorrect")
             return None
         
-        # Handle the new MultiIndex structure from YFinance
-        # Check if we have a MultiIndex (newer YFinance versions)
+        # Handle the new MultiIndex structure
+        candles = []
+        
+        # The key issue is here - we need to check how the index is structured
         if isinstance(df.columns, pd.MultiIndex):
-            # For MultiIndex, we need to extract data differently
-            candles = []
-            # Convert to records for easier processing
-            records = df.reset_index().to_dict('records')
+            # For the new format, we need to work with the index differently
+            # Reset the index to make Date a column
+            df_reset = df.reset_index()
             
-            for record in records:
+            # Now iterate through rows
+            for _, row in df_reset.iterrows():
                 candle = {}
-                timestamp = record['Date']
+                # The Date is now a regular column after reset_index()
+                timestamp = row['Date']
                 candle["datetime"] = int(timestamp.timestamp())
                 
-                # Extract OHLCV data - assuming single ticker column
-                candle["open"] = record[('Open', escaped_ticker)]
-                candle["close"] = record[('Close', escaped_ticker)]
-                candle["high"] = record[('High', escaped_ticker)]
-                candle["low"] = record[('Low', escaped_ticker)]
-                candle["volume"] = record[('Volume', escaped_ticker)]
+                # Extract OHLCV data - accessing MultiIndex columns
+                candle["open"] = float(row[('Open', escaped_ticker)])
+                candle["close"] = float(row[('Close', escaped_ticker)])
+                candle["high"] = float(row[('High', escaped_ticker)])
+                candle["low"] = float(row[('Low', escaped_ticker)])
+                candle["volume"] = float(row[('Volume', escaped_ticker)])
                 
                 candles.append(candle)
         else:
-            # Original approach for older YFinance versions
+            # Original approach for older yfinance versions
             yahoo_response = df.to_dict()
             timestamps = list(yahoo_response["Open"].keys())
             timestamps = list(map(lambda timestamp: int(timestamp.timestamp()), timestamps))
@@ -307,7 +310,6 @@ def get_yf_data(security, start_date, end_date):
             highs = list(yahoo_response["High"].values())
             volumes = list(yahoo_response["Volume"].values())
             
-            candles = []
             for i in range(0, len(opens)):
                 candle = {}
                 candle["open"] = opens[i]
@@ -323,9 +325,11 @@ def get_yf_data(security, start_date, end_date):
         return ticker_data
     except Exception as e:
         print(f"Error downloading data for {ticker}: {str(e)}")
-        # Add some additional debug information
+        # Add debug info
         if 'df' in locals() and not df.empty:
             print(f"DataFrame columns structure: {df.columns}")
+            print(f"DataFrame index type: {type(df.index)}")
+            print(f"First few rows of index: {df.index[:5]}")
         return None
 
 def load_prices_from_yahoo(securities, info = {}):
