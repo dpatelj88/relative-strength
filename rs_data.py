@@ -274,28 +274,45 @@ def get_yf_data(security, start_date, end_date):
             print(f"No data found for {ticker}, symbol may be delisted or incorrect")
             return None
         
-        # Handle the new MultiIndex structure
+        # Handle multiple potential DataFrame structures
         candles = []
         
-        # The key issue is here - we need to check how the index is structured
+        # Check for MultiIndex columns (newer yfinance versions)
         if isinstance(df.columns, pd.MultiIndex):
-            # For the new format, we need to work with the index differently
-            # Reset the index to make Date a column
+            # Method 1: Using itertuples (most reliable)
             df_reset = df.reset_index()
             
-            # Now iterate through rows
-            for _, row in df_reset.iterrows():
+            for row in df_reset.itertuples():
                 candle = {}
-                # The Date is now a regular column after reset_index()
-                timestamp = row['Date']
+                # Get Date from the named tuple
+                timestamp = getattr(row, 'Date')
                 candle["datetime"] = int(timestamp.timestamp())
                 
-                # Extract OHLCV data - accessing MultiIndex columns
-                candle["open"] = float(row[('Open', escaped_ticker)])
-                candle["close"] = float(row[('Close', escaped_ticker)])
-                candle["high"] = float(row[('High', escaped_ticker)])
-                candle["low"] = float(row[('Low', escaped_ticker)])
-                candle["volume"] = float(row[('Volume', escaped_ticker)])
+                # Try different ways to access the data
+                try:
+                    # Try direct access first (depends on column names)
+                    candle["open"] = float(getattr(row, ('Open', escaped_ticker)))
+                    candle["close"] = float(getattr(row, ('Close', escaped_ticker)))
+                    candle["high"] = float(getattr(row, ('High', escaped_ticker)))
+                    candle["low"] = float(getattr(row, ('Low', escaped_ticker)))
+                    candle["volume"] = float(getattr(row, ('Volume', escaped_ticker)))
+                except (AttributeError, ValueError, TypeError):
+                    # Fallback: access by index if direct access fails
+                    # Find column indices for OHLCV
+                    col_indices = {
+                        'open': df_reset.columns.get_loc(('Open', escaped_ticker)),
+                        'close': df_reset.columns.get_loc(('Close', escaped_ticker)),
+                        'high': df_reset.columns.get_loc(('High', escaped_ticker)),
+                        'low': df_reset.columns.get_loc(('Low', escaped_ticker)),
+                        'volume': df_reset.columns.get_loc(('Volume', escaped_ticker))
+                    }
+                    
+                    # Use indices to get values (offset by 1 for itertuples)
+                    candle["open"] = float(row[col_indices['open'] + 1])
+                    candle["close"] = float(row[col_indices['close'] + 1])
+                    candle["high"] = float(row[col_indices['high'] + 1])
+                    candle["low"] = float(row[col_indices['low'] + 1])
+                    candle["volume"] = float(row[col_indices['volume'] + 1])
                 
                 candles.append(candle)
         else:
@@ -320,16 +337,58 @@ def get_yf_data(security, start_date, end_date):
                 candle["datetime"] = timestamps[i]
                 candles.append(candle)
         
+        # Emergency fallback if we couldn't extract candles using the normal methods
+        if not candles and not df.empty:
+            print(f"Using emergency extraction method for {ticker}")
+            # Convert DataFrame to a format we can work with
+            df_reset = df.reset_index()
+            
+            # Get column names as strings to find OHLCV columns
+            col_names = [str(col) for col in df_reset.columns]
+            
+            # Find columns containing each required field
+            ohlcv_cols = {
+                'open': next((col for col in col_names if 'open' in col.lower()), None),
+                'close': next((col for col in col_names if 'close' in col.lower()), None),
+                'high': next((col for col in col_names if 'high' in col.lower()), None),
+                'low': next((col for col in col_names if 'low' in col.lower()), None),
+                'volume': next((col for col in col_names if 'volume' in col.lower()), None),
+                'date': next((col for col in col_names if 'date' in col.lower()), None)
+            }
+            
+            # If we found all needed columns, extract the data
+            if all(ohlcv_cols.values()):
+                for idx, row in df_reset.iterrows():
+                    candle = {}
+                    timestamp = row[ohlcv_cols['date']]
+                    candle["datetime"] = int(timestamp.timestamp())
+                    candle["open"] = float(row[ohlcv_cols['open']])
+                    candle["close"] = float(row[ohlcv_cols['close']])
+                    candle["high"] = float(row[ohlcv_cols['high']])
+                    candle["low"] = float(row[ohlcv_cols['low']])
+                    candle["volume"] = float(row[ohlcv_cols['volume']])
+                    candles.append(candle)
+        
         ticker_data["candles"] = candles
         enrich_ticker_data(ticker_data, security)
         return ticker_data
     except Exception as e:
         print(f"Error downloading data for {ticker}: {str(e)}")
-        # Add debug info
+        # Extensive debug info
         if 'df' in locals() and not df.empty:
-            print(f"DataFrame columns structure: {df.columns}")
-            print(f"DataFrame index type: {type(df.index)}")
-            print(f"First few rows of index: {df.index[:5]}")
+            print(f"DataFrame shape: {df.shape}")
+            print(f"DataFrame columns: {df.columns}")
+            print(f"DataFrame index: {type(df.index)}")
+            try:
+                # Try printing the first row in different formats to help debugging
+                print(f"First row (head): {df.head(1)}")
+                
+                # Reset index and show columns
+                df_reset = df.reset_index()
+                print(f"Reset index columns: {df_reset.columns}")
+                print(f"First row after reset: {df_reset.iloc[0]}")
+            except Exception as inner_e:
+                print(f"Error during debug: {str(inner_e)}")
         return None
 
 def load_prices_from_yahoo(securities, info = {}):
