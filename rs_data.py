@@ -266,108 +266,46 @@ def get_yf_data(security, start_date, end_date):
     escaped_ticker = escape_ticker(ticker)
     
     try:
-        # Download data with auto_adjust=True
-        df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=True, progress=False)
+        # Download data with auto_adjust=False (based on Reddit fix)
+        df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=False, progress=False)
         
         # Check if DataFrame is empty
         if df.empty:
             print(f"No data found for {ticker}, symbol may be delisted or incorrect")
             return None
         
-        # Handle multiple potential DataFrame structures
-        candles = []
-        
-        # Check for MultiIndex columns (newer yfinance versions)
+        # Fix the MultiIndex columns by dropping the second level (based on Reddit fix)
         if isinstance(df.columns, pd.MultiIndex):
-            # Method 1: Using itertuples (most reliable)
-            df_reset = df.reset_index()
-            
-            for row in df_reset.itertuples():
-                candle = {}
-                # Get Date from the named tuple
-                timestamp = getattr(row, 'Date')
-                candle["datetime"] = int(timestamp.timestamp())
-                
-                # Try different ways to access the data
-                try:
-                    # Try direct access first (depends on column names)
-                    candle["open"] = float(getattr(row, ('Open', escaped_ticker)))
-                    candle["close"] = float(getattr(row, ('Close', escaped_ticker)))
-                    candle["high"] = float(getattr(row, ('High', escaped_ticker)))
-                    candle["low"] = float(getattr(row, ('Low', escaped_ticker)))
-                    candle["volume"] = float(getattr(row, ('Volume', escaped_ticker)))
-                except (AttributeError, ValueError, TypeError):
-                    # Fallback: access by index if direct access fails
-                    # Find column indices for OHLCV
-                    col_indices = {
-                        'open': df_reset.columns.get_loc(('Open', escaped_ticker)),
-                        'close': df_reset.columns.get_loc(('Close', escaped_ticker)),
-                        'high': df_reset.columns.get_loc(('High', escaped_ticker)),
-                        'low': df_reset.columns.get_loc(('Low', escaped_ticker)),
-                        'volume': df_reset.columns.get_loc(('Volume', escaped_ticker))
-                    }
-                    
-                    # Use indices to get values (offset by 1 for itertuples)
-                    candle["open"] = float(row[col_indices['open'] + 1])
-                    candle["close"] = float(row[col_indices['close'] + 1])
-                    candle["high"] = float(row[col_indices['high'] + 1])
-                    candle["low"] = float(row[col_indices['low'] + 1])
-                    candle["volume"] = float(row[col_indices['volume'] + 1])
-                
-                candles.append(candle)
-        else:
-            # Original approach for older yfinance versions
-            yahoo_response = df.to_dict()
-            timestamps = list(yahoo_response["Open"].keys())
-            timestamps = list(map(lambda timestamp: int(timestamp.timestamp()), timestamps))
-            
-            opens = list(yahoo_response["Open"].values())
-            closes = list(yahoo_response["Close"].values())
-            lows = list(yahoo_response["Low"].values())
-            highs = list(yahoo_response["High"].values())
-            volumes = list(yahoo_response["Volume"].values())
-            
-            for i in range(0, len(opens)):
-                candle = {}
-                candle["open"] = opens[i]
-                candle["close"] = closes[i]
-                candle["low"] = lows[i]
-                candle["high"] = highs[i]
-                candle["volume"] = volumes[i]
-                candle["datetime"] = timestamps[i]
-                candles.append(candle)
+            df.columns = df.columns.droplevel(1)
         
-        # Emergency fallback if we couldn't extract candles using the normal methods
-        if not candles and not df.empty:
-            print(f"Using emergency extraction method for {ticker}")
-            # Convert DataFrame to a format we can work with
-            df_reset = df.reset_index()
-            
-            # Get column names as strings to find OHLCV columns
-            col_names = [str(col) for col in df_reset.columns]
-            
-            # Find columns containing each required field
-            ohlcv_cols = {
-                'open': next((col for col in col_names if 'open' in col.lower()), None),
-                'close': next((col for col in col_names if 'close' in col.lower()), None),
-                'high': next((col for col in col_names if 'high' in col.lower()), None),
-                'low': next((col for col in col_names if 'low' in col.lower()), None),
-                'volume': next((col for col in col_names if 'volume' in col.lower()), None),
-                'date': next((col for col in col_names if 'date' in col.lower()), None)
-            }
-            
-            # If we found all needed columns, extract the data
-            if all(ohlcv_cols.values()):
-                for idx, row in df_reset.iterrows():
-                    candle = {}
-                    timestamp = row[ohlcv_cols['date']]
-                    candle["datetime"] = int(timestamp.timestamp())
-                    candle["open"] = float(row[ohlcv_cols['open']])
-                    candle["close"] = float(row[ohlcv_cols['close']])
-                    candle["high"] = float(row[ohlcv_cols['high']])
-                    candle["low"] = float(row[ohlcv_cols['low']])
-                    candle["volume"] = float(row[ohlcv_cols['volume']])
-                    candles.append(candle)
+        # Convert to dictionary and process as in the original simple function
+        yahoo_response = df.to_dict()
+        
+        # Check if we have all required columns
+        required_cols = ["Open", "Close", "Low", "High", "Volume"]
+        if not all(col in yahoo_response for col in required_cols):
+            print(f"Missing required columns for {ticker}. Available: {list(yahoo_response.keys())}")
+            return None
+        
+        timestamps = list(yahoo_response["Open"].keys())
+        timestamps = list(map(lambda timestamp: int(timestamp.timestamp()), timestamps))
+        
+        opens = list(yahoo_response["Open"].values())
+        closes = list(yahoo_response["Close"].values())
+        lows = list(yahoo_response["Low"].values())
+        highs = list(yahoo_response["High"].values())
+        volumes = list(yahoo_response["Volume"].values())
+        
+        candles = []
+        for i in range(0, len(opens)):
+            candle = {}
+            candle["open"] = opens[i]
+            candle["close"] = closes[i]
+            candle["low"] = lows[i]
+            candle["high"] = highs[i]
+            candle["volume"] = volumes[i]
+            candle["datetime"] = timestamps[i]
+            candles.append(candle)
         
         ticker_data["candles"] = candles
         enrich_ticker_data(ticker_data, security)
@@ -404,47 +342,44 @@ def load_prices_from_yahoo(securities, info = {}):
         ticker = security["ticker"]
         r_start = time.time()
         
-        # Add retry mechanism for transient errors
-        max_attempts = 2
-        ticker_data = None
+        # Use the updated get_yf_data function
+        ticker_data = get_yf_data(security, start_date, today)
         
-        for attempt in range(max_attempts):
-            ticker_data = get_yf_data(security, start_date, today)
-            if ticker_data is not None:
-                break
-            elif attempt < max_attempts - 1:
-                print(f"Retrying {ticker} (attempt {attempt + 1}/{max_attempts})...")
-                time.sleep(1)  # Short delay before retry
-        
-        # If download failed after all attempts, move to next ticker
+        # Handle failed downloads
         if ticker_data is None:
             failed_tickers.append(ticker)
             continue
             
-        # Industry management
-        try:
-            if not ticker in TICKER_INFO_DICT:
-                load_ticker_info(ticker, TICKER_INFO_DICT)
-                write_ticker_info_file(TICKER_INFO_DICT)
-            ticker_data["industry"] = TICKER_INFO_DICT[ticker]["info"]["industry"]
-        except Exception as e:
-            print(f"Error loading info for {ticker}: {str(e)}")
-            ticker_data["industry"] = "Unknown"
+        # Add industry info if available
+        if not ticker in TICKER_INFO_DICT:
+            load_ticker_info(ticker, TICKER_INFO_DICT)
+            write_ticker_info_file(TICKER_INFO_DICT)
         
-        # Calculate remaining time
+        # Add industry data safely with error handling
+        try:
+            ticker_data["industry"] = TICKER_INFO_DICT[ticker]["info"]["industry"]
+        except (KeyError, TypeError):
+            # Set a default if industry info is missing
+            ticker_data["industry"] = "Unknown"
+            print(f"Warning: Could not find industry information for {ticker}")
+        
+        # Track timing and progress
         now = time.time()
         current_load_time = now - r_start
         load_times.append(current_load_time)
         remaining_seconds = get_remaining_seconds(load_times, idx, len(securities))
         print_data_progress(ticker, security["universe"], idx, securities, "", time.time() - start, remaining_seconds)
+        
+        # Add to results dictionary
         tickers_dict[ticker] = ticker_data
     
-    # Display summary of failures
+    # Report on failures
     if failed_tickers:
-        print(f"Failed for {len(failed_tickers)} tickers: {', '.join(failed_tickers[:10])}{'...' if len(failed_tickers) > 10 else ''}")
+        print(f"Failed for {len(failed_tickers)} tickers: {', '.join(failed_tickers[:10])}...")
     
-    # Save data
+    # Write results to file
     write_price_history_file(tickers_dict)
+    
     return tickers_dict
 
 def save_data(source, securities, api_key, info = {}):
