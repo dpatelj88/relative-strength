@@ -38098,5 +38098,107 @@
       "industry": "Pharmaceutical Retailers",
       "sector": "Healthcare"
     }
+  },
+  "ASBP": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ASBPW": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "BMGL": {
+    "info": {
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare"
+    }
+  },
+  "CTEV": {
+    "info": {
+      "industry": "Health Information Services",
+      "sector": "Healthcare"
+    }
+  },
+  "CYCU": {
+    "info": {
+      "industry": "Information Technology Services",
+      "sector": "Technology"
+    }
+  },
+  "CYCUW": {
+    "info": {
+      "industry": "Information Technology Services",
+      "sector": "Technology"
+    }
+  },
+  "FERAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "HMR": {
+    "info": {
+      "industry": "Marine Shipping",
+      "sector": "Industrials"
+    }
+  },
+  "HTB": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "LUD": {
+    "info": {
+      "industry": "Steel",
+      "sector": "Basic Materials"
+    }
+  },
+  "LZMH": {
+    "info": {
+      "industry": "Information Technology Services",
+      "sector": "Technology"
+    }
+  },
+  "QVCGA": {
+    "info": {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "QVCGB": {
+    "info": {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "QVCGP": {
+    "info": {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "RHLD": {
+    "info": {
+      "industry": "Specialty Business Services",
+      "sector": "Industrials"
+    }
+  },
+  "STAK": {
+    "info": {
+      "industry": "Oil & Gas Equipment & Services",
+      "sector": "Energy"
+    }
+  },
+  "WETO": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
   }
 }
