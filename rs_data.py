@@ -266,15 +266,48 @@ def get_yf_data(security, start_date, end_date):
     escaped_ticker = escape_ticker(ticker)
     
     try:
-        # Download data with auto_adjust=False (based on Reddit fix)
-        df = yf.download(escaped_ticker, start=start_date, end=end_date, auto_adjust=False, progress=False)
+        # Import the random user agent function
+        # First check if we need to import it
+        try:
+            from user_agents import get_random_user_agent
+        except ImportError:
+            # If import fails, use a default method
+            # Define the function inline if we can't import it
+            def get_random_user_agent():
+                import random
+                default_agents = [
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+                ]
+                return random.choice(default_agents)
+        
+        # Set a random user agent
+        user_agent = get_random_user_agent()
+        
+        # Configure yfinance session with the random user agent
+        session = requests.Session()
+        session.headers['User-Agent'] = user_agent
+        
+        # Download data with auto_adjust=False (based on Reddit fix) and using our custom session
+        df = yf.download(
+            escaped_ticker, 
+            start=start_date, 
+            end=end_date, 
+            auto_adjust=False, 
+            progress=False,
+            session=session
+        )
+        
+        # Add a small delay to avoid rate limiting (adjust as needed)
+        time.sleep(0.1)
         
         # Check if DataFrame is empty
         if df.empty:
             print(f"No data found for {ticker}, symbol may be delisted or incorrect")
             return None
         
-        # Fix the MultiIndex columns by dropping the second level (based on Reddit fix)
+        # Fix the MultiIndex columns by dropping the second level
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.droplevel(1)
         
@@ -312,6 +345,11 @@ def get_yf_data(security, start_date, end_date):
         return ticker_data
     except Exception as e:
         print(f"Error downloading data for {ticker}: {str(e)}")
+        # Check if it's a rate limit error and wait longer
+        if "Too Many Requests" in str(e) or "Rate limit" in str(e):
+            print(f"Rate limit hit for {ticker}, will retry later with longer delay")
+            # You might want to implement a more sophisticated retry mechanism here
+        
         # Extensive debug info
         if 'df' in locals() and not df.empty:
             print(f"DataFrame shape: {df.shape}")
@@ -338,22 +376,46 @@ def load_prices_from_yahoo(securities, info = {}):
     load_times = []
     failed_tickers = []
     
+    # Add retry mechanism
+    max_retries = 3
+    base_delay = 2  # seconds
+    
     for idx, security in enumerate(securities):
         ticker = security["ticker"]
-        r_start = time.time()
+        retry_count = 0
+        success = False
         
-        # Use the updated get_yf_data function
-        ticker_data = get_yf_data(security, start_date, today)
+        while retry_count < max_retries and not success:
+            r_start = time.time()
+            
+            # If this is a retry, wait with exponential backoff
+            if retry_count > 0:
+                retry_delay = base_delay * (2 ** (retry_count - 1))  # Exponential backoff
+                print(f"Retry {retry_count}/{max_retries} for {ticker}, waiting {retry_delay}s...")
+                time.sleep(retry_delay)
+            
+            # Use the updated get_yf_data function
+            ticker_data = get_yf_data(security, start_date, today)
+            
+            # If successful, mark as success and break retry loop
+            if ticker_data is not None:
+                success = True
+            else:
+                retry_count += 1
         
-        # Handle failed downloads
-        if ticker_data is None:
+        # Handle failed downloads after all retries
+        if not success:
+            print(f"Failed to download {ticker} after {max_retries} retries")
             failed_tickers.append(ticker)
             continue
             
         # Add industry info if available
         if not ticker in TICKER_INFO_DICT:
-            load_ticker_info(ticker, TICKER_INFO_DICT)
-            write_ticker_info_file(TICKER_INFO_DICT)
+            try:
+                load_ticker_info(ticker, TICKER_INFO_DICT)
+                write_ticker_info_file(TICKER_INFO_DICT)
+            except Exception as e:
+                print(f"Error loading ticker info for {ticker}: {str(e)}")
         
         # Add industry data safely with error handling
         try:
@@ -372,10 +434,18 @@ def load_prices_from_yahoo(securities, info = {}):
         
         # Add to results dictionary
         tickers_dict[ticker] = ticker_data
+        
+        # Periodically save results to avoid losing everything if the process fails
+        if idx > 0 and idx % 100 == 0:
+            print(f"Saving intermediate results after {idx} tickers...")
+            write_price_history_file(tickers_dict)
     
     # Report on failures
     if failed_tickers:
         print(f"Failed for {len(failed_tickers)} tickers: {', '.join(failed_tickers[:10])}...")
+        with open("failed_tickers.txt", "w") as f:
+            f.write("\n".join(failed_tickers))
+        print(f"Saved list of failed tickers to failed_tickers.txt")
     
     # Write results to file
     write_price_history_file(tickers_dict)
