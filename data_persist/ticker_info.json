@@ -38200,5 +38200,77 @@
       "industry": "Software - Application",
       "sector": "Technology"
     }
+  },
+  "ADVB": {
+    "info": {
+      "industry": "Diagnostics & Research",
+      "sector": "Healthcare"
+    }
+  },
+  "CAPS": {
+    "info": {
+      "industry": "Building Materials",
+      "sector": "Basic Materials"
+    }
+  },
+  "JFB": {
+    "info": {
+      "industry": "Real Estate - Development",
+      "sector": "Real Estate"
+    }
+  },
+  "KMTS": {
+    "info": {
+      "industry": "Medical Instruments & Supplies",
+      "sector": "Healthcare"
+    }
+  },
+  "MCRP": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "PN": {
+    "info": {
+      "industry": "Solar",
+      "sector": "Technology"
+    }
+  },
+  "RDGT": {
+    "info": {
+      "industry": "Pharmaceutical Retailers",
+      "sector": "Healthcare"
+    }
+  },
+  "SAGT": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "SNWV": {
+    "info": {
+      "industry": "Medical Devices",
+      "sector": "Healthcare"
+    }
+  },
+  "SOBO": {
+    "info": {
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy"
+    }
+  },
+  "TBH": {
+    "info": {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services"
+    }
+  },
+  "TE": {
+    "info": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials"
+    }
   }
 }
