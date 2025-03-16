@@ -38272,5 +38272,95 @@
       "industry": "Electrical Equipment & Parts",
       "sector": "Industrials"
     }
+  },
+  "BSII": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BSIIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BSIIW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "FFAI": {
+    "info": {
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "FFAIW": {
+    "info": {
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "FVN": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "FVNNU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "GIG": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "GIGGU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "GIGGW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "KFII": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MWYN": {
+    "info": {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "ORKA": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "XAGE": {
+    "info": {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "XAGEW": {
+    "info": {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive"
+    }
   }
 }
