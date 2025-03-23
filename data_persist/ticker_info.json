@@ -38362,5 +38362,77 @@
       "industry": "Household & Personal Products",
       "sector": "Consumer Defensive"
     }
+  },
+  "AAM": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BIYA": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "COLA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "DGXX": {
+    "info": {
+      "industry": "Utilities - Independent Power Producers",
+      "sector": "Utilities"
+    }
+  },
+  "JACS": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "NAGE": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "NWTG": {
+    "info": {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "PCSC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "RCT": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "SION": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "USAR": {
+    "info": {
+      "industry": "Other Industrial Metals & Mining",
+      "sector": "Basic Materials"
+    }
+  },
+  "USARW": {
+    "info": {
+      "industry": "Other Industrial Metals & Mining",
+      "sector": "Basic Materials"
+    }
   }
 }
