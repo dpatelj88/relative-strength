@@ -38434,5 +38434,155 @@
       "industry": "Other Industrial Metals & Mining",
       "sector": "Basic Materials"
     }
+  },
+  "ALMU": {
+    "info": {
+      "industry": "Semiconductors",
+      "sector": "Technology"
+    }
+  },
+  "AMZE": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "CHARU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CRWV": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "CUB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CUBWU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CUBWW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "EPSM": {
+    "info": {
+      "industry": "Beverages - Wineries & Distilleries",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "KLRS": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "LGPS": {
+    "info": {
+      "industry": "Conglomerates",
+      "sector": "Industrials"
+    }
+  },
+  "MACI": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MACIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MACIW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MCHPP": {
+    "info": {
+      "industry": "Semiconductors",
+      "sector": "Technology"
+    }
+  },
+  "NCT": {
+    "info": {
+      "industry": "Marine Shipping",
+      "sector": "Industrials"
+    }
+  },
+  "RFAI": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "RFAIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "STRF": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "TTAM": {
+    "info": {
+      "industry": "Building Materials",
+      "sector": "Basic Materials"
+    }
+  },
+  "WFF": {
+    "info": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "WHWK": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "WLAC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "WLACU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "WLACW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "YHNA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
   }
 }
