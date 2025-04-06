@@ -38584,5 +38584,233 @@
       "industry": "Shell Companies",
       "sector": "Financial Services"
     }
+  },
+  "AGD": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "AIFE": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AIFEU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALF": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALFUU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALFUW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCIX": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCIXU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCIXW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHEB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "DRDB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ENGS": {
+    "info": {
+      "industry": "Waste Management",
+      "sector": "Industrials"
+    }
+  },
+  "FACTU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "FACTW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "HKPD": {
+    "info": {
+      "industry": "Pharmaceutical Retailers",
+      "sector": "Healthcare"
+    }
+  },
+  "JOYY": {
+    "info": {
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services"
+    }
+  },
+  "LPAA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "LPAAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "LPAAW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "LPBB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "LPBBW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MBAV": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MBAVU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MBAVW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "NMAX": {
+    "info": {
+      "industry": "Broadcasting",
+      "sector": "Communication Services"
+    }
+  },
+  "NTHI": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "OACC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "OACCU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "OACCW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ONEG": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "RDAC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "RDACU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SDHIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SZZLU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "TOPW": {
+    "info": {
+      "industry": "Luxury Goods",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "UYSCU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "WTF": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "WXM": {
+    "info": {
+      "industry": "Industrial Distribution",
+      "sector": "Industrials"
+    }
   }
 }
