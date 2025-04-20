@@ -38974,5 +38974,149 @@
       "industry": "Shell Companies",
       "sector": "Financial Services"
     }
+  },
+  "ATHR": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "ATII": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ATIIW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BLIV": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "BULL": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "BULLW": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "BULLZ": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "CHA": {
+    "info": {
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "CUPR": {
+    "info": {
+      "industry": "Medical Instruments & Supplies",
+      "sector": "Healthcare"
+    }
+  },
+  "EDHL": {
+    "info": {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services"
+    }
+  },
+  "HXHX": {
+    "info": {
+      "industry": "Integrated Freight & Logistics",
+      "sector": "Industrials"
+    }
+  },
+  "IOTR": {
+    "info": {
+      "industry": "Information Technology Services",
+      "sector": "Technology"
+    }
+  },
+  "KIDZ": {
+    "info": {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "KIDZW": {
+    "info": {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "LHSW": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "MAYA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MAYAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MB": {
+    "info": {
+      "industry": "Restaurants",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "NHICW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "RYET": {
+    "info": {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "SLSN": {
+    "info": {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "SMA": {
+    "info": {
+      "industry": "REIT - Industrial",
+      "sector": "Real Estate"
+    }
+  },
+  "TACHU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "VSA": {
+    "info": {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive"
+    }
   }
 }
