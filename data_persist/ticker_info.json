@@ -39118,5 +39118,167 @@
       "industry": "Education & Training Services",
       "sector": "Consumer Defensive"
     }
+  },
+  "BCTXZ": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "CAPN": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CAPNU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CIGL": {
+    "info": {
+      "industry": "Security & Protection Services",
+      "sector": "Industrials"
+    }
+  },
+  "DVS": {
+    "info": {
+      "industry": "Silver",
+      "sector": "Basic Materials"
+    }
+  },
+  "FERA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "IPCXU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "MBBC": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "OSRH": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "OSRHW": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "PFAI": {
+    "info": {
+      "industry": "Farm Products",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "PHOE": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "SIMA": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SIMAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SIMAW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SNDK": {
+    "info": {
+      "industry": "Computer Hardware",
+      "sector": "Technology"
+    }
+  },
+  "SPWRW": {
+    "info": {
+      "industry": "Solar",
+      "sector": "Technology"
+    }
+  },
+  "SSII": {
+    "info": {
+      "industry": "Medical Devices",
+      "sector": "Healthcare"
+    }
+  },
+  "SVCC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SVCCU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SVCCW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "TMDE": {
+    "info": {
+      "industry": "Oil & Gas Midstream",
+      "sector": "Energy"
+    }
+  },
+  "TVACU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "VCIC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "VCICU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "VCICW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "VIVS": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
   }
 }
