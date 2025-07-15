@@ -19,12 +19,29 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'  # Updated to a supported version
+          python-version: '3.10'  # Updated to supported version
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt  # Use requirements.txt for consistency
+
+      - name: Test tickers
+        run: |
+          if [ -f "data_persist/yf.py" ]; then
+            python data_persist/yf.py
+          else
+            echo "Error: yf.py not found"
+            exit 1
+          fi
+
+      - name: Upload test log
+        if: success() || failure()  # Upload even if test fails
+        uses: actions/upload-artifact@v4
+        with:
+          name: ticker-test-log
+          path: ticker_test.log
+          retention-days: 7
 
       - name: Run stock update script
         run: |
@@ -50,7 +67,7 @@ jobs:
           fi
 
       - name: Upload artifacts
-        if: success() || failure()  # Upload even if script fails for debugging
+        if: success() || failure()  # Upload even if script fails
         uses: actions/upload-artifact@v4
         with:
           name: stock-data
