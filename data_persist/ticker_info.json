@@ -39280,5 +39280,455 @@
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "ASGI": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "ASIC": {
+    "info": {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
+    }
+  },
+  "ASPCR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "ASPSW": {
+    "info": {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate"
+    }
+  },
+  "ASPSZ": {
+    "info": {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate"
+    }
+  },
+  "ATMCR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "ATMVR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AACB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AACBR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AACBU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AAUC": {
+    "info": {
+      "industry": "Gold",
+      "sector": "Basic Materials"
+    }
+  },
+  "ABI": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AIRO": {
+    "info": {
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials"
+    }
+  },
+  "AKAF": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AMBR": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "AMRZ": {
+    "info": {
+      "industry": "Building Materials",
+      "sector": "Basic Materials"
+    }
+  },
+  "ANTA": {
+    "info": {
+      "industry": "Credit Services",
+      "sector": "Financial Services"
+    }
+  },
+  "APUS": {
+    "info": {
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "sector": "Healthcare"
+    }
+  },
+  "ARAI": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "AFJKR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AFOS": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AHL": {
+    "info": {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
+    }
+  },
+  "AIFER": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AII": {
+    "info": {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
+    }
+  },
+  "AIO": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "AXINU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BACQ": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BACQR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BACQU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BASG": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BASV": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BAYAR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BCAT": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "BEAGR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BGL": {
+    "info": {
+      "industry": "Gold",
+      "sector": "Basic Materials"
+    }
+  },
+  "BGLWW": {
+    "info": {
+      "industry": "Gold",
+      "sector": "Basic Materials"
+    }
+  },
+  "BKHAR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BLUWU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BMEZ": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "BMNR": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "BOWNR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "BSAAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "BTX": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "BUSEP": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "CAEP": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CEPT": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CGCT": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CGCTU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CGCTW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CAI": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "CAPNR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CBIO": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "CCCM": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCCMU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCCMW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CCCXU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHAC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHACR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CHACU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHAR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CHARR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CHPG": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHPGR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CHPGU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "CHYM": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "CICB": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CIMO": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CMDB": {
+    "info": {
+      "industry": "Marine Shipping",
+      "sector": "Industrials"
+    }
+  },
+  "CNFRZ": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CPZ": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "CRCL": {
+    "info": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services"
+    }
+  },
+  "CSCL": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "CSCS": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "COLAR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "COPL": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
   }
 }
