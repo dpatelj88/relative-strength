@@ -55,6 +55,8 @@ def fetch_nasdaq_data():
             response = requests.get(url, headers=headers, timeout=10)
             response.raise_for_status()
             df = pd.read_csv(StringIO(response.text), delimiter='|')
+            # Drop footer rows (e.g., "File Creation Time")
+            df = df[df['Symbol'].str.contains('File Creation Time') == False]
             logging.info(f"Retrieved {len(df)} symbols from NASDAQ")
             return df
         except Exception as e:
@@ -139,12 +141,20 @@ def process_nasdaq_file(batch_size=50, max_workers=5):
 
         # Filter out non-standard symbols (warrants, units, preferred stocks)
         pattern = re.compile(r'.*[.\$][A-Z]$|.*\.W$|.*\.R$')
-        symbols = [
-            row['Symbol'] for _, row in df.iterrows()
-            if not pattern.match(row['Symbol']) and
-            row['Symbol'] not in result and
-            row['Symbol'] not in failed_symbols
-        ]
+        symbols = []
+        for _, row in df.iterrows():
+            symbol = row['Symbol']
+            # Ensure symbol is a string and not null
+            if isinstance(symbol, str) and pd.notna(symbol):
+                if (not pattern.match(symbol) and
+                    symbol not in result and
+                    symbol not in failed_symbols):
+                    symbols.append(symbol)
+                else:
+                    logging.debug(f"Excluded symbol: {symbol} (non-standard or already processed)")
+            else:
+                logging.warning(f"Invalid symbol: {symbol} (skipped due to non-string or null value)")
+        
         logging.info(f"Processing {len(symbols)} new symbols")
 
         # Process symbols in batches
