@@ -8,24 +8,25 @@ on:
 jobs:
   update-stocks:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Prevent hung workflows
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for git diff
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.8'  # Consistent with other workflows
+          python-version: '3.10'  # Updated to a supported version
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pandas yfinance requests
+          pip install -r requirements.txt  # Use requirements.txt for consistency
 
       - name: Run stock update script
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
         run: |
           if [ -f "data_persist/update_stocks.py" ]; then
             python data_persist/update_stocks.py
@@ -34,22 +35,28 @@ jobs:
             exit 1
           fi
 
-      - name: Commit and push if changes
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use GITHUB_TOKEN for authentication
         run: |
-          git config --local user.email "dpatelj88@users.noreply.github.com"
-          git config --local user.name "dpatelj88"
-          if [ -f "data_persist/ticker_info.json" ]; then
-            git add data_persist/ticker_info.json
-            git diff --quiet && git diff --staged --quiet || git commit -m "Update stocks data [automated]"
-            git push || echo "Nothing to push"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data_persist/ticker_info.json data_persist/skipped_symbols.txt data_persist/failed_symbols.json
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
           else
-            echo "Error: ticker_info.json not found"
-            exit 1
+            git commit -m "Update stocks data [automated]"
+            git push origin main  # Specify branch
           fi
 
-      - name: Upload artifact
+      - name: Upload artifacts
+        if: success() || failure()  # Upload even if script fails for debugging
         uses: actions/upload-artifact@v4
         with:
-          name: ticker-info
-          path: data_persist/ticker_info.json
+          name: stock-data
+          path: |
+            data_persist/ticker_info.json
+            data_persist/skipped_symbols.txt
+            data_persist/failed_symbols.json
+            update_stocks.log
           retention-days: 7
