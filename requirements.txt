@@ -1,7 +1,7 @@
 requests>=2.32.0
 numpy>=1.24
 pandas>=2.0.0
-scipy>=1.13.0
+scipy>=1.10.0
 # pandas_datareader==0.10.0  # Consider replacing with yfinance
 beautifulsoup4>=4.12.3
 PyYAML>=6.0.1
