@@ -43,8 +43,7 @@ def save_failed_symbols_cache(cache_file, failed_symbols):
 def fetch_nasdaq_data():
     """Fetch NASDAQ data with fallback URLs"""
     urls = [
-        "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt",
-        "https://ftp.nasdaqtrader.com/dynamic/SymDir/nasdaqtraded.txt"
+        "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     ]
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
