@@ -65,9 +65,10 @@ def fetch_nasdaq_data():
                 raise Exception("All NASDAQ URLs failed")
     return None
 
-def get_ticker_info_batch(symbols, retries=3, initial_delay=2):
+def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
     """Retrieve ticker information for a batch of symbols with retry logic"""
     attempt = 0
+    rate_limited_symbols = []
     while attempt < retries:
         try:
             tickers = yf.Tickers(symbols)
@@ -80,40 +81,50 @@ def get_ticker_info_batch(symbols, retries=3, initial_delay=2):
                     sector = info.get('sector', 'N/A')
                     industry = info.get('industry', 'N/A')
                     
-                    if sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
+                    if sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
                         result[symbol] = {"info": {"industry": industry, "sector": sector}}
                         logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
                     else:
-                        logging.warning(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
+                        logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
                         failed_symbols.append(symbol)
                 except Exception as e:
                     if "404" in str(e):
                         logging.error(f"HTTP 404 for {symbol}, skipping")
+                        failed_symbols.append(symbol)
+                    elif "401" in str(e):
+                        logging.warning(f"HTTP 401 for {symbol}, retrying")
+                        failed_symbols.append(symbol)
+                    elif "429" in str(e) or "Too Many Requests" in str(e):
+                        logging.warning(f"Rate limit hit for {symbol}")
+                        rate_limited_symbols.append(symbol)
+                        failed_symbols.append(symbol)
                     else:
                         logging.warning(f"Error for {symbol}: {str(e)}")
-                    failed_symbols.append(symbol)
+                        failed_symbols.append(symbol)
             
-            return result, failed_symbols
+            return result, failed_symbols, rate_limited_symbols
         
         except Exception as e:
             if "429" in str(e) or "Too Many Requests" in str(e):
                 attempt += 1
+                rate_limited_symbols.extend(symbols)
                 if attempt < retries:
                     delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)  # Exponential backoff
                     logging.warning(f"Rate limit hit, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
                     sleep(delay)
                 else:
                     logging.error(f"Failed after {retries} retries: {str(e)}")
-                    return {}, symbols
+                    return {}, symbols, rate_limited_symbols
             else:
                 logging.error(f"Non-rate-limit error: {str(e)}")
-                return {}, symbols
+                return {}, symbols, rate_limited_symbols
 
-def process_nasdaq_file(batch_size=50, max_workers=5):
+def process_nasdaq_file(batch_size=20, max_workers=3):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
     result = {}
     skipped_symbols = []
     failed_symbols = set()
+    rate_limited_symbols = set()
     
     # Define paths
     script_dir = Path(__file__).parent
@@ -163,18 +174,21 @@ def process_nasdaq_file(batch_size=50, max_workers=5):
 
         def process_batch(batch):
             """Helper function for parallel batch processing"""
-            batch_result, batch_failed = get_ticker_info_batch(batch)
-            return batch_result, batch_failed
+            batch_result, batch_failed, batch_rate_limited = get_ticker_info_batch(batch)
+            return batch_result, batch_failed, batch_rate_limited
 
         # Process batches in parallel
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_batch = {executor.submit(process_batch, batch): batch for batch in batches}
             for future in as_completed(future_to_batch):
-                batch_result, batch_failed = future.result()
+                batch_result, batch_failed, batch_rate_limited = future.result()
                 result.update(batch_result)
                 skipped_symbols.extend(batch_failed)
                 failed_symbols.update(batch_failed)
-                sleep(0.5)  # Reduced sleep for batch requests
+                rate_limited_symbols.update(batch_rate_limited)
+                sleep(2)  # Delay between batches to avoid rate limits
+
+        logging.info(f"Encountered {len(rate_limited_symbols)} rate-limited symbols")
 
         # Save results
         with open(output_file, 'w') as f:
