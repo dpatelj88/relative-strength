@@ -5,14 +5,14 @@ from time import sleep
 import requests
 import os
 from pathlib import Path
-from io import StringIO  # Added this due to error
+from io import StringIO
 
-def get_ticker_info(symbol, session):
+def get_ticker_info(symbol):
     """Function to retrieve ticker information with retry logic"""
-    tries = 2
+    tries = 3  # Increased retries for robustness
     for attempt in range(tries):
         try:
-            ticker = yf.Ticker(symbol, session=session)
+            ticker = yf.Ticker(symbol)  # Remove session parameter
             info = ticker.info
             sector = info.get('sector')
             industry = info.get('industry')
@@ -39,10 +39,12 @@ def process_nasdaq_file():
     # Get NASDAQ symbols directly from URL
     url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     result = {}
+    skipped_symbols = []  # Track skipped symbols
     
     # Define path for output file
     script_dir = Path(__file__).parent
     output_file = script_dir / 'ticker_info.json'
+    skipped_file = script_dir / 'skipped_symbols.txt'  # File for skipped symbols
     
     # Load existing data if available
     if output_file.exists():
@@ -52,7 +54,6 @@ def process_nasdaq_file():
             print(f"Loaded existing data with {len(result)} entries")
         except Exception as e:
             print(f"Error loading existing file: {e}")
-            pass
 
     try:
         # Download and process NASDAQ data
@@ -60,15 +61,13 @@ def process_nasdaq_file():
         response.raise_for_status()
         
         # Read data into DataFrame
-        df = pd.read_csv(StringIO(response.text), delimiter='|')  # Modification here
+        df = pd.read_csv(StringIO(response.text), delimiter='|')
         print(f"Retrieved {len(df)} symbols from NASDAQ")
 
-        session = requests.Session()
-        
         for _, row in df.iterrows():
             symbol = row['Symbol']
             if symbol not in result:
-                sector, industry = get_ticker_info(symbol, session)
+                sector, industry = get_ticker_info(symbol)
                 
                 if sector and industry:
                     result[symbol] = {
@@ -78,14 +77,20 @@ def process_nasdaq_file():
                         }
                     }
                     print(f"Added: {symbol} - {sector}/{industry}")
-                    
-                    # Save after each successful addition
-                    with open(output_file, 'w') as f:
-                        json.dump(result, f, indent=2)
                 else:
                     print(f"Skipped (missing data after retries): {symbol}")
+                    skipped_symbols.append(symbol)
                 
-                sleep(1)  # Pause between symbols
+                sleep(1.5)  # Slightly longer delay to avoid rate limits
+    
+        # Save results to JSON file
+        with open(output_file, 'w') as f:
+            json.dump(result, f, indent=2)
+        
+        # Save skipped symbols to a separate file
+        with open(skipped_file, 'w') as f:
+            f.write('\n'.join(skipped_symbols))
+        print(f"Saved {len(skipped_symbols)} skipped symbols to {skipped_file}")
     
     except Exception as e:
         print(f"Error processing NASDAQ data: {e}")
