@@ -1,4 +1,3 @@
-# Author: dpatelj88
 import pandas as pd
 import yfinance as yf
 import json
@@ -7,104 +6,184 @@ import requests
 from pathlib import Path
 from io import StringIO
 import re
+import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import random
 
-def get_ticker_info(symbol):
-    """Retrieve ticker information with retry logic."""
-    tries = 2
-    for attempt in range(tries):
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('update_stocks.log'),
+        logging.StreamHandler()
+    ]
+)
+
+def load_failed_symbols_cache(cache_file):
+    """Load failed symbols from cache to skip them"""
+    if cache_file.exists():
         try:
-            ticker = yf.Ticker(symbol)
-            info = ticker.info
-            sector = info.get('sector')
-            industry = info.get('industry')
-            
-            if sector and industry and sector != 'Unknown' and industry != 'Unknown':
-                return sector, industry
-            
-            if attempt < tries - 1:
-                print(f"Attempt {attempt + 1} failed for {symbol}, retrying in 2s...")
-                sleep(2)
-            
+            with open(cache_file, 'r') as f:
+                return set(json.load(f))
         except Exception as e:
-            if attempt < tries - 1:
-                print(f"Error for {symbol} (attempt {attempt + 1}): {e}, retrying in 2s...")
-                sleep(2)
-            else:
-                print(f"Final failure for {symbol}: {e}")
-                with open("skipped_symbols.txt", "a") as f:
-                    f.write(f"{symbol}: {str(e)}\n")
-    
-    return None, None
+            logging.error(f"Error loading failed symbols cache: {e}")
+            return set()
+    return set()
 
-def process_nasdaq_file():
-    """Process NASDAQ symbols and update JSON file with sector/industry data."""
+def save_failed_symbols_cache(cache_file, failed_symbols):
+    """Save failed symbols to cache"""
+    try:
+        with open(cache_file, 'w') as f:
+            json.dump(list(failed_symbols), f, indent=2)
+        logging.info(f"Saved {len(failed_symbols)} failed symbols to {cache_file}")
+    except Exception as e:
+        logging.error(f"Error saving failed symbols cache: {e}")
+
+def fetch_nasdaq_data():
+    """Fetch NASDAQ data with fallback URLs"""
+    urls = [
+        "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt",
+        "https://ftp.nasdaqtrader.com/dynamic/SymDir/nasdaqtraded.txt"
+    ]
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    for url in urls:
+        try:
+            logging.info(f"Fetching data from {url}")
+            response = requests.get(url, headers=headers, timeout=10)
+            response.raise_for_status()
+            df = pd.read_csv(StringIO(response.text), delimiter='|')
+            logging.info(f"Retrieved {len(df)} symbols from NASDAQ")
+            return df
+        except Exception as e:
+            logging.error(f"Failed to fetch from {url}: {e}")
+            if url == urls[-1]:
+                raise Exception("All NASDAQ URLs failed")
+    return None
+
+def get_ticker_info_batch(symbols, retries=3, initial_delay=2):
+    """Retrieve ticker information for a batch of symbols with retry logic"""
+    attempt = 0
+    while attempt < retries:
+        try:
+            tickers = yf.Tickers(symbols)
+            result = {}
+            failed_symbols = []
+            
+            for symbol in symbols:
+                try:
+                    info = tickers.tickers.get(symbol).info
+                    sector = info.get('sector', 'N/A')
+                    industry = info.get('industry', 'N/A')
+                    
+                    if sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
+                        result[symbol] = {"info": {"industry": industry, "sector": sector}}
+                        logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
+                    else:
+                        logging.warning(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
+                        failed_symbols.append(symbol)
+                except Exception as e:
+                    if "404" in str(e):
+                        logging.error(f"HTTP 404 for {symbol}, skipping")
+                    else:
+                        logging.warning(f"Error for {symbol}: {str(e)}")
+                    failed_symbols.append(symbol)
+            
+            return result, failed_symbols
+        
+        except Exception as e:
+            if "429" in str(e) or "Too Many Requests" in str(e):
+                attempt += 1
+                if attempt < retries:
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)  # Exponential backoff
+                    logging.warning(f"Rate limit hit, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
+                    sleep(delay)
+                else:
+                    logging.error(f"Failed after {retries} retries: {str(e)}")
+                    return {}, symbols
+            else:
+                logging.error(f"Non-rate-limit error: {str(e)}")
+                return {}, symbols
+
+def process_nasdaq_file(batch_size=50, max_workers=5):
+    """Process NASDAQ symbols and update JSON file with sector/industry data"""
+    result = {}
+    skipped_symbols = []
+    failed_symbols = set()
     
-    # Define paths and URL
+    # Define paths
     script_dir = Path(__file__).parent
     output_file = script_dir / 'ticker_info.json'
-    url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
+    skipped_file = script_dir / 'skipped_symbols.txt'
+    failed_cache_file = script_dir / 'failed_symbols.json'
     
     # Load existing data
-    result = {}
     if output_file.exists():
         try:
             with open(output_file, 'r') as f:
                 result = json.load(f)
-            print(f"Loaded existing data with {len(result)} entries")
+            logging.info(f"Loaded existing data with {len(result)} entries")
         except Exception as e:
-            print(f"Error loading existing file: {e}")
+            logging.error(f"Error loading existing file: {e}")
+
+    # Load failed symbols cache
+    failed_symbols = load_failed_symbols_cache(failed_cache_file)
 
     try:
-        # Download and process NASDAQ data
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-        df = pd.read_csv(StringIO(response.text), delimiter='|')
-        print(f"Retrieved {len(df)} symbols from NASDAQ")
+        # Fetch NASDAQ data
+        df = fetch_nasdaq_data()
+        if df is None:
+            raise Exception("Failed to fetch NASDAQ data")
 
-        # Regular expression for valid stock symbols (e.g., 1-5 letters, excluding test symbols)
-        pattern = re.compile(r'^[A-Z]{1,5}$')
+        # Filter out non-standard symbols (warrants, units, preferred stocks)
+        pattern = re.compile(r'.*[.\$][A-Z]$|.*\.W$|.*\.R$')
+        symbols = [
+            row['Symbol'] for _, row in df.iterrows()
+            if not pattern.match(row['Symbol']) and
+            row['Symbol'] not in result and
+            row['Symbol'] not in failed_symbols
+        ]
+        logging.info(f"Processing {len(symbols)} new symbols")
 
-        # Filter valid symbols and handle non-string values
-        symbols = []
-        for _, row in df.iterrows():
-            symbol = row['Symbol']
-            # Check if symbol is a string and matches the pattern
-            if isinstance(symbol, str) and pattern.match(symbol) and not symbol.startswith('Z'):
-                symbols.append(symbol)
-            else:
-                print(f"Skipped invalid symbol: {symbol}")
-                with open("skipped_symbols.txt", "a") as f:
-                    f.write(f"Invalid symbol: {symbol}\n")
+        # Process symbols in batches
+        batches = [symbols[i:i + batch_size] for i in range(0, len(symbols), batch_size)]
+        logging.info(f"Created {len(batches)} batches of size {batch_size}")
 
-        print(f"Filtered to {len(symbols)} valid symbols")
+        def process_batch(batch):
+            """Helper function for parallel batch processing"""
+            batch_result, batch_failed = get_ticker_info_batch(batch)
+            return batch_result, batch_failed
 
-        # Process symbols
-        for symbol in symbols:
-            if symbol not in result:
-                sector, industry = get_ticker_info(symbol)
-                
-                if sector and industry:
-                    result[symbol] = {
-                        "info": {
-                            "industry": industry,
-                            "sector": sector
-                        }
-                    }
-                    print(f"Added: {symbol} - {sector}/{industry}")
-                else:
-                    print(f"Skipped (missing data after retries): {symbol}")
-                
-                sleep(0.5)  # Balance rate limits and speed
-    
-        # Save final dataset
+        # Process batches in parallel
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_to_batch = {executor.submit(process_batch, batch): batch for batch in batches}
+            for future in as_completed(future_to_batch):
+                batch_result, batch_failed = future.result()
+                result.update(batch_result)
+                skipped_symbols.extend(batch_failed)
+                failed_symbols.update(batch_failed)
+                sleep(0.5)  # Reduced sleep for batch requests
+
+        # Save results
         with open(output_file, 'w') as f:
             json.dump(result, f, indent=2)
-        print(f"Final dataset contains {len(result)} symbols")
-
+        logging.info(f"Saved results to {output_file}")
+        
+        # Save skipped symbols
+        with open(skipped_file, 'w') as f:
+            f.write('\n'.join(skipped_symbols))
+        logging.info(f"Saved {len(skipped_symbols)} skipped symbols to {skipped_file}")
+        
+        # Save failed symbols cache
+        save_failed_symbols_cache(failed_cache_file, failed_symbols)
+    
     except Exception as e:
-        print(f"Error processing NASDAQ data: {e}")
+        logging.error(f"Error processing NASDAQ data: {e}")
         raise
-
+    
+    logging.info(f"Final dataset contains {len(result)} symbols")
     return result
 
 if __name__ == "__main__":
