@@ -72,7 +72,7 @@ def get_ticker_info_batch(symbols):
 
 def process_nasdaq_file(batch_size=50, max_workers=5):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
-    url = "https://ftp.nasdaqtrader.com/dynamic/SymDir/nasdaqtraded.txt"
+    url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     result = {}
     skipped_symbols = []
     failed_symbols = set()
