@@ -3,7 +3,7 @@
 DATA_SOURCE: YAHOO
 
 # Not needed if you use YAHOO, retained for compatibility
-API_KEY: Your_API_Key
+API_KEY: null
 
 # Which Ticker should be the reference for performance?
 REFERENCE_TICKER: SPY
@@ -12,7 +12,7 @@ REFERENCE_TICKER: SPY
 MIN_PERCENTILE: 80
 
 # Do you want all listed stocks?
-USE_ALL_LISTED_STOCKS: true
+USE_ALL_LISTED_STOCKS: false
 
 # If USE_ALL_LISTED_STOCKS is false: Only those stocks are considered which are included in the enabled indices
 NQ100: true
@@ -22,21 +22,21 @@ SP600: true
 
 # Program behavior
 # Should the program wait for you to hit enter to exit?
-EXIT_WAIT_FOR_ENTER: true
+EXIT_WAIT_FOR_ENTER: false
 
 # Batch Processing Configuration
 # Number of tickers to process in each batch (adjust based on API limits)
-BATCH_SIZE: 30
+BATCH_SIZE: 10
 
 # Maximum number of worker threads for parallel processing
-MAX_WORKERS: 2
+MAX_WORKERS: 1
 
 # Retry Configuration
 # Maximum number of retry attempts for failed API calls
-MAX_RETRIES: 7
+MAX_RETRIES: 3
 
 # Initial delay (in seconds) for retry backoff
-INITIAL_DELAY: 5
+INITIAL_DELAY: 10
 
 # Relative Strength Ranking Configuration
 # Number of trading days per month for relative strength calculations
