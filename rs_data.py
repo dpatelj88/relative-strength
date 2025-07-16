@@ -76,6 +76,20 @@ def cfg(key):
         "MIN_TICKERS_PER_INDUSTRY": 2
     }
     return value if value is not None else defaults.get(key)
+
+def read_json(file_path):
+    """Read and parse a JSON file."""
+    try:
+        with open(file_path, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        logging.error(f"JSON file not found: {file_path}")
+        return {}
+    except json.JSONDecodeError as e:
+        logging.error(f"Error decoding JSON from {file_path}: {e}")
+        return {}
+
+# Rest of the file remains unchanged...
     
 def load_failed_symbols_cache(cache_file):
     if cache_file.exists():
