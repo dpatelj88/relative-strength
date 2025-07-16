@@ -26,7 +26,7 @@ EXIT_WAIT_FOR_ENTER: true
 
 # Batch Processing Configuration
 # Number of tickers to process in each batch (adjust based on API limits)
-BATCH_SIZE: 20
+BATCH_SIZE: 15
 
 # Maximum number of worker threads for parallel processing
 MAX_WORKERS: 2
