@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
 import yaml
 from pathlib import Path
-import pickle
+from tqdm import tqdm
 
 # Set up logging
 LOG_DIR = Path(__file__).parent / 'logs'
@@ -36,11 +36,6 @@ TMP_DIR = DIR / 'tmp'
 
 DATA_DIR.mkdir(exist_ok=True)
 TMP_DIR.mkdir(exist_ok=True)
-
-# Define global file paths and data structures
-PRICE_DATA_FILE = DATA_DIR / "price_data.json"
-TICKER_INFO_FILE = DATA_DIR / "ticker_info.json"
-TICKER_INFO_DICT = {}
 
 # Load configuration
 try:
@@ -78,7 +73,7 @@ def cfg(key):
         "BATCH_SIZE": 20,
         "MAX_WORKERS": 2,
         "MAX_RETRIES": 7,
-        "INITIAL_DELAY": 10,  # Increased delay
+        "INITIAL_DELAY": 5,
         "TRADING_DAYS_PER_MONTH": 20,
         "MIN_TICKERS_PER_INDUSTRY": 2
     }
@@ -96,6 +91,8 @@ def read_json(file_path):
         logging.error(f"Error decoding JSON from {file_path}: {e}")
         return {}
 
+# Rest of the file remains unchanged...
+    
 def load_failed_symbols_cache(cache_file):
     if cache_file.exists():
         try:
@@ -166,11 +163,6 @@ def get_tickers_from_nasdaq(tickers, retries=cfg("MAX_RETRIES"), initial_delay=c
                     securities[ticker] = sec
             lines.close()
 
-            # Limit to 100 tickers to avoid rate limits
-            max_tickers = 100
-            securities = dict(list(securities.items())[:max_tickers])
-            logging.info(f"Limited to {max_tickers} tickers")
-
             # Pre-validate symbols
             valid_securities = {}
             for ticker, sec in securities.items():
@@ -213,12 +205,12 @@ def get_tickers_from_nasdaq(tickers, retries=cfg("MAX_RETRIES"), initial_delay=c
                     batch_result, batch_failed = future.result()
                     ticker_info.update(batch_result)
                     failed_symbols.update(batch_failed)
-                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1) if attempt > 0 else 10
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1) if attempt > 0 else 2
                     sleep(delay)
 
             # Merge with initial tickers
             for ticker in securities:
-                securities[ticker].update(ticker_info.get(ticker, {"info": {"industry": "N/A", "sector": "N/A"}}))
+                securities[ticker].update(ticker_info.get(ticker, {"info": {"industry": UNKNOWN, "sector": UNKNOWN}}))
             tickers.update(securities)
             logging.info(f"Processed {len(securities)} NASDAQ tickers, failed {len(failed_symbols)}")
             return tickers
@@ -253,13 +245,8 @@ def get_tickers_from_wikipedia(tickers, retries=cfg("MAX_RETRIES"), initial_dela
     return tickers
 
 def get_resolved_securities():
-    tickers = {cfg("REFERENCE_TICKER"): {"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"}}
-    ALL_STOCKS = cfg("USE_ALL_LISTED_STOCKS")
-    tickers = get_tickers_from_nasdaq(tickers) if ALL_STOCKS else get_tickers_from_wikipedia(tickers)
-    # Ensure SPY is included
-    if cfg("REFERENCE_TICKER") not in tickers:
-        tickers[cfg("REFERENCE_TICKER")] = {"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"}
-    return tickers
+    tickers = {REFERENCE_TICKER: REF_TICKER}
+    return get_tickers_from_nasdaq(tickers) if ALL_STOCKS else get_tickers_from_wikipedia(tickers)
 
 def write_to_file(dict_data, file):
     try:
@@ -366,10 +353,6 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
     valid_securities = [sec for sec in securities if sec["ticker"] not in failed_tickers and sec["ticker"] not in tickers_dict]
     logging.info(f"Processing {len(valid_securities)} new tickers")
 
-    # Ensure SPY is included
-    if cfg("REFERENCE_TICKER") not in tickers_dict:
-        valid_securities.append({"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"})
-
     batches = [valid_securities[i:i + batch_size] for i in range(0, len(valid_securities), batch_size)]
     with ThreadPoolExecutor(max_workers=max_workers or 2) as executor:
         future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")): batch for batch in batches}
@@ -382,7 +365,7 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
             write_to_file(failure_reasons, failure_reasons_file)
             if batch_result:
                 write_to_file(tickers_dict, PRICE_DATA_FILE)
-            delay = 10  # Increased delay
+            delay = cfg("INITIAL_DELAY") or 5
             sleep(delay)
 
     # Update ticker info for new tickers
@@ -397,19 +380,19 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
 
     return tickers_dict
 
-def save_data(source, securities, api_key=None):
+def save_data(source, securities, api_key=None, info=None):
     if source == "YAHOO":
-        return load_prices_from_yahoo(securities)
+        return load_prices_from_yahoo(securities, info=info or {})
     elif source == "TD_AMERITRADE" and api_key:
         logging.error("TD Ameritrade support deprecated; using Yahoo Finance instead")
-        return load_prices_from_yahoo(securities)
+        return load_prices_from_yahoo(securities, info=info or {})
     else:
         logging.error(f"Unsupported or missing data source: {source}, defaulting to Yahoo Finance")
-        return load_prices_from_yahoo(securities)
+        return load_prices_from_yahoo(securities, info=info or {})
 
 def main(forceTDA=False, api_key=None):
     securities = get_resolved_securities().values()
-    save_data(cfg("DATA_SOURCE") if not forceTDA else "TD_AMERITRADE", securities, api_key)
+    save_data(DATA_SOURCE if not forceTDA else "TD_AMERITRADE", securities, api_key, {"forceTDA": forceTDA})
     write_to_file(TICKER_INFO_DICT, TICKER_INFO_FILE)
 
 if __name__ == "__main__":
