@@ -1,46 +1,9 @@
-# Data Retrieval
-# Available Sources: YAHOO (TD_AMERITRADE deprecated)
-DATA_SOURCE: YAHOO
-
-# Not needed if you use YAHOO, retained for compatibility
-API_KEY: Your_API_Key
-
-# Which Ticker should be the reference for performance?
-REFERENCE_TICKER: SPY
-
-# What is the lowest Percentile you want to see?
-MIN_PERCENTILE: 80
-
-# Do you want all listed stocks?
-USE_ALL_LISTED_STOCKS: true
-
-# If USE_ALL_LISTED_STOCKS is false: Only those stocks are considered which are included in the enabled indices
-NQ100: true
-SP500: true
-SP400: true
-SP600: true
-
-# Program behavior
-# Should the program wait for you to hit enter to exit?
-EXIT_WAIT_FOR_ENTER: true
-
-# Batch Processing Configuration
-# Number of tickers to process in each batch (adjust based on API limits)
-BATCH_SIZE: 30
-
-# Maximum number of worker threads for parallel processing
-MAX_WORKERS: 3
-
-# Retry Configuration
-# Maximum number of retry attempts for failed API calls
+REFERENCE_TICKER: "SPY"
+BATCH_SIZE: 20
+MAX_WORKERS: 2
 MAX_RETRIES: 7
-
-# Initial delay (in seconds) for retry backoff
-INITIAL_DELAY: 10
-
-# Relative Strength Ranking Configuration
-# Number of trading days per month for relative strength calculations
+INITIAL_DELAY: 5
+MIN_PERCENTILE: 80
 TRADING_DAYS_PER_MONTH: 20
-
-# Minimum number of tickers per industry for industry rankings
 MIN_TICKERS_PER_INDUSTRY: 2
+EXIT_WAIT_FOR_ENTER: false
