@@ -57,7 +57,9 @@ except yaml.YAMLError as exc:
     config = None
 
 def cfg(key):
-    return private_config.get(key) or config.get(key)
+    value = private_config.get(key) or config.get(key)
+    defaults = {"BATCH_SIZE": 20, "MAX_WORKERS": 2, "MAX_RETRIES": 7, "INITIAL_DELAY": 5}
+    return value if value is not None else defaults.get(key)
 
 def read_json(json_file):
     try:
@@ -78,7 +80,6 @@ REF_TICKER = {"ticker": REFERENCE_TICKER, "sector": "--- Reference ---", "indust
 UNKNOWN = "unknown"
 
 def load_failed_symbols_cache(cache_file):
-    """Load failed symbols from cache to skip them"""
     if cache_file.exists():
         try:
             with open(cache_file, 'r') as f:
@@ -89,7 +90,6 @@ def load_failed_symbols_cache(cache_file):
     return set()
 
 def save_failed_symbols_cache(cache_file, failed_symbols):
-    """Save failed symbols to cache"""
     try:
         with open(cache_file, 'w') as f:
             json.dump(list(failed_symbols), f, indent=2)
@@ -123,8 +123,7 @@ def exchange_from_symbol(symbol):
     mapping = {"Q": "NASDAQ", "A": "NYSE MKT", "N": "NYSE", "P": "NYSE ARCA", "Z": "BATS", "V": "IEXG"}
     return mapping.get(symbol, "n/a")
 
-def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, max_workers=2):
-    """Fetch NASDAQ tickers and enrich with sector/industry data using yfinance in batches."""
+def get_tickers_from_nasdaq(tickers, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY"), batch_size=cfg("BATCH_SIZE"), max_workers=cfg("MAX_WORKERS")):
     filename = "nasdaqtraded.txt"
     url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     ticker_column = 1
@@ -133,9 +132,9 @@ def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, 
     test_column = 7
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
 
-    for attempt in range(retries):
+    for attempt in range(retries or 3):
         try:
-            logging.info(f"Fetching NASDAQ data from {url} (attempt {attempt + 1}/{retries})")
+            logging.info(f"Fetching NASDAQ data from {url} (attempt {attempt + 1}/{retries or 3})")
             response = requests.get(url, headers=headers, timeout=15)
             response.raise_for_status()
             lines = StringIO(response.text)
@@ -146,12 +145,22 @@ def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, 
                 if (re.match(r'^[A-Z]+$', ticker) and 
                     values[etf_column] == "N" and 
                     values[test_column] == "N"):
-                    sec = {
-                        "ticker": ticker,
-                        "universe": exchange_from_symbol(values[exchange_column])
-                    }
+                    sec = {"ticker": ticker, "universe": exchange_from_symbol(values[exchange_column])}
                     securities[ticker] = sec
             lines.close()
+
+            # Pre-validate symbols
+            valid_securities = {}
+            for ticker, sec in securities.items():
+                try:
+                    yf.Ticker(ticker).basic_info
+                    valid_securities[ticker] = sec
+                except Exception as e:
+                    if "404" in str(e):
+                        logging.error(f"Pre-validation failed for {ticker}: HTTP 404")
+                    else:
+                        valid_securities[ticker] = sec
+            securities = valid_securities
 
             # Batch process to fetch sector/industry
             symbols = list(securities.keys())
@@ -176,13 +185,14 @@ def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, 
                         failed.append(ticker)
                 return result, failed
 
-            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            with ThreadPoolExecutor(max_workers=max_workers or 2) as executor:
                 future_to_batch = {executor.submit(process_batch, batch): batch for batch in batches}
                 for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Enriching NASDAQ tickers"):
                     batch_result, batch_failed = future.result()
                     ticker_info.update(batch_result)
                     failed_symbols.update(batch_failed)
-                    sleep(2)  # Respect rate limits
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1) if attempt > 0 else 2
+                    sleep(delay)
 
             # Merge with initial tickers
             for ticker in securities:
@@ -192,23 +202,32 @@ def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, 
             return tickers
 
         except Exception as e:
-            logging.warning(f"NASDAQ data fetch failed (attempt {attempt + 1}/{retries}): {e}")
-            if attempt < retries - 1:
+            logging.warning(f"NASDAQ data fetch failed (attempt {attempt + 1}/{retries or 3}): {e}")
+            if attempt < (retries or 3) - 1:
                 delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
                 sleep(delay)
     logging.error("Failed to fetch NASDAQ tickers after retries")
     return tickers
 
-def get_tickers_from_wikipedia(tickers):
+def get_tickers_from_wikipedia(tickers, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
     sources = [
         ("NQ100", 'https://en.wikipedia.org/wiki/Nasdaq-100', 2, 3, 1, 1, "Nasdaq 100"),
         ("SP500", 'http://en.wikipedia.org/wiki/List_of_S%26P_500_companies', 1, 1, 3, 1, "S&P 500"),
         ("SP400", 'https://en.wikipedia.org/wiki/List_of_S%26P_400_companies', 2, 1, 1, 1, "S&P 400"),
         ("SP600", 'https://en.wikipedia.org/wiki/List_of_S%26P_600_companies', 2, 1, 1, 1, "S&P 600")
     ]
-    for key, url, ticker_pos, table_pos, sector_offset, industry_offset, universe in sources:
-        if cfg(key):
-            tickers.update(get_securities(url, ticker_pos, table_pos, sector_offset, industry_offset, universe))
+    for attempt in range(retries or 3):
+        try:
+            for key, url, ticker_pos, table_pos, sector_offset, industry_offset, universe in sources:
+                if cfg(key):
+                    tickers.update(get_securities(url, ticker_pos, table_pos, sector_offset, industry_offset, universe))
+            return tickers
+        except Exception as e:
+            logging.warning(f"Wikipedia fetch failed (attempt {attempt + 1}/{retries or 3}): {e}")
+            if attempt < (retries or 3) - 1:
+                delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
+                sleep(delay)
+    logging.error("Failed to fetch Wikipedia tickers after retries")
     return tickers
 
 def get_resolved_securities():
@@ -223,12 +242,12 @@ def write_to_file(dict_data, file):
     except Exception as e:
         logging.error(f"Error writing to {file}: {e}")
 
-def get_yf_data_batch(securities, start_date, end_date, retries=7, initial_delay=5):
+def get_yf_data_batch(securities, start_date, end_date, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
     attempt = 0
     rate_limited_tickers = []
     failure_reasons = {}
     tickers_dict = {}
-    while attempt < retries:
+    while attempt < (retries or 7):
         try:
             tickers = yf.Tickers([s["ticker"] for s in securities])
             failed_tickers = []
@@ -274,12 +293,12 @@ def get_yf_data_batch(securities, start_date, end_date, retries=7, initial_delay
             if "429" in str(e) or "Too Many Requests" in str(e):
                 attempt += 1
                 rate_limited_tickers.extend([s["ticker"] for s in securities])
-                if attempt < retries:
+                if attempt < (retries or 7):
                     delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
-                    logging.warning(f"Rate limit hit, retrying in {delay:.2f}s (attempt {attempt}/{retries})")
+                    logging.warning(f"Rate limit hit, retrying in {delay:.2f}s (attempt {attempt}/{retries or 7})")
                     sleep(delay)
                 else:
-                    logging.error(f"Failed after {retries} retries: {str(e)}")
+                    logging.error(f"Failed after {retries or 7} retries: {str(e)}")
                     failure_reasons = {s["ticker"]: f"Batch failure: {str(e)}" for s in securities}
                     return {}, [s["ticker"] for s in securities], rate_limited_tickers, failure_reasons
             else:
@@ -305,7 +324,7 @@ def load_ticker_info(ticker, info_dict):
         logging.error(f"Error loading info for {ticker}: {e}")
         info_dict[ticker] = {"info": {"industry": "n/a", "sector": "n/a"}}
 
-def load_prices_from_yahoo(securities, batch_size=20, max_workers=2):
+def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers=cfg("MAX_WORKERS")):
     logging.info("*** Loading Stocks from Yahoo Finance ***")
     today = dt.date.today()
     start_date = today - dt.timedelta(days=1*365+183)  # 18 months
@@ -313,22 +332,16 @@ def load_prices_from_yahoo(securities, batch_size=20, max_workers=2):
     failed_tickers = load_failed_symbols_cache(DATA_DIR / "failed_tickers.json")
     failure_reasons_file = DATA_DIR / "failure_reasons.json"
 
-    # Clear failed tickers cache with 20% probability
     if (DATA_DIR / "failed_tickers.json").exists() and random.random() < 0.2:
         failed_tickers = set()
         logging.info("Cleared failed tickers cache")
 
-    # Filter securities
-    valid_securities = [
-        sec for sec in securities
-        if sec["ticker"] not in failed_tickers and sec["ticker"] not in tickers_dict
-    ]
+    valid_securities = [sec for sec in securities if sec["ticker"] not in failed_tickers and sec["ticker"] not in tickers_dict]
     logging.info(f"Processing {len(valid_securities)} new tickers")
 
-    # Process in batches
     batches = [valid_securities[i:i + batch_size] for i in range(0, len(valid_securities), batch_size)]
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today): batch for batch in batches}
+    with ThreadPoolExecutor(max_workers=max_workers or 2) as executor:
+        future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")): batch for batch in batches}
         for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Processing batches"):
             batch_result, batch_failed, batch_rate_limited, batch_failure_reasons = future.result()
             tickers_dict.update(batch_result)
@@ -338,7 +351,8 @@ def load_prices_from_yahoo(securities, batch_size=20, max_workers=2):
             write_to_file(failure_reasons, failure_reasons_file)
             if batch_result:
                 write_to_file(tickers_dict, PRICE_DATA_FILE)
-            sleep(2)
+            delay = cfg("INITIAL_DELAY") or 5
+            sleep(delay)
 
     # Update ticker info for new tickers
     for sec in valid_securities:
@@ -347,7 +361,6 @@ def load_prices_from_yahoo(securities, batch_size=20, max_workers=2):
             load_ticker_info(ticker, TICKER_INFO_DICT)
     write_to_file(TICKER_INFO_DICT, TICKER_INFO_FILE)
 
-    # Save failed tickers
     save_failed_symbols_cache(DATA_DIR / "failed_tickers.json", failed_tickers)
     logging.info(f"Processed {len(tickers_dict)} tickers, failed {len(failed_tickers)}")
 
