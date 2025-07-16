@@ -40,6 +40,7 @@ TITLE_1M = "1 Month Ago"
 TITLE_3M = "3 Months Ago"
 TITLE_6M = "6 Months Ago"
 TITLE_RS = "Relative Strength"
+TITLE_PRICE = "Latest Price"
 
 def relative_strength(closes: pd.Series, ref_closes: pd.Series):
     """Calculate relative strength for a stock against reference."""
@@ -91,7 +92,7 @@ def generate_tradingview_csv(percentile_values, first_rs_values):
     return ''.join(reversed(lines))
 
 def process_batch(tickers_batch, ref_closes):
-    """Process a batch of tickers to calculate relative strength."""
+    """Process a batch of tickers to calculate relative strength and include latest price."""
     relative_strengths = []
     json_data = read_json(PRICE_DATA_FILE)
     ticker_info = read_json(TICKER_INFO_FILE)
@@ -100,7 +101,8 @@ def process_batch(tickers_batch, ref_closes):
         try:
             if ticker not in json_data or not json_data[ticker]["candles"]:
                 continue
-            closes = pd.Series([candle["close"] for candle in json_data[ticker]["candles"]])
+            candles = json_data[ticker]["candles"]
+            closes = pd.Series([candle["close"] for candle in candles])
             if len(closes) < 6 * TRADING_DAYS_PER_MONTH:
                 continue
             rs = relative_strength(closes, ref_closes)
@@ -110,13 +112,14 @@ def process_batch(tickers_batch, ref_closes):
             rs1m = relative_strength(closes.head(-TRADING_DAYS_PER_MONTH), ref_closes.head(-TRADING_DAYS_PER_MONTH))
             rs3m = relative_strength(closes.head(-3 * TRADING_DAYS_PER_MONTH), ref_closes.head(-3 * TRADING_DAYS_PER_MONTH))
             rs6m = relative_strength(closes.head(-6 * TRADING_DAYS_PER_MONTH), ref_closes.head(-6 * TRADING_DAYS_PER_MONTH))
+            latest_price = candles[-1]["close"] if candles else 0
             info = ticker_info.get(ticker, {})
             relative_strengths.append((
                 0, ticker, 
                 info.get("info", {}).get("sector", json_data[ticker]["sector"]),
                 info.get("info", {}).get("industry", json_data[ticker]["industry"]),
                 json_data[ticker]["universe"], 
-                rs, 100, rs1m, rs3m, rs6m
+                rs, 100, rs1m, rs3m, rs6m, latest_price
             ))
         except Exception as e:
             logging.error(f"Error processing {ticker}: {e}")
@@ -145,7 +148,7 @@ def rankings():
         for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Processing ticker batches"):
             batch_results = future.result()
             relative_strengths.extend(batch_results)
-            for _, ticker, sector, industry, universe, rs, _, rs1m, rs3m, rs6m in batch_results:
+            for _, ticker, sector, industry, universe, rs, _, rs1m, rs3m, rs6m, _ in batch_results:
                 if industry not in industries:
                     industries[industry] = {
                         "info": (0, industry, sector, 0, 99, 1, 3, 6),
@@ -162,7 +165,7 @@ def rankings():
     if relative_strengths:
         df = pd.DataFrame(relative_strengths, columns=[
             TITLE_RANK, TITLE_TICKER, TITLE_SECTOR, TITLE_INDUSTRY, TITLE_UNIVERSE, 
-            TITLE_RS, TITLE_PERCENTILE, TITLE_1M, TITLE_3M, TITLE_6M
+            TITLE_RS, TITLE_PERCENTILE, TITLE_1M, TITLE_3M, TITLE_6M, TITLE_PRICE
         ])
         df[TITLE_PERCENTILE] = pd.qcut(df[TITLE_RS], 100, labels=False, duplicates="drop")
         df[TITLE_1M] = pd.qcut(df[TITLE_1M], 100, labels=False, duplicates="drop")
