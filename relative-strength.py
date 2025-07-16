@@ -25,6 +25,11 @@ def main():
         logging.info("Process completed successfully")
     except Exception as e:
         logging.error(f"Error in main execution: {e}")
+        # Create fallback output file
+        output_dir = Path(__file__).parent / "output"
+        output_dir.mkdir(exist_ok=True)
+        with open(output_dir / "status.txt", "w") as f:
+            f.write(f"Error in process: {str(e)}")
         raise
 
 if __name__ == "__main__":
