@@ -91,9 +91,12 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                     sector = info.get('sector', 'N/A')
                     industry = info.get('industry', 'N/A')
                     
-                    if (sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown') or info.get('quoteType', '') == 'ETF':
-                        result[symbol] = {"info": {"industry": industry or "ETF", "sector": sector or "ETF"}}
-                        logging.info(f"Retrieved: {symbol} - Sector: {sector or 'ETF'}, Industry: {industry or 'ETF'}")
+                    if info.get('quoteType', '') == 'ETF':
+                        result[symbol] = {"info": {"industry": "ETF", "sector": "ETF"}}
+                        logging.info(f"Retrieved: {symbol} - Sector: ETF, Industry: ETF")
+                    elif sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
+                        result[symbol] = {"info": {"industry": industry, "sector": sector}}
+                        logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
                     else:
                         logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
                         failed_symbols.append(symbol)
@@ -156,6 +159,7 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
     skipped_symbols = []
     failed_symbols = set()
     rate_limited_symbols = set()
+    failure_reasons = {}
     
     # Define paths
     script_dir = Path(__file__).parent
@@ -175,8 +179,8 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
     # Load failed symbols cache
     failed_symbols = load_failed_symbols_cache(failed_cache_file)
     
-    # Periodically clear failed symbols cache (10% chance)
-    if failed_cache_file.exists() and random.random() < 0.1:
+    # Clear failed symbols cache with 20% probability
+    if failed_cache_file.exists() and random.random() < 0.2:
         failed_symbols = set()
         logging.info("Cleared failed symbols cache for full retry")
 
@@ -203,6 +207,22 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
             else:
                 logging.warning(f"Invalid symbol: {symbol} (skipped due to non-string or null value)")
         
+        # Pre-validate symbols
+        valid_symbols = []
+        for symbol in symbols:
+            try:
+                ticker = yf.Ticker(symbol)
+                ticker.basic_info  # Lightweight check for symbol validity
+                valid_symbols.append(symbol)
+            except Exception as e:
+                if "404" in str(e):
+                    logging.error(f"Pre-validation failed for {symbol}: HTTP 404")
+                    failed_symbols.add(symbol)
+                    failure_reasons[symbol] = "HTTP 404 (pre-validation)"
+                else:
+                    valid_symbols.append(symbol)  # Retry transient errors in batch
+        symbols = valid_symbols
+
         # Retry a subset of failed symbols
         if failed_symbols:
             retry_failed = set(random.sample(list(failed_symbols), min(500, len(failed_symbols))))
@@ -245,6 +265,10 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
         
         # Save failed symbols cache
         save_failed_symbols_cache(failed_cache_file, failed_symbols)
+        
+        # Save failure reasons
+        with open(script_dir / 'failure_reasons.json', 'w') as f:
+            json.dump(failure_reasons, f, indent=2)
     
     except Exception as e:
         logging.error(f"Error processing NASDAQ data: {e}")
