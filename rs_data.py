@@ -35,6 +35,11 @@ TMP_DIR = DIR / 'tmp'
 DATA_DIR.mkdir(exist_ok=True)
 TMP_DIR.mkdir(exist_ok=True)
 
+# Define global file paths and data structures
+PRICE_DATA_FILE = DATA_DIR / "price_data.json"
+TICKER_INFO_FILE = DATA_DIR / "ticker_info.json"
+TICKER_INFO_DICT = {}
+
 # Load configuration
 try:
     with open(DIR / 'config_private.yaml', 'r') as stream:
