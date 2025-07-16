@@ -73,14 +73,17 @@ def relative_strength(closes: pd.Series, closes_ref: pd.Series):
 def strength(closes: pd.Series):
     try:
         quarters = [quarters_perf(closes, n) for n in range(1, 5)]
-        return 0.4*quarters[0] + 0.2*quarters[1] + 0.2*quarters[2] + 0.2*quarters[3]
+        return 0.4 * quarters[0] + 0.2 * quarters[1] + 0.2 * quarters[2] + 0.2 * quarters[3]
     except Exception as e:
         logging.error(f"Error in strength calculation: {e}")
         return 0
 
 def quarters_perf(closes: pd.Series, n):
     try:
-        length = min(len(closes), n*int(252/4))
+        if len(closes) < int(252/4):  # Minimum 63 days for 1 quarter
+            logging.warning(f"Insufficient data for {n} quarters, using 0")
+            return 0
+        length = min(len(closes), n * int(252/4))
         prices = closes.tail(length)
         pct_chg = prices.pct_change().dropna()
         perf_cum = (pct_chg + 1).cumprod() - 1
@@ -103,8 +106,7 @@ def generate_tradingview_csv(percentile_values, first_rs_values):
             trading_days += 1
     return ''.join(reversed(lines))
 
-def process_batch(tickers_batch, ref_closes):
-    """Process a batch of tickers for relative strength"""
+def process_batch(tickers_batch, ref_closes, trading_days_per_month=cfg("TRADING_DAYS_PER_MONTH") or 20):
     relative_strengths = []
     for ticker in tickers_batch:
         try:
@@ -114,23 +116,19 @@ def process_batch(tickers_batch, ref_closes):
             closes = pd.Series([candle["close"] for candle in json_data[ticker]["candles"]])
             industry = TICKER_INFO_DICT.get(ticker, {}).get("info", {}).get("industry", json_data[ticker]["industry"])
             sector = TICKER_INFO_DICT.get(ticker, {}).get("info", {}).get("sector", json_data[ticker]["sector"])
-            if len(closes) >= 6*20 and not cfg("SP500") and json_data[ticker]["universe"] == "S&P 500":
-                continue
-            if len(closes) >= 6*20 and not cfg("SP400") and json_data[ticker]["universe"] == "S&P 400":
-                continue
-            if len(closes) >= 6*20 and not cfg("SP600") and json_data[ticker]["universe"] == "S&P 600":
-                continue
-            if len(closes) >= 6*20 and not cfg("NQ100") and json_data[ticker]["universe"] == "Nasdaq 100":
-                continue
-            if len(closes) >= 6*20:
+            if len(closes) >= 6 * trading_days_per_month:
+                if (not cfg("SP500") and json_data[ticker]["universe"] == "S&P 500") or \
+                   (not cfg("SP400") and json_data[ticker]["universe"] == "S&P 400") or \
+                   (not cfg("SP600") and json_data[ticker]["universe"] == "S&P 600") or \
+                   (not cfg("NQ100") and json_data[ticker]["universe"] == "Nasdaq 100"):
+                    continue
                 rs = relative_strength(closes, ref_closes)
                 if rs >= 590:
                     logging.warning(f"Skipping {ticker}: RS {rs} too high, likely faulty data")
                     continue
-                month = 20
-                rs1m = relative_strength(closes.head(-1*month), ref_closes.head(-1*month))
-                rs3m = relative_strength(closes.head(-3*month), ref_closes.head(-3*month))
-                rs6m = relative_strength(closes.head(-6*month), ref_closes.head(-6*month))
+                rs1m = relative_strength(closes.head(-trading_days_per_month), ref_closes.head(-trading_days_per_month))
+                rs3m = relative_strength(closes.head(-3 * trading_days_per_month), ref_closes.head(-3 * trading_days_per_month))
+                rs6m = relative_strength(closes.head(-6 * trading_days_per_month), ref_closes.head(-6 * trading_days_per_month))
                 relative_strengths.append((0, ticker, sector, industry, json_data[ticker]["universe"], rs, 100, rs1m, rs3m, rs6m))
         except Exception as e:
             logging.error(f"Error processing {ticker}: {e}")
@@ -148,10 +146,12 @@ def rankings():
     ind_ranks = []
     stock_rs = {}
 
-    # Process tickers in batches
-    batch_size = 50
+    batch_size = cfg("BATCH_SIZE") or 50
+    max_workers = cfg("MAX_WORKERS") or 2
+    min_tickers_per_industry = cfg("MIN_TICKERS_PER_INDUSTRY") or 2
+
     batches = [tickers[i:i + batch_size] for i in range(0, len(tickers), batch_size)]
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_batch = {executor.submit(process_batch, batch, ref_closes): batch for batch in batches}
         for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Processing ticker batches"):
             batch_results = future.result()
@@ -166,7 +166,7 @@ def rankings():
                         TITLE_6M: [],
                         TITLE_TICKERS: []
                     }
-                    ind_ranks.append(len(ind_ranks)+1)
+                    ind_ranks.append(len(ind_ranks) + 1)
                 industries[industry][TITLE_RS].append(rs)
                 industries[industry][TITLE_1M].append(rs1m)
                 industries[industry][TITLE_3M].append(rs3m)
@@ -177,7 +177,6 @@ def rankings():
     dfs = []
     suffix = ''
 
-    # Stocks DataFrame
     if relative_strengths:
         df = pd.DataFrame(relative_strengths, columns=[TITLE_RANK, TITLE_TICKER, TITLE_SECTOR, TITLE_INDUSTRY, TITLE_UNIVERSE, TITLE_RS, TITLE_PERCENTILE, TITLE_1M, TITLE_3M, TITLE_6M])
         df[TITLE_PERCENTILE] = pd.qcut(df[TITLE_RS], 100, labels=False, duplicates="drop")
@@ -189,7 +188,6 @@ def rankings():
         out_tickers_count = sum(df[TITLE_PERCENTILE] >= MIN_PERCENTILE)
         df = df.head(out_tickers_count)
 
-        # TradingView CSV
         percentile_values = [98, 89, 69, 49, 29, 9, 1]
         first_rs_values = {p: df[df[TITLE_PERCENTILE] == p][TITLE_RS].iloc[0] for p in percentile_values if p in df[TITLE_PERCENTILE].values}
         tradingview_csv_content = generate_tradingview_csv(percentile_values, first_rs_values)
@@ -198,7 +196,6 @@ def rankings():
         df.to_csv(OUTPUT_DIR / f'rs_stocks{suffix}.csv', index=False)
         dfs.append(df)
 
-    # Industries DataFrame
     def get_rs_average(industries, industry, column):
         rs = sum(industries[industry][column]) / len(industries[industry][column]) if industries[industry][column] else 0
         return round(rs, 2)
@@ -206,7 +203,7 @@ def rankings():
     def get_tickers(industries, industry):
         return ",".join(sorted(industries[industry][TITLE_TICKERS], key=lambda t: stock_rs.get(t, 0), reverse=True))
 
-    filtered_industries = [i for i in industries.values() if len(i[TITLE_TICKERS]) > 1]
+    filtered_industries = [i for i in industries.values() if len(i[TITLE_TICKERS]) >= min_tickers_per_industry]
     if filtered_industries:
         df_industries = pd.DataFrame(
             [i["info"] for i in filtered_industries],
