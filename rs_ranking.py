@@ -39,12 +39,12 @@ except FileNotFoundError:
 except yaml.YAMLError as exc:
     logging.error(f"YAML error: {exc}")
 
-PRICE_DATA = DATA_DIR / "price_data.json"  # Fixed file name
+PRICE_DATA = DATA_DIR / "price_history.json"
 MIN_PERCENTILE = cfg("MIN_PERCENTILE") or 80
 POS_COUNT_TARGET = cfg("POSITIONS_COUNT_TARGET") or 100
 REFERENCE_TICKER = cfg("REFERENCE_TICKER") or "SPY"
 ALL_STOCKS = cfg("USE_ALL_LISTED_STOCKS") or False
-TICKER_INFO_FILE = DIR / "data" / "ticker_info.json"  # Fixed path
+TICKER_INFO_FILE = DIR / "data_persist" / "ticker_info.json"
 TICKER_INFO_DICT = read_json(TICKER_INFO_FILE)
 
 TITLE_RANK = "Rank"
@@ -140,9 +140,6 @@ def rankings():
     json_data = read_json(PRICE_DATA)
     if not json_data or REFERENCE_TICKER not in json_data:
         logging.error(f"Price data or reference ticker {REFERENCE_TICKER} not found")
-        # Create fallback output file
-        with open(OUTPUT_DIR / "status.txt", "w") as f:
-            f.write("No data processed due to missing price data or reference ticker.")
         return []
     ref_closes = pd.Series([candle["close"] for candle in json_data[REFERENCE_TICKER]["candles"]])
     tickers = [t for t in json_data if t != REFERENCE_TICKER]
@@ -236,15 +233,10 @@ def main(skipEnter=False):
         if ranks:
             print(ranks[0])
             print("***\nYour 'rs_stocks.csv' is in the output folder.\n***")
-        else:
-            print("No rankings generated, check logs for details.")
         if not skipEnter and cfg("EXIT_WAIT_FOR_ENTER"):
             input("Press Enter key to exit...")
     except Exception as e:
         logging.error(f"Error in main execution: {e}")
-        # Create fallback output file
-        with open(OUTPUT_DIR / "status.txt", "w") as f:
-            f.write(f"Error in ranking process: {str(e)}")
         raise
 
 if __name__ == "__main__":
