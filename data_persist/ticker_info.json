@@ -39838,5 +39838,2801 @@
       "industry": "Shell Companies",
       "sector": "Financial Services"
     }
+  },
+  "WBIF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PSK": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XHYC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EVSM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PGX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IMF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BJUN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BBLB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XISE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GEM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BAGY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DVYA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "STOT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PSCH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SOXX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EIPI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DRN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FALN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MBSD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TEK": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLKR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SCHQ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CSNR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLEE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ELFY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FBL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RWJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "THIR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RNRG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "COSO": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "UBT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WTMU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DFSB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLLA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PJFM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XTRE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SATO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WCME": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MARZ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DFUV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HELX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IDEF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BWEB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VYLD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IVLU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BDBT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HSBH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XLU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FXP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SOVF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CGW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EVSB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CTWO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SMB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SIZE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ASEA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IBUY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UDOW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPUU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TOPC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MUSI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GLDY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HAPY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WBIL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LYLD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XMLV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SCHA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JIG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HYHG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PSFD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GDXJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSSE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ARKX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "OFAL": {
+    "info": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials"
+    }
+  },
+  "HNDL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JCAP": {
+    "info": {
+      "industry": "Credit Services",
+      "sector": "Financial Services"
+    }
+  },
+  "LFAW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWZS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ROBN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLTB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PRXG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TSLS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQLV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AVGE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ILDR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SHYD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JLHL": {
+    "info": {
+      "industry": "Building Products & Equipment",
+      "sector": "Industrials"
+    }
+  },
+  "BDVG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LENS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TILT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GBXA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LSAF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RAYD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "STHH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IDU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EMA": {
+    "info": {
+      "industry": "Utilities - Regulated Electric",
+      "sector": "Utilities"
+    }
+  },
+  "PSCW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BJK": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NUSC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AAVM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AVIE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RZG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XPP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FDCF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GLIN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ISWN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FINX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XMAY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DDEC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VYMI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WEED": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PPEM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FJP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPDV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FELV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MMTM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GURU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VTWG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "COWZ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SSPY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XYLD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPGP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPNS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GUMI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QYLG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TLTW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RAYC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HYSA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PBDE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BCIM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AGGH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MGOV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EDEN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ORR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DIG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FTHI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LEMB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CVRT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UCRD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EFIV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TPYP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IUSV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PAVE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "METU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQEW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MAGG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "YJUN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PMMR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PSQA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PPTY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NSEP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HDUS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SVXY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPLG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MUSE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SZNE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PXJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TAFI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FEGE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LFGY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DMAX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EJUL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "INKM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JPEF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FXN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DTH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AAPB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HYLB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FDND": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UFEB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EMTY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CGCV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ANGL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LDRT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WGMI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AIEQ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RBIL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TAGS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AGRW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RINT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CCEF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KBAB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PZA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLSP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BNGE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RXD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EPRF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BEGS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IVOV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GSEP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XEMD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IJAN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GDXU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CGMU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FPE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UGL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BINT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FGM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GXC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AUSF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPHY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SHRT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPDW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SKRE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MOTE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EVAV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LGRO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CMCI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VNIE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NOBL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RISN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IYF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ENDW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NURE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MFEM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BNDX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QBF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPNQ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EMOP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NDEC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TDSC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TMFS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GNOV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BDCZ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SYFI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EFNL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LEXI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XLE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GLDI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DVAL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MUST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MLPA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FBCV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HDEF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TACO": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ION": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EPS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RND": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VGT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RVRB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DES": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CANE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GXUS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PDP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SOFX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPCY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "WUGI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "INVG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPER": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ZSEP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPSF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KBWR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SIXG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UPGR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQQY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JPST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPRO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BRKC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ROSC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HYMB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PTL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MYY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SDY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UUP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CPNM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PANG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DUST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQQD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KLMT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SCHJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPAB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CCSB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VONV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JULJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "STCE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DFND": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DECO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FMNY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DBND": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EZET": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IBIJ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IQLT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSPU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DON": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DFSU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FXF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MVFD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RTAC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "QJUN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RAAQW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "JADE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PBJL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPIP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SMMD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GOP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ILTB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DDTL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PDBA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JMID": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UPRO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MSSS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSPE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MFSG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPYC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IBTI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PBAP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PMMF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "APIE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EUAD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IYZ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FEBP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NVDS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MUD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPXN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PSFO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HEJD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "URTH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BMAR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FLMB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DNL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EMXF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CGUS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPTI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HIBS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QHY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JGRO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IBTM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NMAY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ULST": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NBCR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DGS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSPM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IONL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ESGD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MSFL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LOUP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BCUS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MLDR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FSYD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NVII": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EWT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BKCH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QAT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JEMB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RTXG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ISCG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RVNU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FIGB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RINF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JEMA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SPTE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BAFE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TDEC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ZSC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RATE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CAOS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JPIN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RINC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FTAG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ALTL": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NOVP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "YMAG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AMZY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MSFU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TINT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VIOG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BRKD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SIXO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GLDM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KWEB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SFLO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DSCF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ODHY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQQT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SHV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ARKF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JDIV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KRBN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BKHY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SOUL": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AIVI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TFLR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UTES": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "TEXN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DAPR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ICF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SMBS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BTGD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EDZ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LPRE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JMOM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BDCX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AVMV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BRKU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "JANP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PXF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HDGE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HYKE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IWMI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VTP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MOO": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MMCA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NFTY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MKOR": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GDEC": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DXYZ": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "QB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "KBDC": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "QINT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AIBD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BUFH": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SURI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SCHX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UJAN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SEEM": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AHYB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CLOA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FWD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "MADE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AFIF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "APPX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BKDV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "INTW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "OGSP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "SIXP": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "DBA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "NSI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "VGLT": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "FPA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RSPG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "YANG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "EAFG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "LABU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QCMU": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GCOW": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ZTAX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IDHQ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GWX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "PWS": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "IVVB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "QQQE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "GEMD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RAAQ": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "SCHD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "UJUN": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ECML": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "CORX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "STAX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "XSHQ": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "RLY": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "COWG": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AVLV": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "BIDD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "HDLB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
   }
 }
