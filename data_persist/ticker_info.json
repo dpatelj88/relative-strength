@@ -39730,5 +39730,113 @@
       "industry": "Shell Companies",
       "sector": "Financial Services"
     }
+  },
+  "OTF": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "SDM": {
+    "info": {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services"
+    }
+  },
+  "OBAWU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "LOKVW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "PDX": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "VAPE": {
+    "info": {
+      "industry": "Farm & Heavy Construction Machinery",
+      "sector": "Industrials"
+    }
+  },
+  "MSDL": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "MNTN": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "GSHR": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "PDCC": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "RDAG": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "EHLD": {
+    "info": {
+      "industry": "Marine Shipping",
+      "sector": "Industrials"
+    }
+  },
+  "SDHI": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ISBA": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "PDPA": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "GIBO": {
+    "info": {
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services"
+    }
+  },
+  "UMBFO": {
+    "info": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services"
+    }
+  },
+  "IPODW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
   }
 }
