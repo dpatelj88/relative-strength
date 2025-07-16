@@ -10,10 +10,23 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Checkout repository
+      - name: Checkout rs-log repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Full history for commits
+
+      # Optional: Fetch ticker_info.json from another repository (uncomment if needed)
+      # - name: Checkout ticker-data repository
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: dpatelj88/ticker-data
+      #     path: ticker-data
+      #     token: ${{ secrets.RS_LOG_PAT }}
+      #
+      # - name: Copy ticker_info.json
+      #   run: |
+      #     mkdir -p data_persist
+      #     cp ticker-data/data_persist/ticker_info.json data_persist/ticker_info.json
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -30,21 +43,17 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
 
-      - name: Push to rs-log repo
-        env:
-          RS_LOG_PAT: ${{ secrets.PAT }}
+      - name: Commit and push output files
         run: |
-          git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/rs-log.git
-          mkdir -p output
-          [ "$(ls -A output)" ] || { echo "Output directory empty, creating fallback file"; echo "No output generated" > output/status.txt; }
-          rsync -av --delete output/ rs-log/output/
-          cd rs-log
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p output data
+          [ "$(ls -A output)" ] || { echo "Output directory empty, creating fallback file"; echo "No output generated" > output/status.txt; }
           git add output/*.csv
           git diff --staged --quiet || git commit -m "Update relative strength output files: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          git push || echo "Push failed, check PAT permissions or network"
-        if: success() || failure()
+          git push || echo "Push failed, check repository permissions or network"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload logs
         if: always()
