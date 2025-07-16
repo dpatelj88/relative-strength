@@ -25,7 +25,7 @@ jobs:
           
       - name: Push to rs-log repo
         env:
-          RS_LOG_TOKEN: ${{ secrets.PAT }}
+          RS_LOG_PAT: ${{ secrets.PAT }}
         run: |
           git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/rs-log.git
           [ -d ./output ] && [ "$(ls -A ./output)" ] || { echo "Output directory empty, creating fallback file..."; mkdir -p ./output; echo "No output generated" > ./output/status.txt; }
