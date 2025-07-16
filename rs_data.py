@@ -389,7 +389,7 @@ def save_data(source, securities, api_key=None):
 
 def main(forceTDA=False, api_key=None):
     securities = get_resolved_securities().values()
-    save_data(DATA_SOURCE if not forceTDA else "TD_AMERITRADE", securities, api_key)
+    save_data("YAHOO" if not forceTDA else "TD_AMERITRADE", securities, api_key)
     write_to_file(TICKER_INFO_DICT, TICKER_INFO_FILE)
 
 if __name__ == "__main__":
