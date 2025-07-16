@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
 import yaml
 from pathlib import Path
-from tqdm import tqdm
+import pickle
 
 # Set up logging
 logging.basicConfig(
@@ -76,7 +76,7 @@ def cfg(key):
         "BATCH_SIZE": 20,
         "MAX_WORKERS": 2,
         "MAX_RETRIES": 7,
-        "INITIAL_DELAY": 5,
+        "INITIAL_DELAY": 10,  # Increased delay
         "TRADING_DAYS_PER_MONTH": 20,
         "MIN_TICKERS_PER_INDUSTRY": 2
     }
@@ -164,6 +164,11 @@ def get_tickers_from_nasdaq(tickers, retries=cfg("MAX_RETRIES"), initial_delay=c
                     securities[ticker] = sec
             lines.close()
 
+            # Limit to 100 tickers to avoid rate limits
+            max_tickers = 100
+            securities = dict(list(securities.items())[:max_tickers])
+            logging.info(f"Limited to {max_tickers} tickers")
+
             # Pre-validate symbols
             valid_securities = {}
             for ticker, sec in securities.items():
@@ -206,7 +211,7 @@ def get_tickers_from_nasdaq(tickers, retries=cfg("MAX_RETRIES"), initial_delay=c
                     batch_result, batch_failed = future.result()
                     ticker_info.update(batch_result)
                     failed_symbols.update(batch_failed)
-                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1) if attempt > 0 else 2
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1) if attempt > 0 else 10
                     sleep(delay)
 
             # Merge with initial tickers
@@ -248,7 +253,11 @@ def get_tickers_from_wikipedia(tickers, retries=cfg("MAX_RETRIES"), initial_dela
 def get_resolved_securities():
     tickers = {cfg("REFERENCE_TICKER"): {"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"}}
     ALL_STOCKS = cfg("USE_ALL_LISTED_STOCKS")
-    return get_tickers_from_nasdaq(tickers) if ALL_STOCKS else get_tickers_from_wikipedia(tickers)
+    tickers = get_tickers_from_nasdaq(tickers) if ALL_STOCKS else get_tickers_from_wikipedia(tickers)
+    # Ensure SPY is included
+    if cfg("REFERENCE_TICKER") not in tickers:
+        tickers[cfg("REFERENCE_TICKER")] = {"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"}
+    return tickers
 
 def write_to_file(dict_data, file):
     try:
@@ -355,6 +364,10 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
     valid_securities = [sec for sec in securities if sec["ticker"] not in failed_tickers and sec["ticker"] not in tickers_dict]
     logging.info(f"Processing {len(valid_securities)} new tickers")
 
+    # Ensure SPY is included
+    if cfg("REFERENCE_TICKER") not in tickers_dict:
+        valid_securities.append({"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"})
+
     batches = [valid_securities[i:i + batch_size] for i in range(0, len(valid_securities), batch_size)]
     with ThreadPoolExecutor(max_workers=max_workers or 2) as executor:
         future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")): batch for batch in batches}
@@ -367,7 +380,7 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
             write_to_file(failure_reasons, failure_reasons_file)
             if batch_result:
                 write_to_file(tickers_dict, PRICE_DATA_FILE)
-            delay = cfg("INITIAL_DELAY") or 5
+            delay = 10  # Increased delay
             sleep(delay)
 
     # Update ticker info for new tickers
