@@ -41,7 +41,7 @@ try:
         private_config = yaml.safe_load(stream)
 except FileNotFoundError:
     private_config = None
-    logging.error("config_private.yaml not found")
+    logging.warning("config_private.yaml not found, using config.yaml if available")
 except yaml.YAMLError as exc:
     logging.error(f"YAML error in config_private.yaml: {exc}")
     private_config = None
@@ -57,28 +57,26 @@ except yaml.YAMLError as exc:
     config = None
 
 def cfg(key):
-    value = private_config.get(key) or config.get(key)
-    defaults = {"BATCH_SIZE": 20, "MAX_WORKERS": 2, "MAX_RETRIES": 7, "INITIAL_DELAY": 5}
+    value = private_config.get(key) if private_config else config.get(key) if config else None
+    defaults = {
+        "API_KEY": None,
+        "REFERENCE_TICKER": "SPY",
+        "DATA_SOURCE": "YAHOO",
+        "USE_ALL_LISTED_STOCKS": False,
+        "NQ100": False,
+        "SP500": False,
+        "SP400": False,
+        "SP600": False,
+        "EXIT_WAIT_FOR_ENTER": False,
+        "BATCH_SIZE": 20,
+        "MAX_WORKERS": 2,
+        "MAX_RETRIES": 7,
+        "INITIAL_DELAY": 5,
+        "TRADING_DAYS_PER_MONTH": 20,
+        "MIN_TICKERS_PER_INDUSTRY": 2
+    }
     return value if value is not None else defaults.get(key)
-
-def read_json(json_file):
-    try:
-        with open(json_file, "r", encoding="utf-8") as fp:
-            return json.load(fp)
-    except Exception as e:
-        logging.error(f"Error reading {json_file}: {e}")
-        return {}
-
-API_KEY = cfg("API_KEY")
-PRICE_DATA_FILE = DATA_DIR / "price_history.json"
-REFERENCE_TICKER = cfg("REFERENCE_TICKER") or "SPY"
-DATA_SOURCE = cfg("DATA_SOURCE") or "YAHOO"
-ALL_STOCKS = cfg("USE_ALL_LISTED_STOCKS") or False
-TICKER_INFO_FILE = DIR / "data_persist" / "ticker_info.json"
-TICKER_INFO_DICT = read_json(TICKER_INFO_FILE)
-REF_TICKER = {"ticker": REFERENCE_TICKER, "sector": "--- Reference ---", "industry": "--- Reference ---", "universe": "--- Reference ---"}
-UNKNOWN = "unknown"
-
+    
 def load_failed_symbols_cache(cache_file):
     if cache_file.exists():
         try:
