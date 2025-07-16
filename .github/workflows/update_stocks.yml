@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data_persist/ticker_info.json data_persist/skipped_symbols.txt data_persist/failed_symbols.json
+          git add data_persist/ticker_info.json data_persist/skipped_symbols.txt data_persist/failed_symbols.json data_persist/failure_reasons.json
           if git diff --quiet && git diff --staged --quiet; then
             echo "No changes to commit"
           else
