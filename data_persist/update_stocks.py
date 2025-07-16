@@ -53,10 +53,9 @@ def fetch_nasdaq_data(retries=3, initial_delay=5):
         while attempt < retries:
             try:
                 logging.info(f"Fetching data from {url} (attempt {attempt + 1}/{retries})")
-                response = requests.get(url, headers=headers, timeout=15)  # Increased timeout
+                response = requests.get(url, headers=headers, timeout=15)
                 response.raise_for_status()
                 df = pd.read_csv(StringIO(response.text), delimiter='|')
-                # Drop footer rows (e.g., "File Creation Time")
                 df = df[df['Symbol'].str.contains('File Creation Time') == False]
                 logging.info(f"Retrieved {len(df)} symbols from NASDAQ")
                 return df
@@ -75,10 +74,11 @@ def fetch_nasdaq_data(retries=3, initial_delay=5):
             raise Exception("All NASDAQ URLs failed after retries")
     return None
 
-def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
+def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
     """Retrieve ticker information for a batch of symbols with retry logic"""
     attempt = 0
     rate_limited_symbols = []
+    failure_reasons = {}
     while attempt < retries:
         try:
             tickers = yf.Tickers(symbols)
@@ -91,26 +91,37 @@ def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
                     sector = info.get('sector', 'N/A')
                     industry = info.get('industry', 'N/A')
                     
-                    if sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
-                        result[symbol] = {"info": {"industry": industry, "sector": sector}}
-                        logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
+                    if (sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown') or info.get('quoteType', '') == 'ETF':
+                        result[symbol] = {"info": {"industry": industry or "ETF", "sector": sector or "ETF"}}
+                        logging.info(f"Retrieved: {symbol} - Sector: {sector or 'ETF'}, Industry: {industry or 'ETF'}")
                     else:
                         logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
                         failed_symbols.append(symbol)
+                        failure_reasons[symbol] = "Missing or invalid sector/industry"
                 except Exception as e:
                     if "404" in str(e):
                         logging.error(f"HTTP 404 for {symbol}, skipping")
                         failed_symbols.append(symbol)
+                        failure_reasons[symbol] = "HTTP 404"
                     elif "429" in str(e) or "Too Many Requests" in str(e):
                         logging.warning(f"Rate limit hit for {symbol}")
                         rate_limited_symbols.append(symbol)
                         failed_symbols.append(symbol)
+                        failure_reasons[symbol] = "Rate limit (HTTP 429)"
                     elif isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
                         logging.warning(f"Timeout or connection error for {symbol}, marking for retry")
                         failed_symbols.append(symbol)
+                        failure_reasons[symbol] = "Timeout or connection error"
                     else:
                         logging.warning(f"Error for {symbol}: {str(e)}")
                         failed_symbols.append(symbol)
+                        failure_reasons[symbol] = f"Other error: {str(e)}"
+            
+            # Save failure reasons for this batch
+            script_dir = Path(__file__).parent
+            with open(script_dir / 'failure_reasons.json', 'a') as f:
+                json.dump({symbol: reason for symbol, reason in failure_reasons.items() if symbol in failed_symbols}, f, indent=2)
+                f.write('\n')
             
             return result, failed_symbols, rate_limited_symbols
         
@@ -124,9 +135,19 @@ def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
                     sleep(delay)
                 else:
                     logging.error(f"Failed after {retries} retries: {str(e)}")
+                    for symbol in symbols:
+                        failure_reasons[symbol] = f"Batch failure after {retries} retries: {str(e)}"
+                    with open(script_dir / 'failure_reasons.json', 'a') as f:
+                        json.dump(failure_reasons, f, indent=2)
+                        f.write('\n')
                     return {}, symbols, rate_limited_symbols
             else:
                 logging.error(f"Non-retryable error: {str(e)}")
+                for symbol in symbols:
+                    failure_reasons[symbol] = f"Non-retryable batch error: {str(e)}"
+                with open(script_dir / 'failure_reasons.json', 'a') as f:
+                    json.dump(failure_reasons, f, indent=2)
+                    f.write('\n')
                 return {}, symbols, rate_limited_symbols
 
 def process_nasdaq_file(batch_size=10, max_workers=2):
@@ -153,6 +174,11 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
 
     # Load failed symbols cache
     failed_symbols = load_failed_symbols_cache(failed_cache_file)
+    
+    # Periodically clear failed symbols cache (10% chance)
+    if failed_cache_file.exists() and random.random() < 0.1:
+        failed_symbols = set()
+        logging.info("Cleared failed symbols cache for full retry")
 
     try:
         # Fetch NASDAQ data
@@ -179,7 +205,7 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
         
         # Retry a subset of failed symbols
         if failed_symbols:
-            retry_failed = set(random.sample(failed_symbols, min(500, len(failed_symbols))))
+            retry_failed = set(random.sample(list(failed_symbols), min(500, len(failed_symbols))))
             symbols.extend(list(retry_failed))
             logging.info(f"Added {len(retry_failed)} previously failed symbols for retry")
 
