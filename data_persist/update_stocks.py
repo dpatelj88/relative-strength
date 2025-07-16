@@ -40,8 +40,8 @@ def save_failed_symbols_cache(cache_file, failed_symbols):
     except Exception as e:
         logging.error(f"Error saving failed symbols cache: {e}")
 
-def fetch_nasdaq_data():
-    """Fetch NASDAQ data with fallback URLs"""
+def fetch_nasdaq_data(retries=3, initial_delay=5):
+    """Fetch NASDAQ data with fallback URLs and retry logic"""
     urls = [
         "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     ]
@@ -49,19 +49,30 @@ def fetch_nasdaq_data():
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
     }
     for url in urls:
-        try:
-            logging.info(f"Fetching data from {url}")
-            response = requests.get(url, headers=headers, timeout=10)
-            response.raise_for_status()
-            df = pd.read_csv(StringIO(response.text), delimiter='|')
-            # Drop footer rows (e.g., "File Creation Time")
-            df = df[df['Symbol'].str.contains('File Creation Time') == False]
-            logging.info(f"Retrieved {len(df)} symbols from NASDAQ")
-            return df
-        except Exception as e:
-            logging.error(f"Failed to fetch from {url}: {e}")
-            if url == urls[-1]:
-                raise Exception("All NASDAQ URLs failed")
+        attempt = 0
+        while attempt < retries:
+            try:
+                logging.info(f"Fetching data from {url} (attempt {attempt + 1}/{retries})")
+                response = requests.get(url, headers=headers, timeout=10)
+                response.raise_for_status()
+                df = pd.read_csv(StringIO(response.text), delimiter='|')
+                # Drop footer rows (e.g., "File Creation Time")
+                df = df[df['Symbol'].str.contains('File Creation Time') == False]
+                logging.info(f"Retrieved {len(df)} symbols from NASDAQ")
+                return df
+            except requests.exceptions.Timeout as e:
+                attempt += 1
+                if attempt < retries:
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)  # Exponential backoff
+                    logging.warning(f"Timeout fetching {url}, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
+                    sleep(delay)
+                else:
+                    logging.error(f"Failed to fetch from {url} after {retries} attempts: Timeout")
+            except Exception as e:
+                logging.error(f"Failed to fetch from {url}: {e}")
+                break  # Non-timeout errors skip retries for this URL
+        if attempt == retries or url == urls[-1]:
+            raise Exception("All NASDAQ URLs failed after retries")
     return None
 
 def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
