@@ -4,7 +4,7 @@ block_cipher = None
 
 a = Analysis(['relative-strength.py'],
              binaries=[],
-             datas=[('config.yaml', '.'), ('config_private.yaml', '.', 'DATA')],  # Optional private config
+             datas=[('config.yaml', '.')],
              hiddenimports=[],  # Remove scipy imports unless confirmed needed
              hookspath=[],
              runtime_hooks=[],
