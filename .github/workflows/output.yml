@@ -24,6 +24,8 @@ jobs:
           python relative-strength.py true || echo "Script failed, continuing..."
           
       - name: Push to rs-log repo
+        env:
+          RS_LOG_TOKEN: ${{ secrets.RS_LOG_TOKEN }}
         run: |
           git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/rs-log.git
           [ -d ./output ] && [ "$(ls -A ./output)" ] || { echo "Output directory empty, creating fallback file..."; mkdir -p ./output; echo "No output generated" > ./output/status.txt; }
@@ -33,7 +35,7 @@ jobs:
           git add --all
           git commit -m "CI output update" || echo "Nothing to commit"
           git push || echo "Nothing to push"
-          
+            
       - name: Upload logs
         uses: actions/upload-artifact@v4
         with:
