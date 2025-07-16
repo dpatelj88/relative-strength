@@ -12,6 +12,8 @@ from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 
 # Set up logging
+LOG_DIR = Path(__file__).parent / 'logs'
+LOG_DIR.mkdir(exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
