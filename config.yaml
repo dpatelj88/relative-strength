@@ -37,3 +37,10 @@ MAX_RETRIES: 7
 
 # Initial delay (in seconds) for retry backoff
 INITIAL_DELAY: 5
+
+# Relative Strength Ranking Configuration
+# Number of trading days per month for relative strength calculations
+TRADING_DAYS_PER_MONTH: 20
+
+# Minimum number of tickers per industry for industry rankings
+MIN_TICKERS_PER_INDUSTRY: 2
