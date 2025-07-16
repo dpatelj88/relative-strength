@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import date, timedelta
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 import logging
 from rs_data import cfg, read_json
@@ -23,7 +23,7 @@ OUTPUT_DIR = DIR / 'output'
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 PRICE_DATA_FILE = DATA_DIR / 'price_data.json'
-TICKER_INFO_FILE = DATA_DIR / 'ticker_info.json'
+TICKER_INFO_FILE = DIR / 'data_persist' / 'ticker_info.json'
 MIN_PERCENTILE = cfg("MIN_PERCENTILE") or 80
 REFERENCE_TICKER = cfg("REFERENCE_TICKER") or "SPY"
 TRADING_DAYS_PER_MONTH = cfg("TRADING_DAYS_PER_MONTH") or 20
