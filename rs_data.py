@@ -8,7 +8,6 @@ import os
 import yfinance as yf
 import pandas as pd
 import re
-import pickle  # Added for get_securities
 from ftplib import FTP
 from io import StringIO
 from time import sleep
@@ -242,10 +241,9 @@ def get_tickers_from_wikipedia(tickers, retries=cfg("MAX_RETRIES"), initial_dela
     return tickers
 
 def get_resolved_securities():
-    ref_ticker = cfg("REFERENCE_TICKER")  # Use cfg to get REFERENCE_TICKER
-    all_stocks = cfg("USE_ALL_LISTED_STOCKS")  # Use cfg to get USE_ALL_LISTED_STOCKS
-    tickers = {ref_ticker: {"ticker": ref_ticker, "universe": "Reference"}}  # Initialize with reference ticker
-    return get_tickers_from_nasdaq(tickers) if all_stocks else get_tickers_from_wikipedia(tickers)
+    tickers = {cfg("REFERENCE_TICKER"): {"ticker": cfg("REFERENCE_TICKER"), "universe": "Reference"}}
+    ALL_STOCKS = cfg("USE_ALL_LISTED_STOCKS")
+    return get_tickers_from_nasdaq(tickers) if ALL_STOCKS else get_tickers_from_wikipedia(tickers)
 
 def write_to_file(dict_data, file):
     try:
@@ -341,7 +339,6 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
     logging.info("*** Loading Stocks from Yahoo Finance ***")
     today = dt.date.today()
     start_date = today - dt.timedelta(days=1*365+183)  # 18 months
-    PRICE_DATA_FILE = DATA_DIR / "price_history.json"  # Define file path
     tickers_dict = read_json(PRICE_DATA_FILE)
     failed_tickers = load_failed_symbols_cache(DATA_DIR / "failed_tickers.json")
     failure_reasons_file = DATA_DIR / "failure_reasons.json"
@@ -354,7 +351,6 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
     logging.info(f"Processing {len(valid_securities)} new tickers")
 
     batches = [valid_securities[i:i + batch_size] for i in range(0, len(valid_securities), batch_size)]
-    TICKER_INFO_DICT = {}  # Initialize TICKER_INFO_DICT
     with ThreadPoolExecutor(max_workers=max_workers or 2) as executor:
         future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")): batch for batch in batches}
         for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Processing batches"):
@@ -374,7 +370,6 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
         ticker = sec["ticker"]
         if ticker not in TICKER_INFO_DICT:
             load_ticker_info(ticker, TICKER_INFO_DICT)
-    TICKER_INFO_FILE = DATA_DIR / "ticker_info.json"  # Define file path
     write_to_file(TICKER_INFO_DICT, TICKER_INFO_FILE)
 
     save_failed_symbols_cache(DATA_DIR / "failed_tickers.json", failed_tickers)
@@ -382,21 +377,19 @@ def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers
 
     return tickers_dict
 
-def save_data(source, securities, api_key=None, info=None):
+def save_data(source, securities, api_key=None):
     if source == "YAHOO":
-        return load_prices_from_yahoo(securities, info=info or {})
+        return load_prices_from_yahoo(securities)
     elif source == "TD_AMERITRADE" and api_key:
         logging.error("TD Ameritrade support deprecated; using Yahoo Finance instead")
-        return load_prices_from_yahoo(securities, info=info or {})
+        return load_prices_from_yahoo(securities)
     else:
         logging.error(f"Unsupported or missing data source: {source}, defaulting to Yahoo Finance")
-        return load_prices_from_yahoo(securities, info=info or {})
+        return load_prices_from_yahoo(securities)
 
 def main(forceTDA=False, api_key=None):
     securities = get_resolved_securities().values()
-    DATA_SOURCE = cfg("DATA_SOURCE")  # Define DATA_SOURCE using cfg
-    save_data(DATA_SOURCE if not forceTDA else "TD_AMERITRADE", securities, api_key, {"forceTDA": forceTDA})
-    TICKER_INFO_FILE = DATA_DIR / "ticker_info.json"  # Define for write_to_file
+    save_data(DATA_SOURCE if not forceTDA else "TD_AMERITRADE", securities, api_key)
     write_to_file(TICKER_INFO_DICT, TICKER_INFO_FILE)
 
 if __name__ == "__main__":
