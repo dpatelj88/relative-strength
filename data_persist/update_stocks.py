@@ -120,13 +120,7 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                         failed_symbols.append(symbol)
                         failure_reasons[symbol] = f"Other error: {str(e)}"
             
-            # Save failure reasons for this batch
-            script_dir = Path(__file__).parent
-            with open(script_dir / 'failure_reasons.json', 'a') as f:
-                json.dump({symbol: reason for symbol, reason in failure_reasons.items() if symbol in failed_symbols}, f, indent=2)
-                f.write('\n')
-            
-            return result, failed_symbols, rate_limited_symbols
+            return result, failed_symbols, rate_limited_symbols, failure_reasons
         
         except Exception as e:
             if isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)) or "429" in str(e) or "Too Many Requests" in str(e):
@@ -138,20 +132,12 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                     sleep(delay)
                 else:
                     logging.error(f"Failed after {retries} retries: {str(e)}")
-                    for symbol in symbols:
-                        failure_reasons[symbol] = f"Batch failure after {retries} retries: {str(e)}"
-                    with open(script_dir / 'failure_reasons.json', 'a') as f:
-                        json.dump(failure_reasons, f, indent=2)
-                        f.write('\n')
-                    return {}, symbols, rate_limited_symbols
+                    failure_reasons = {symbol: f"Batch failure after {retries} retries: {str(e)}" for symbol in symbols}
+                    return {}, symbols, rate_limited_symbols, failure_reasons
             else:
                 logging.error(f"Non-retryable error: {str(e)}")
-                for symbol in symbols:
-                    failure_reasons[symbol] = f"Non-retryable batch error: {str(e)}"
-                with open(script_dir / 'failure_reasons.json', 'a') as f:
-                    json.dump(failure_reasons, f, indent=2)
-                    f.write('\n')
-                return {}, symbols, rate_limited_symbols
+                failure_reasons = {symbol: f"Non-retryable batch error: {str(e)}" for symbol in symbols}
+                return {}, symbols, rate_limited_symbols, failure_reasons
 
 def process_nasdaq_file(batch_size=10, max_workers=2):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
@@ -159,13 +145,14 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
     skipped_symbols = []
     failed_symbols = set()
     rate_limited_symbols = set()
-    failure_reasons = {}
+    all_failure_reasons = []  # List to store all failure reasons as dictionaries
     
     # Define paths
     script_dir = Path(__file__).parent
     output_file = script_dir / 'ticker_info.json'
     skipped_file = script_dir / 'skipped_symbols.txt'
     failed_cache_file = script_dir / 'failed_symbols.json'
+    failure_reasons_file = script_dir / 'failure_reasons.json'
     
     # Load existing data
     if output_file.exists():
@@ -218,7 +205,7 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
                 if "404" in str(e):
                     logging.error(f"Pre-validation failed for {symbol}: HTTP 404")
                     failed_symbols.add(symbol)
-                    failure_reasons[symbol] = "HTTP 404 (pre-validation)"
+                    all_failure_reasons.append({"symbol": symbol, "reason": "HTTP 404 (pre-validation)"})
                 else:
                     valid_symbols.append(symbol)  # Retry transient errors in batch
         symbols = valid_symbols
@@ -237,18 +224,19 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
 
         def process_batch(batch):
             """Helper function for parallel batch processing"""
-            batch_result, batch_failed, batch_rate_limited = get_ticker_info_batch(batch)
-            return batch_result, batch_failed, batch_rate_limited
+            batch_result, batch_failed, batch_rate_limited, batch_failure_reasons = get_ticker_info_batch(batch)
+            return batch_result, batch_failed, batch_rate_limited, batch_failure_reasons
 
         # Process batches in parallel
         with ThreadPoolExecutor(max_workers=max_workers) as executor:
             future_to_batch = {executor.submit(process_batch, batch): batch for batch in batches}
             for future in as_completed(future_to_batch):
-                batch_result, batch_failed, batch_rate_limited = future.result()
+                batch_result, batch_failed, batch_rate_limited, batch_failure_reasons = future.result()
                 result.update(batch_result)
                 skipped_symbols.extend(batch_failed)
                 failed_symbols.update(batch_failed)
                 rate_limited_symbols.update(batch_rate_limited)
+                all_failure_reasons.extend([{"symbol": k, "reason": v} for k, v in batch_failure_reasons.items()])
                 sleep(2)
 
         logging.info(f"Encountered {len(rate_limited_symbols)} rate-limited symbols")
@@ -266,9 +254,19 @@ def process_nasdaq_file(batch_size=10, max_workers=2):
         # Save failed symbols cache
         save_failed_symbols_cache(failed_cache_file, failed_symbols)
         
-        # Save failure reasons
-        with open(script_dir / 'failure_reasons.json', 'w') as f:
-            json.dump(failure_reasons, f, indent=2)
+        # Save failure reasons as a proper JSON array
+        if all_failure_reasons or failure_reasons_file.exists():
+            try:
+                existing_data = []
+                if failure_reasons_file.exists():
+                    with open(failure_reasons_file, 'r') as f:
+                        existing_data = json.load(f)
+                existing_data.extend(all_failure_reasons)
+                with open(failure_reasons_file, 'w') as f:
+                    json.dump(existing_data, f, indent=2)
+                logging.info(f"Saved {len(all_failure_reasons)} failure reasons to {failure_reasons_file}")
+            except Exception as e:
+                logging.error(f"Error saving failure_reasons.json: {e}")
     
     except Exception as e:
         logging.error(f"Error processing NASDAQ data: {e}")
