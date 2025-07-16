@@ -139,7 +139,7 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                 failure_reasons = {symbol: f"Non-retryable batch error: {str(e)}" for symbol in symbols}
                 return {}, symbols, rate_limited_symbols, failure_reasons
 
-def process_nasdaq_file(batch_size=10, max_workers=2):
+def process_nasdaq_file(batch_size=20, max_workers=2):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
     result = {}
     skipped_symbols = []
