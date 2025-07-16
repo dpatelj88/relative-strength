@@ -18,11 +18,9 @@ logging.basicConfig(
 
 def main():
     skipEnter = sys.argv[1] == "true" if len(sys.argv) > 1 else False
-    forceTDA = sys.argv[2] == "true" if len(sys.argv) > 2 else False
-    api_key = sys.argv[3] if len(sys.argv) > 3 else None
     try:
         logging.info("Starting data collection and ranking process")
-        rs_data.main(forceTDA=forceTDA, api_key=api_key)
+        rs_data.main()
         rs_ranking.main(skipEnter=skipEnter)
         logging.info("Process completed successfully")
     except Exception as e:
