@@ -23,10 +23,18 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y jq  # Install jq for JSON processing
           python -m pip install --upgrade pip
           pip install -r requirements.txt  # Use requirements.txt for consistency
 
-  
+      - name: Verify script existence
+        run: |
+          if [ ! -f "data_persist/update_stocks.py" ]; then
+            echo "Error: update_stocks.py not found in data_persist/"
+            exit 1
+          fi
+
       - name: Run stock update script
         run: |
           if [ -f "data_persist/update_stocks.py" ]; then
@@ -35,6 +43,14 @@ jobs:
             echo "Error: update_stocks.py not found"
             exit 1
           fi
+        retry: 2  # Retry up to 2 times on failure
+        continue-on-error: false
+
+      - name: Summarize results
+        run: |
+          echo "Processed symbols: $(jq length data_persist/ticker_info.json)"
+          echo "Failed symbols: $(jq length data_persist/failed_symbols.json)"
+          echo "Failure reasons: $(jq length data_persist/failure_reasons.json)"
 
       - name: Commit and push changes
         env:
