@@ -15,16 +15,17 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"  # Install Python 3.8
+          python-version: "3.11"  # Updated to 3.11 for better support
       - name: Install dependencies and execute script
         run: |
           python -m pip install -r requirements.txt
-          python relative-strength.py true false ${{ secrets.API_KEY }}
+          python relative-strength.py true || { echo "Script failed"; exit 1; }
       - name: Push RSRATING.csv to TradingView repo
         run: |
-          git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/relative-strength.git
-          cp ./output/RSRATING.csv ./relative-strength/data
-          cd relative-strength
+          git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/tradingview-data.git
+          [ -f ./output/RSRATING.csv ] || { echo "RSRATING.csv not found"; exit 1; }
+          cp ./output/RSRATING.csv ./tradingview-data/data
+          cd tradingview-data
           git config user.name "CI" && git config user.email "ci@github.com"
           git add --all
           git commit -m "CI RSRATING update" || echo "Nothing to commit"
@@ -32,7 +33,8 @@ jobs:
       - name: Push to rs-log repo
         run: |
           git clone https://dpatelj88:${{ secrets.PAT }}@github.com/dpatelj88/rs-log.git
-          rm ./rs-log/output/* && cp -a ./output/. ./rs-log/output
+          [ -d ./output ] && [ "$(ls -A ./output)" ] || { echo "Output directory empty"; exit 1; }
+          rsync -av --delete ./output/ ./rs-log/output/
           cd rs-log
           git config user.name "CI" && git config user.email "ci@github.com"
           git add --all
@@ -41,5 +43,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rs_stocks.csv
-          path: output
+          name: output-files
+          path: output/
