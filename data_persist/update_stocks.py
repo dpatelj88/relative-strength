@@ -53,7 +53,7 @@ def fetch_nasdaq_data(retries=3, initial_delay=5):
         while attempt < retries:
             try:
                 logging.info(f"Fetching data from {url} (attempt {attempt + 1}/{retries})")
-                response = requests.get(url, headers=headers, timeout=10)
+                response = requests.get(url, headers=headers, timeout=15)  # Increased timeout
                 response.raise_for_status()
                 df = pd.read_csv(StringIO(response.text), delimiter='|')
                 # Drop footer rows (e.g., "File Creation Time")
@@ -63,14 +63,14 @@ def fetch_nasdaq_data(retries=3, initial_delay=5):
             except requests.exceptions.Timeout as e:
                 attempt += 1
                 if attempt < retries:
-                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)  # Exponential backoff
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
                     logging.warning(f"Timeout fetching {url}, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
                     sleep(delay)
                 else:
                     logging.error(f"Failed to fetch from {url} after {retries} attempts: Timeout")
             except Exception as e:
                 logging.error(f"Failed to fetch from {url}: {e}")
-                break  # Non-timeout errors skip retries for this URL
+                break
         if attempt == retries or url == urls[-1]:
             raise Exception("All NASDAQ URLs failed after retries")
     return None
@@ -101,12 +101,12 @@ def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
                     if "404" in str(e):
                         logging.error(f"HTTP 404 for {symbol}, skipping")
                         failed_symbols.append(symbol)
-                    elif "401" in str(e):
-                        logging.warning(f"HTTP 401 for {symbol}, retrying")
-                        failed_symbols.append(symbol)
                     elif "429" in str(e) or "Too Many Requests" in str(e):
                         logging.warning(f"Rate limit hit for {symbol}")
                         rate_limited_symbols.append(symbol)
+                        failed_symbols.append(symbol)
+                    elif isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
+                        logging.warning(f"Timeout or connection error for {symbol}, marking for retry")
                         failed_symbols.append(symbol)
                     else:
                         logging.warning(f"Error for {symbol}: {str(e)}")
@@ -115,21 +115,21 @@ def get_ticker_info_batch(symbols, retries=5, initial_delay=5):
             return result, failed_symbols, rate_limited_symbols
         
         except Exception as e:
-            if "429" in str(e) or "Too Many Requests" in str(e):
+            if isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)) or "429" in str(e) or "Too Many Requests" in str(e):
                 attempt += 1
                 rate_limited_symbols.extend(symbols)
                 if attempt < retries:
-                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)  # Exponential backoff
-                    logging.warning(f"Rate limit hit, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
+                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
+                    logging.warning(f"Rate limit, timeout, or connection error, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
                     sleep(delay)
                 else:
                     logging.error(f"Failed after {retries} retries: {str(e)}")
                     return {}, symbols, rate_limited_symbols
             else:
-                logging.error(f"Non-rate-limit error: {str(e)}")
+                logging.error(f"Non-retryable error: {str(e)}")
                 return {}, symbols, rate_limited_symbols
 
-def process_nasdaq_file(batch_size=20, max_workers=3):
+def process_nasdaq_file(batch_size=10, max_workers=2):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
     result = {}
     skipped_symbols = []
@@ -160,22 +160,29 @@ def process_nasdaq_file(batch_size=20, max_workers=3):
         if df is None:
             raise Exception("Failed to fetch NASDAQ data")
 
-        # Filter out non-standard symbols (warrants, units, preferred stocks)
+        # Filter out non-standard and test symbols
         pattern = re.compile(r'.*[.\$][A-Z]$|.*\.W$|.*\.R$')
+        test_symbol_pattern = re.compile(r'^Z[A-Z]+T$')
         symbols = []
         for _, row in df.iterrows():
             symbol = row['Symbol']
-            # Ensure symbol is a string and not null
             if isinstance(symbol, str) and pd.notna(symbol):
                 if (not pattern.match(symbol) and
+                    not test_symbol_pattern.match(symbol) and
                     symbol not in result and
                     symbol not in failed_symbols):
                     symbols.append(symbol)
                 else:
-                    logging.debug(f"Excluded symbol: {symbol} (non-standard or already processed)")
+                    logging.debug(f"Excluded symbol: {symbol} (non-standard, test, or already processed)")
             else:
                 logging.warning(f"Invalid symbol: {symbol} (skipped due to non-string or null value)")
         
+        # Retry a subset of failed symbols
+        if failed_symbols:
+            retry_failed = set(random.sample(failed_symbols, min(500, len(failed_symbols))))
+            symbols.extend(list(retry_failed))
+            logging.info(f"Added {len(retry_failed)} previously failed symbols for retry")
+
         logging.info(f"Processing {len(symbols)} new symbols")
 
         # Process symbols in batches
@@ -196,7 +203,7 @@ def process_nasdaq_file(batch_size=20, max_workers=3):
                 skipped_symbols.extend(batch_failed)
                 failed_symbols.update(batch_failed)
                 rate_limited_symbols.update(batch_rate_limited)
-                sleep(2)  # Delay between batches to avoid rate limits
+                sleep(2)
 
         logging.info(f"Encountered {len(rate_limited_symbols)} rate-limited symbols")
 
