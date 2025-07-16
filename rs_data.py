@@ -123,35 +123,76 @@ def exchange_from_symbol(symbol):
     mapping = {"Q": "NASDAQ", "A": "NYSE MKT", "N": "NYSE", "P": "NYSE ARCA", "Z": "BATS", "V": "IEXG"}
     return mapping.get(symbol, "n/a")
 
-def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5):
+def get_tickers_from_nasdaq(tickers, retries=3, initial_delay=5, batch_size=20, max_workers=2):
+    """Fetch NASDAQ tickers and enrich with sector/industry data using yfinance in batches."""
     filename = "nasdaqtraded.txt"
+    url = "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     ticker_column = 1
     etf_column = 5
     exchange_column = 3
     test_column = 7
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+
     for attempt in range(retries):
         try:
-            ftp = FTP('ftp.nasdaqtrader.com')
-            ftp.login()
-            ftp.cwd('SymbolDirectory')
-            lines = StringIO()
-            ftp.retrlines('RETR ' + filename, lambda x: lines.write(str(x) + '\n'))
-            ftp.quit()
-            lines.seek(0)
+            logging.info(f"Fetching NASDAQ data from {url} (attempt {attempt + 1}/{retries})")
+            response = requests.get(url, headers=headers, timeout=15)
+            response.raise_for_status()
+            lines = StringIO(response.text)
+            securities = {}
             for entry in lines.readlines():
                 values = entry.split('|')
-                ticker = values[ticker_column]
-                if re.match(r'^[A-Z]+$', ticker) and values[etf_column] == "N" and values[test_column] == "N":
+                ticker = values[ticker_column].strip()
+                if (re.match(r'^[A-Z]+$', ticker) and 
+                    values[etf_column] == "N" and 
+                    values[test_column] == "N"):
                     sec = {
                         "ticker": ticker,
-                        "sector": UNKNOWN,
-                        "industry": UNKNOWN,
                         "universe": exchange_from_symbol(values[exchange_column])
                     }
-                    tickers[ticker] = sec
+                    securities[ticker] = sec
+            lines.close()
+
+            # Batch process to fetch sector/industry
+            symbols = list(securities.keys())
+            batches = [symbols[i:i + batch_size] for i in range(0, len(symbols), batch_size)]
+            failed_symbols = set()
+            ticker_info = {}
+
+            def process_batch(batch):
+                result = {}
+                failed = []
+                for ticker in batch:
+                    try:
+                        info = yf.Ticker(ticker).info
+                        sector = info.get('sector', 'N/A')
+                        industry = info.get('industry', 'N/A')
+                        if sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
+                            result[ticker] = {"info": {"industry": industry, "sector": sector}}
+                        else:
+                            failed.append(ticker)
+                    except Exception as e:
+                        logging.warning(f"Error fetching info for {ticker}: {e}")
+                        failed.append(ticker)
+                return result, failed
+
+            with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                future_to_batch = {executor.submit(process_batch, batch): batch for batch in batches}
+                for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Enriching NASDAQ tickers"):
+                    batch_result, batch_failed = future.result()
+                    ticker_info.update(batch_result)
+                    failed_symbols.update(batch_failed)
+                    sleep(2)  # Respect rate limits
+
+            # Merge with initial tickers
+            for ticker in securities:
+                securities[ticker].update(ticker_info.get(ticker, {"info": {"industry": UNKNOWN, "sector": UNKNOWN}}))
+            tickers.update(securities)
+            logging.info(f"Processed {len(securities)} NASDAQ tickers, failed {len(failed_symbols)}")
             return tickers
+
         except Exception as e:
-            logging.warning(f"NASDAQ FTP failed (attempt {attempt+1}/{retries}): {e}")
+            logging.warning(f"NASDAQ data fetch failed (attempt {attempt + 1}/{retries}): {e}")
             if attempt < retries - 1:
                 delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
                 sleep(delay)
