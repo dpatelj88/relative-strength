@@ -8,7 +8,7 @@ on:
 jobs:
   update-stocks:
     runs-on: ubuntu-latest
-    timeout-minutes: 45  # Prevent hung workflows
+    timeout-minutes: 60  # Prevent hung workflows
 
     steps:
       - name: Checkout code
