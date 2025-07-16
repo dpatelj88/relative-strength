@@ -25,7 +25,7 @@ DIR = Path(__file__).parent
 DATA_DIR = DIR / 'data'
 DATA_DIR.mkdir(exist_ok=True)
 PRICE_DATA_FILE = DATA_DIR / 'price_data.json'
-TICKER_INFO_FILE = DATA_DIR / 'ticker_info.json'
+TICKER_INFO_FILE = DIR / 'data_persist' / 'ticker_info.json'
 
 # Load configuration
 try:
