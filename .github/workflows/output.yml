@@ -1,76 +1,58 @@
-name: Update RS Rankings
-
+name: Build
 on:
-  schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight UTC
-  workflow_dispatch:  # Allows manual trigger
-
+  push:
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-24.04
-
     steps:
-      - name: Checkout rs-log repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Full history for commits
-
-      # Optional: Fetch ticker_info.json from another repository (uncomment if needed)
-      # - name: Checkout ticker-data repository
-      #   uses: actions/checkout@v4
-      #   with:
-      #     repository: dpatelj88/ticker-data
-      #     path: ticker-data
-      #     token: ${{ secrets.RS_LOG_PAT }}
-      #
-      # - name: Copy ticker_info.json
-      #   run: |
-      #     mkdir -p data_persist
-      #     cp ticker-data/data_persist/ticker_info.json data_persist/ticker_info.json
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-
+          python-version: '3.11'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install yfinance pandas requests tqdm pyyaml; fi
-
-      - name: Run relative strength script
-        run: python relative-strength.py true
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install yfinance pandas requests tqdm pyyaml ratelimit retrying; fi
+      - name: Run update_stocks.py
+        run: python update_stocks.py
         env:
           PYTHONPATH: ${{ github.workspace }}
-
-      - name: Commit and push output files
+      - name: Run rs_data.py
+        run: python rs_data.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+      - name: Run rs_ranking.py
+        run: python rs_ranking.py true
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+      - name: Commit and push results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p output data
-          [ "$(ls -A output)" ] || { echo "Output directory empty, creating fallback file"; echo "No output generated" > output/status.txt; }
-          git add output/*.csv
+          mkdir -p output data data_persist
+          [ "$(ls -A data data_persist output)" ] || { echo "Output directories empty, creating fallback file"; echo "No output generated" > output/status.txt; }
+          git add --all
           git diff --staged --quiet || git commit -m "Update relative strength output files: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           git push || echo "Push failed, check repository permissions or network"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload logs
-        if: always()
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: logs
-          path: '*.log'
+          path: "*.log"
           retention-days: 7
-
-      - name: Upload output files
-        if: always()
-        uses: actions/upload-artifact@v4
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
         with:
           name: output-files
           path: |
-            output/
+            output/*.csv
             data/price_data.json
             data/failed_tickers.json
             data/failure_reasons.json
+            data_persist/ticker_info.json
           retention-days: 7
+          if-no-files-found: warn
