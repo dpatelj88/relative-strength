@@ -138,8 +138,8 @@ def rankings():
     industries = {}
     stock_rs = {}
 
-    batch_size = cfg("BATCH_SIZE") or 50
-    max_workers = cfg("MAX_WORKERS") or 2
+    batch_size = cfg("BATCH_SIZE") or 20
+    max_workers = cfg("MAX_WORKERS") or 10  # Increased for performance
 
     # Process tickers in batches
     batches = [tickers[i:i + batch_size] for i in range(0, len(tickers), batch_size)]
