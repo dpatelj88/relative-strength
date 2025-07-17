@@ -1,4 +1,4 @@
-name: Build
+name: RS_Score
 on:
   push:
     branches: [main]
