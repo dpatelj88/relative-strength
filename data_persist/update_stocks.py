@@ -9,6 +9,7 @@ import re
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
+from rs_data import cfg
 
 # Set up logging
 logging.basicConfig(
@@ -40,7 +41,7 @@ def save_failed_symbols_cache(cache_file, failed_symbols):
     except Exception as e:
         logging.error(f"Error saving failed symbols cache: {e}")
 
-def fetch_nasdaq_data(retries=3, initial_delay=5):
+def fetch_nasdaq_data(retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
     """Fetch NASDAQ data with fallback URLs and retry logic"""
     urls = [
         "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
@@ -74,15 +75,23 @@ def fetch_nasdaq_data(retries=3, initial_delay=5):
             raise Exception("All NASDAQ URLs failed after retries")
     return None
 
-def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
+def get_ticker_info_batch(symbols, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
     """Retrieve ticker information for a batch of symbols with retry logic"""
     attempt = 0
     rate_limited_symbols = []
     failure_reasons = {}
+    result = {}
+    
+    # Explicitly handle SPY
+    ref_ticker = cfg("REFERENCE_TICKER")
+    if ref_ticker in symbols:
+        result[ref_ticker] = {"info": {"sector": "ETF", "industry": "ETF"}, "universe": "Reference"}
+        symbols = [s for s in symbols if s != ref_ticker]
+        logging.info(f"Added {ref_ticker} as ETF with universe 'Reference'")
+    
     while attempt < retries:
         try:
             tickers = yf.Tickers(symbols)
-            result = {}
             failed_symbols = []
             
             for symbol in symbols:
@@ -92,10 +101,10 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                     industry = info.get('industry', 'N/A')
                     
                     if info.get('quoteType', '') == 'ETF':
-                        result[symbol] = {"info": {"industry": "ETF", "sector": "ETF"}}
+                        result[symbol] = {"info": {"sector": "ETF", "industry": "ETF"}, "universe": "N/A"}
                         logging.info(f"Retrieved: {symbol} - Sector: ETF, Industry: ETF")
                     elif sector and industry and sector != 'N/A' and industry != 'N/A' and sector != 'Unknown' and industry != 'Unknown':
-                        result[symbol] = {"info": {"industry": industry, "sector": sector}}
+                        result[symbol] = {"info": {"sector": sector, "industry": industry}, "universe": "N/A"}
                         logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
                     else:
                         logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
@@ -139,17 +148,17 @@ def get_ticker_info_batch(symbols, retries=7, initial_delay=5):
                 failure_reasons = {symbol: f"Non-retryable batch error: {str(e)}" for symbol in symbols}
                 return {}, symbols, rate_limited_symbols, failure_reasons
 
-def process_nasdaq_file(batch_size=20, max_workers=2):
+def process_nasdaq_file(batch_size=cfg("BATCH_SIZE"), max_workers=cfg("MAX_WORKERS")):
     """Process NASDAQ symbols and update JSON file with sector/industry data"""
     result = {}
     skipped_symbols = []
     failed_symbols = set()
     rate_limited_symbols = set()
-    all_failure_reasons = []  # List to store all failure reasons as dictionaries
+    all_failure_reasons = []
     
     # Define paths
     script_dir = Path(__file__).parent
-    output_file = script_dir / 'ticker_info.json'
+    output_file = script_dir / 'data_persist' / 'ticker_info.json'
     skipped_file = script_dir / 'skipped_symbols.txt'
     failed_cache_file = script_dir / 'failed_symbols.json'
     failure_reasons_file = script_dir / 'failure_reasons.json'
@@ -177,20 +186,24 @@ def process_nasdaq_file(batch_size=20, max_workers=2):
         if df is None:
             raise Exception("Failed to fetch NASDAQ data")
 
-        # Filter out non-standard and test symbols
+        # Filter out non-standard and test symbols, but include SPY
         pattern = re.compile(r'.*[.\$][A-Z]$|.*\.W$|.*\.R$')
         test_symbol_pattern = re.compile(r'^Z[A-Z]+T$')
+        ref_ticker = cfg("REFERENCE_TICKER")
         symbols = []
         for _, row in df.iterrows():
             symbol = row['Symbol']
+            is_etf = row['ETF'] == 'Y'
             if isinstance(symbol, str) and pd.notna(symbol):
-                if (not pattern.match(symbol) and
-                    not test_symbol_pattern.match(symbol) and
-                    symbol not in result and
-                    symbol not in failed_symbols):
+                if (symbol == ref_ticker or  # Explicitly include SPY
+                    (not pattern.match(symbol) and
+                     not test_symbol_pattern.match(symbol) and
+                     not is_etf and
+                     symbol not in result and
+                     symbol not in failed_symbols)):
                     symbols.append(symbol)
                 else:
-                    logging.debug(f"Excluded symbol: {symbol} (non-standard, test, or already processed)")
+                    logging.debug(f"Excluded symbol: {symbol} (non-standard, test, ETF, or already processed)")
             else:
                 logging.warning(f"Invalid symbol: {symbol} (skipped due to non-string or null value)")
         
@@ -209,6 +222,11 @@ def process_nasdaq_file(batch_size=20, max_workers=2):
                 else:
                     valid_symbols.append(symbol)  # Retry transient errors in batch
         symbols = valid_symbols
+
+        # Add SPY explicitly if not already included
+        if ref_ticker not in symbols and ref_ticker not in result and ref_ticker not in failed_symbols:
+            symbols.append(ref_ticker)
+            logging.info(f"Added {ref_ticker} to symbols list")
 
         # Retry a subset of failed symbols
         if failed_symbols:
@@ -237,7 +255,7 @@ def process_nasdaq_file(batch_size=20, max_workers=2):
                 failed_symbols.update(batch_failed)
                 rate_limited_symbols.update(batch_rate_limited)
                 all_failure_reasons.extend([{"symbol": k, "reason": v} for k, v in batch_failure_reasons.items()])
-                sleep(2)
+                sleep(cfg("INITIAL_DELAY"))
 
         logging.info(f"Encountered {len(rate_limited_symbols)} rate-limited symbols")
 
