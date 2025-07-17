@@ -7,9 +7,9 @@ from pathlib import Path
 from io import StringIO
 import re
 import logging
+import yaml
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import random
-from rs_data import cfg
 
 # Set up logging
 logging.basicConfig(
@@ -20,6 +20,28 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+# Load configuration
+DIR = Path(__file__).parent
+try:
+    with open(DIR / 'config.yaml', 'r') as stream:
+        config = yaml.safe_load(stream)
+except FileNotFoundError:
+    config = None
+    logging.error("config.yaml not found")
+except yaml.YAMLError as exc:
+    logging.error(f"YAML error in config.yaml: {exc}")
+    config = None
+
+def cfg(key):
+    defaults = {
+        "REFERENCE_TICKER": "SPY",
+        "BATCH_SIZE": 20,
+        "MAX_WORKERS": 10,
+        "MAX_RETRIES": 7,
+        "INITIAL_DELAY": 5
+    }
+    return config.get(key) if config else defaults.get(key)
 
 def load_failed_symbols_cache(cache_file):
     """Load failed symbols from cache to skip them"""
@@ -42,7 +64,7 @@ def save_failed_symbols_cache(cache_file, failed_symbols):
         logging.error(f"Error saving failed symbols cache: {e}")
 
 def fetch_nasdaq_data(retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
-    """Fetch NASDAQ data with fallback URLs and retry logic"""
+    """Fetch NASDAQ data with retry logic"""
     urls = [
         "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
     ]
@@ -64,19 +86,17 @@ def fetch_nasdaq_data(retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DEL
                 attempt += 1
                 if attempt < retries:
                     delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
-                    logging.warning(f"Timeout fetching {url}, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
+                    logging.warning(f"Timeout fetching {url}, retrying in {delay:.2f} seconds")
                     sleep(delay)
                 else:
                     logging.error(f"Failed to fetch from {url} after {retries} attempts: Timeout")
             except Exception as e:
                 logging.error(f"Failed to fetch from {url}: {e}")
                 break
-        if attempt == retries or url == urls[-1]:
-            raise Exception("All NASDAQ URLs failed after retries")
-    return None
+    raise Exception("Failed to fetch NASDAQ data")
 
 def get_ticker_info_batch(symbols, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
-    """Retrieve ticker information for a batch of symbols with retry logic"""
+    """Retrieve ticker information for a batch of symbols"""
     attempt = 0
     rate_limited_symbols = []
     failure_reasons = {}
@@ -107,7 +127,7 @@ def get_ticker_info_batch(symbols, retries=cfg("MAX_RETRIES"), initial_delay=cfg
                         result[symbol] = {"info": {"sector": sector, "industry": industry}, "universe": "N/A"}
                         logging.info(f"Retrieved: {symbol} - Sector: {sector}, Industry: {industry}")
                     else:
-                        logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry (Sector: {sector}, Industry: {industry})")
+                        logging.debug(f"Skipped: {symbol} - Missing or invalid sector/industry")
                         failed_symbols.append(symbol)
                         failure_reasons[symbol] = "Missing or invalid sector/industry"
                 except Exception as e:
@@ -121,7 +141,7 @@ def get_ticker_info_batch(symbols, retries=cfg("MAX_RETRIES"), initial_delay=cfg
                         failed_symbols.append(symbol)
                         failure_reasons[symbol] = "Rate limit (HTTP 429)"
                     elif isinstance(e, (requests.exceptions.Timeout, requests.exceptions.ConnectionError)):
-                        logging.warning(f"Timeout or connection error for {symbol}, marking for retry")
+                        logging.warning(f"Timeout or connection error for {symbol}")
                         failed_symbols.append(symbol)
                         failure_reasons[symbol] = "Timeout or connection error"
                     else:
@@ -137,7 +157,7 @@ def get_ticker_info_batch(symbols, retries=cfg("MAX_RETRIES"), initial_delay=cfg
                 rate_limited_symbols.extend(symbols)
                 if attempt < retries:
                     delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
-                    logging.warning(f"Rate limit, timeout, or connection error, retrying in {delay:.2f} seconds (attempt {attempt}/{retries})")
+                    logging.warning(f"Rate limit or timeout, retrying in {delay:.2f} seconds")
                     sleep(delay)
                 else:
                     logging.error(f"Failed after {retries} retries: {str(e)}")
@@ -158,7 +178,7 @@ def process_nasdaq_file(batch_size=cfg("BATCH_SIZE"), max_workers=cfg("MAX_WORKE
     
     # Define paths
     script_dir = Path(__file__).parent
-    output_file = script_dir / 'data_persist' / 'ticker_info.json'
+    output_file = script_dir / 'ticker_info.json'
     skipped_file = script_dir / 'skipped_symbols.txt'
     failed_cache_file = script_dir / 'failed_symbols.json'
     failure_reasons_file = script_dir / 'failure_reasons.json'
