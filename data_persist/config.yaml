@@ -1,0 +1,4 @@
+MAX_WORKERS: 10
+INITIAL_DELAY: 0.5
+NASDAQ_URL: "https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt"
+RETRY_ATTEMPTS: 3
