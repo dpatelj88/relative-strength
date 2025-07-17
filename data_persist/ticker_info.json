@@ -11,11 +11,71 @@
       "sector": "Basic Materials"
     }
   },
+  "AAA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAAA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAAU": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AACB": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AACBR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AACBU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
   "AACG": {
     "info": {
       "industry": "Education & Training Services",
       "sector": "Consumer Defensive"
     }
+  },
+  "AACI": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AACIU": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AACIW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AACT": {
     "info": {
@@ -23,10 +83,24 @@
       "sector": "Financial Services"
     }
   },
-  "AADI": {
+  "AACT.U": {
     "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AACT.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AADR": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AAL": {
@@ -35,9 +109,42 @@
       "sector": "Industrials"
     }
   },
+  "AALG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAM": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AAM.U": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAM.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AAME": {
     "info": {
       "industry": "Insurance - Life",
+      "sector": "Financial Services"
+    }
+  },
+  "AAMI": {
+    "info": {
+      "industry": "Asset Management",
       "sector": "Financial Services"
     }
   },
@@ -59,10 +166,68 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "AAPB": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AAPD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAPG": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
   "AAPL": {
     "info": {
       "industry": "Consumer Electronics",
       "sector": "Technology"
+    }
+  },
+  "AAPR": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAPU": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AAPW": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AAPX": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AAPY": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AARD": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
     }
   },
   "AAT": {
@@ -70,6 +235,25 @@
       "industry": "REIT - Diversified",
       "sector": "Real Estate"
     }
+  },
+  "AAUC": {
+    "info": {
+      "industry": "Gold",
+      "sector": "Basic Materials"
+    }
+  },
+  "AAVM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AAXJ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AB": {
     "info": {
@@ -101,10 +285,22 @@
       "sector": "Healthcare"
     }
   },
+  "ABCS": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ABEO": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ABEQ": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ABEV": {
@@ -113,16 +309,70 @@
       "sector": "Consumer Defensive"
     }
   },
+  "ABFL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ABG": {
     "info": {
       "industry": "Auto & Truck Dealerships",
       "sector": "Consumer Cyclical"
     }
   },
+  "ABI": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "ABIG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ABL": {
     "info": {
       "industry": "Insurance - Life",
       "sector": "Financial Services"
+    }
+  },
+  "ABLD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ABLG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ABLLL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ABLLW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ABLS": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ABLV": {
@@ -149,11 +399,24 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "ABNY": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ABOS": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "ABOT": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ABP": {
     "info": {
@@ -172,6 +435,27 @@
       "industry": "REIT - Mortgage",
       "sector": "Real Estate"
     }
+  },
+  "ABR$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ABR$E": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ABR$F": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ABSI": {
     "info": {
@@ -221,6 +505,13 @@
       "sector": "Healthcare"
     }
   },
+  "ABXB": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AC": {
     "info": {
       "industry": "Asset Management",
@@ -245,16 +536,16 @@
       "sector": "Healthcare"
     }
   },
-  "ACCD": {
-    "info": {
-      "industry": "Health Information Services",
-      "sector": "Healthcare"
-    }
-  },
   "ACCO": {
     "info": {
       "industry": "Business Equipment & Supplies",
       "sector": "Industrials"
+    }
+  },
+  "ACCS": {
+    "info": {
+      "industry": "Advertising Agencies",
+      "sector": "Communication Services"
     }
   },
   "ACDC": {
@@ -268,6 +559,13 @@
       "industry": "Gambling",
       "sector": "Consumer Cyclical"
     }
+  },
+  "ACES": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ACET": {
     "info": {
@@ -293,15 +591,15 @@
       "sector": "Financial Services"
     }
   },
+  "ACGR": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ACHC": {
     "info": {
       "industry": "Medical Care Facilities",
-      "sector": "Healthcare"
-    }
-  },
-  "ACHL": {
-    "info": {
-      "industry": "Biotechnology",
       "sector": "Healthcare"
     }
   },
@@ -310,6 +608,13 @@
       "industry": "Aerospace & Defense",
       "sector": "Industrials"
     }
+  },
+  "ACHR.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ACHV": {
     "info": {
@@ -329,6 +634,13 @@
       "sector": "Financial Services"
     }
   },
+  "ACIO": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ACIU": {
     "info": {
       "industry": "Biotechnology",
@@ -339,6 +651,18 @@
     "info": {
       "industry": "Software - Infrastructure",
       "sector": "Technology"
+    }
+  },
+  "ACLC": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "ACLO": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ACLS": {
@@ -383,6 +707,12 @@
       "sector": "Basic Materials"
     }
   },
+  "ACOG": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
   "ACON": {
     "info": {
       "industry": "Health Information Services",
@@ -401,11 +731,32 @@
       "sector": "Financial Services"
     }
   },
+  "ACP$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ACR": {
     "info": {
       "industry": "REIT - Mortgage",
       "sector": "Real Estate"
     }
+  },
+  "ACR$C": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ACR$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ACRE": {
     "info": {
@@ -425,6 +776,13 @@
       "sector": "Healthcare"
     }
   },
+  "ACSI": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ACT": {
     "info": {
       "industry": "Insurance - Specialty",
@@ -441,6 +799,12 @@
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ACTV": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ACU": {
@@ -460,6 +824,40 @@
       "industry": "Auto & Truck Dealerships",
       "sector": "Consumer Cyclical"
     }
+  },
+  "ACVF": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ACVT": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ACWI": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "ACWV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ACWX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ACXP": {
     "info": {
@@ -485,11 +883,25 @@
       "sector": "Technology"
     }
   },
+  "ADBG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
   "ADC": {
     "info": {
       "industry": "REIT - Retail",
       "sector": "Real Estate"
     }
+  },
+  "ADC$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ADCT": {
     "info": {
@@ -509,6 +921,13 @@
       "sector": "Technology"
     }
   },
+  "ADFI": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ADGM": {
     "info": {
       "industry": "Medical Devices",
@@ -527,6 +946,12 @@
       "sector": "Healthcare"
     }
   },
+  "ADIV": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ADM": {
     "info": {
       "industry": "Farm Products",
@@ -537,6 +962,12 @@
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ADME": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ADN": {
@@ -567,6 +998,12 @@
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ADPV": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ADSE": {
@@ -623,6 +1060,18 @@
       "sector": "Communication Services"
     }
   },
+  "ADVB": {
+    "info": {
+      "industry": "Diagnostics & Research",
+      "sector": "Healthcare"
+    }
+  },
+  "ADVE": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ADVM": {
     "info": {
       "industry": "Biotechnology",
@@ -647,11 +1096,12 @@
       "sector": "Healthcare"
     }
   },
-  "AE": {
+  "AEBI": {
     "info": {
-      "industry": "Oil & Gas Refining & Marketing",
-      "sector": "Energy"
-    }
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AEE": {
     "info": {
@@ -664,6 +1114,13 @@
       "industry": "Asset Management",
       "sector": "Financial Services"
     }
+  },
+  "AEFC": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AEG": {
     "info": {
@@ -706,6 +1163,13 @@
       "industry": "Medical Devices",
       "sector": "Healthcare"
     }
+  },
+  "AEMS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AENT": {
     "info": {
@@ -767,7 +1231,25 @@
       "sector": "Energy"
     }
   },
+  "AESR": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AETH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AEVA": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "AEVAW": {
     "info": {
       "industry": "Software - Infrastructure",
       "sector": "Technology"
@@ -803,10 +1285,56 @@
       "sector": "Financial Services"
     }
   },
+  "AFGB": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AFGC": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AFGD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AFGE": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AFIF": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AFIX": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AFJK": {
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
+    }
+  },
+  "AFJKR": {
+    "info": {
+      "industry": "",
+      "sector": ""
     }
   },
   "AFJKU": {
@@ -815,16 +1343,35 @@
       "sector": "Financial Services"
     }
   },
+  "AFK": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AFL": {
     "info": {
       "industry": "Insurance - Life",
       "sector": "Financial Services"
     }
   },
-  "AFMD": {
+  "AFLG": {
     "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AFMC": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AFOS": {
+    "info": {
+      "industry": "",
+      "sector": ""
     }
   },
   "AFRI": {
@@ -843,6 +1390,18 @@
     "info": {
       "industry": "Software - Infrastructure",
       "sector": "Technology"
+    }
+  },
+  "AFSC": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AFSM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AFYA": {
@@ -869,6 +1428,18 @@
       "sector": "Industrials"
     }
   },
+  "AGD": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "AGEM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AGEN": {
     "info": {
       "industry": "Biotechnology",
@@ -881,16 +1452,66 @@
       "sector": "Industrials"
     }
   },
+  "AGG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGGA": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AGGH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AGGS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AGGY": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AGH": {
+    "info": {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical"
+    }
+  },
   "AGI": {
     "info": {
       "industry": "Gold",
       "sector": "Basic Materials"
     }
   },
+  "AGIH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AGIO": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "AGIX": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AGL": {
@@ -905,11 +1526,53 @@
       "sector": "Financial Services"
     }
   },
+  "AGM$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGM$E": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGM$F": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGM$G": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGM.A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AGMH": {
     "info": {
       "industry": "Computer Hardware",
       "sector": "Technology"
     }
+  },
+  "AGMI": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AGNC": {
     "info": {
@@ -947,10 +1610,42 @@
       "sector": "Real Estate"
     }
   },
+  "AGNG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AGO": {
     "info": {
       "industry": "Insurance - Specialty",
       "sector": "Financial Services"
+    }
+  },
+  "AGOX": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AGQ": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AGQI": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGRH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AGRI": {
@@ -965,10 +1660,10 @@
       "sector": "Consumer Defensive"
     }
   },
-  "AGS": {
+  "AGRW": {
     "info": {
-      "industry": "Gambling",
-      "sector": "Consumer Cyclical"
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AGX": {
@@ -982,6 +1677,20 @@
       "industry": "Software - Application",
       "sector": "Technology"
     }
+  },
+  "AGZ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AGZD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AHCO": {
     "info": {
@@ -1001,6 +1710,46 @@
       "sector": "Real Estate"
     }
   },
+  "AHH$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHL": {
+    "info": {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
+    }
+  },
+  "AHL$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHL$E": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHL$F": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHLT": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AHR": {
     "info": {
       "industry": "REIT - Healthcare Facilities",
@@ -1013,16 +1762,101 @@
       "sector": "Real Estate"
     }
   },
+  "AHT$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHT$F": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHT$G": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHT$H": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHT$I": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AHYB": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AI": {
     "info": {
       "industry": "Software - Application",
       "sector": "Technology"
     }
   },
-  "AIEV": {
+  "AIA": {
     "info": {
-      "industry": "Auto Manufacturers",
-      "sector": "Consumer Cyclical"
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AIBD": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AIBU": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AIEQ": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AIFD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AIFE": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AIFER": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
+  "AIFEU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
     }
   },
   "AIFF": {
@@ -1049,40 +1883,16 @@
       "sector": "Financial Services"
     }
   },
-  "AILE": {
+  "AII": {
     "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
-  "AILEW": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
     }
   },
   "AIM": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
-    }
-  },
-  "AIMAU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AIMAW": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AIMBU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
     }
   },
   "AIMD": {
@@ -1103,6 +1913,25 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "AINP": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AIO": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "AIOO": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AIOT": {
     "info": {
       "industry": "Software - Infrastructure",
@@ -1114,6 +1943,20 @@
       "industry": "Semiconductors",
       "sector": "Technology"
     }
+  },
+  "AIPI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AIQ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AIR": {
     "info": {
@@ -1151,6 +1994,26 @@
       "sector": "Industrials"
     }
   },
+  "AIRL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AIRO": {
+    "info": {
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials"
+    }
+  },
+  "AIRR": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
   "AIRS": {
     "info": {
       "industry": "Medical Care Facilities",
@@ -1168,6 +2031,13 @@
       "industry": "Conglomerates",
       "sector": "Industrials"
     }
+  },
+  "AIS": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AISP": {
     "info": {
@@ -1187,28 +2057,41 @@
       "sector": "Industrials"
     }
   },
-  "AITR": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AITRU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
   "AIV": {
     "info": {
       "industry": "REIT - Residential",
       "sector": "Real Estate"
     }
   },
+  "AIVC": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AIVI": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "AIVL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
   "AIXI": {
     "info": {
       "industry": "Software - Application",
       "sector": "Technology"
+    }
+  },
+  "AIYY": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AIZ": {
@@ -1217,16 +2100,42 @@
       "sector": "Financial Services"
     }
   },
+  "AIZN": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AJAN": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AJG": {
     "info": {
       "industry": "Insurance Brokers",
       "sector": "Financial Services"
     }
   },
+  "AJUL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AKA": {
     "info": {
       "industry": "Apparel Retail",
       "sector": "Consumer Cyclical"
+    }
+  },
+  "AKAF": {
+    "info": {
+      "industry": "",
+      "sector": ""
     }
   },
   "AKAM": {
@@ -1247,6 +2156,20 @@
       "sector": "Healthcare"
     }
   },
+  "AKO.A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AKO.B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AKR": {
     "info": {
       "industry": "REIT - Retail",
@@ -1265,12 +2188,6 @@
       "sector": "Healthcare"
     }
   },
-  "AKYA": {
-    "info": {
-      "industry": "Medical Instruments & Supplies",
-      "sector": "Healthcare"
-    }
-  },
   "AL": {
     "info": {
       "industry": "Rental & Leasing Services",
@@ -1281,6 +2198,12 @@
     "info": {
       "industry": "Semiconductors",
       "sector": "Technology"
+    }
+  },
+  "ALAI": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ALAR": {
@@ -1295,6 +2218,13 @@
       "sector": "Basic Materials"
     }
   },
+  "ALB$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALBT": {
     "info": {
       "industry": "Real Estate Services",
@@ -1305,12 +2235,6 @@
     "info": {
       "industry": "Medical Instruments & Supplies",
       "sector": "Healthcare"
-    }
-  },
-  "ALCE": {
-    "info": {
-      "industry": "Utilities - Renewable",
-      "sector": "Utilities"
     }
   },
   "ALCO": {
@@ -1326,6 +2250,31 @@
     }
   },
   "ALCYU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALCYW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ALDF": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALDFU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALDFW": {
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
@@ -1353,6 +2302,24 @@
     "info": {
       "industry": "REIT - Retail",
       "sector": "Real Estate"
+    }
+  },
+  "ALF": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALFUU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ALFUW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
     }
   },
   "ALG": {
@@ -1391,6 +2358,13 @@
       "sector": "Healthcare"
     }
   },
+  "ALIL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALIT": {
     "info": {
       "industry": "Software - Application",
@@ -1421,16 +2395,38 @@
       "sector": "Financial Services"
     }
   },
+  "ALL$B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ALL$H": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ALL$I": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ALL$J": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALLE": {
     "info": {
       "industry": "Security & Protection Services",
       "sector": "Industrials"
-    }
-  },
-  "ALLK": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
     }
   },
   "ALLO": {
@@ -1451,16 +2447,35 @@
       "sector": "Technology"
     }
   },
+  "ALLW": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ALLY": {
     "info": {
       "industry": "Credit Services",
       "sector": "Financial Services"
     }
   },
+  "ALM": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALMS": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ALMU": {
+    "info": {
+      "industry": "Semiconductors",
+      "sector": "Technology"
     }
   },
   "ALNT": {
@@ -1481,16 +2496,17 @@
       "sector": "Technology"
     }
   },
+  "ALRG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALRM": {
     "info": {
       "industry": "Software - Application",
       "sector": "Technology"
-    }
-  },
-  "ALRN": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
     }
   },
   "ALRS": {
@@ -1517,16 +2533,23 @@
       "sector": "Industrials"
     }
   },
+  "ALTG$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ALTI": {
     "info": {
       "industry": "Asset Management",
       "sector": "Financial Services"
     }
   },
-  "ALTM": {
+  "ALTL": {
     "info": {
-      "industry": "Specialty Chemicals",
-      "sector": "Basic Materials"
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ALTO": {
@@ -1535,16 +2558,16 @@
       "sector": "Basic Materials"
     }
   },
-  "ALTR": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
   "ALTS": {
     "info": {
       "industry": "Software - Application",
       "sector": "Technology"
+    }
+  },
+  "ALTY": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ALUR": {
@@ -1552,6 +2575,13 @@
       "industry": "Medical Devices",
       "sector": "Healthcare"
     }
+  },
+  "ALUR.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ALV": {
     "info": {
@@ -1568,12 +2598,6 @@
   "ALVOW": {
     "info": {
       "industry": "Drug Manufacturers - Specialty & Generic",
-      "sector": "Healthcare"
-    }
-  },
-  "ALVR": {
-    "info": {
-      "industry": "Biotechnology",
       "sector": "Healthcare"
     }
   },
@@ -1613,6 +2637,13 @@
       "sector": "Technology"
     }
   },
+  "AMAX": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AMBA": {
     "info": {
       "industry": "Semiconductor Equipment & Materials",
@@ -1631,6 +2662,13 @@
       "sector": "Industrials"
     }
   },
+  "AMBI.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AMBO": {
     "info": {
       "industry": "Education & Training Services",
@@ -1641,6 +2679,19 @@
     "info": {
       "industry": "Packaging & Containers",
       "sector": "Consumer Cyclical"
+    }
+  },
+  "AMBP.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMBR": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
     }
   },
   "AMC": {
@@ -1666,6 +2717,32 @@
       "industry": "Semiconductors",
       "sector": "Technology"
     }
+  },
+  "AMDD": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMDG": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMDL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMDY": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AME": {
     "info": {
@@ -1697,11 +2774,38 @@
       "sector": "Real Estate"
     }
   },
+  "AMH$G": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMH$H": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMID": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AMIX": {
     "info": {
       "industry": "Medical Devices",
       "sector": "Healthcare"
     }
+  },
+  "AMJB": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AMKR": {
     "info": {
@@ -1709,11 +2813,12 @@
       "sector": "Technology"
     }
   },
-  "AMLI": {
+  "AMLP": {
     "info": {
-      "industry": "Other Industrial Metals & Mining",
-      "sector": "Basic Materials"
-    }
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AMLX": {
     "info": {
@@ -1726,6 +2831,25 @@
       "industry": "Medical Care Facilities",
       "sector": "Healthcare"
     }
+  },
+  "AMOD": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "AMODW": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "AMOM": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AMP": {
     "info": {
@@ -1757,17 +2881,18 @@
       "sector": "Technology"
     }
   },
-  "AMPS": {
-    "info": {
-      "industry": "Utilities - Renewable",
-      "sector": "Utilities"
-    }
-  },
   "AMPX": {
     "info": {
       "industry": "Electrical Equipment & Parts",
       "sector": "Industrials"
     }
+  },
+  "AMPX.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AMPY": {
     "info": {
@@ -1803,6 +2928,12 @@
     "info": {
       "industry": "Drug Manufacturers - Specialty & Generic",
       "sector": "Healthcare"
+    }
+  },
+  "AMRZ": {
+    "info": {
+      "industry": "Building Materials",
+      "sector": "Basic Materials"
     }
   },
   "AMS": {
@@ -1859,6 +2990,19 @@
       "sector": "Energy"
     }
   },
+  "AMUB": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMUU": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AMWD": {
     "info": {
       "industry": "Furnishings, Fixtures & Appliances",
@@ -1877,10 +3021,61 @@
       "sector": "Communication Services"
     }
   },
+  "AMZA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMZD": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMZE": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
   "AMZN": {
     "info": {
       "industry": "Internet Retail",
       "sector": "Consumer Cyclical"
+    }
+  },
+  "AMZP": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AMZU": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AMZW": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMZY": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AMZZ": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AN": {
@@ -1913,11 +3108,32 @@
       "sector": "Technology"
     }
   },
+  "ANEW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ANF": {
     "info": {
       "industry": "Apparel Retail",
       "sector": "Consumer Cyclical"
     }
+  },
+  "ANG$B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ANG$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ANGH": {
     "info": {
@@ -1935,6 +3151,12 @@
     "info": {
       "industry": "Internet Content & Information",
       "sector": "Communication Services"
+    }
+  },
+  "ANGL": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ANGO": {
@@ -1967,11 +3189,30 @@
       "sector": "Healthcare"
     }
   },
+  "ANNA": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
+  "ANNAW": {
+    "info": {
+      "industry": "Oil & Gas E&P",
+      "sector": "Energy"
+    }
+  },
   "ANNX": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "ANPA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ANRO": {
     "info": {
@@ -2003,6 +3244,12 @@
       "sector": "Technology"
     }
   },
+  "ANTA": {
+    "info": {
+      "industry": "Credit Services",
+      "sector": "Financial Services"
+    }
+  },
   "ANTE": {
     "info": {
       "industry": "Advertising Agencies",
@@ -2027,11 +3274,57 @@
       "sector": "Financial Services"
     }
   },
+  "AOA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AOCT": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "AOD": {
     "info": {
       "industry": "Asset Management",
       "sector": "Financial Services"
     }
+  },
+  "AOHY": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AOK": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AOM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AOMD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AOMN": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AOMR": {
     "info": {
@@ -2044,6 +3337,13 @@
       "industry": "Insurance Brokers",
       "sector": "Financial Services"
     }
+  },
+  "AOR": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AORT": {
     "info": {
@@ -2063,6 +3363,13 @@
       "sector": "Technology"
     }
   },
+  "AOTG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AOUT": {
     "info": {
       "industry": "Leisure",
@@ -2074,6 +3381,13 @@
       "industry": "Metal Fabrication",
       "sector": "Industrials"
     }
+  },
+  "AP.W": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "APA": {
     "info": {
@@ -2087,16 +3401,10 @@
       "sector": "Financial Services"
     }
   },
-  "APCX": {
+  "APCB": {
     "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
-  "APCXW": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "APD": {
@@ -2109,6 +3417,12 @@
     "info": {
       "industry": "Diagnostics & Research",
       "sector": "Healthcare"
+    }
+  },
+  "APED": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "APEI": {
@@ -2141,6 +3455,12 @@
       "sector": "Technology"
     }
   },
+  "APIE": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
   "APLD": {
     "info": {
       "industry": "Information Technology Services",
@@ -2159,6 +3479,13 @@
       "sector": "Healthcare"
     }
   },
+  "APLMW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "APLS": {
     "info": {
       "industry": "Biotechnology",
@@ -2171,10 +3498,29 @@
       "sector": "Healthcare"
     }
   },
+  "APLU": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "APLY": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "APM": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "APMU": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "APO": {
@@ -2183,11 +3529,32 @@
       "sector": "Financial Services"
     }
   },
+  "APO$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "APOC": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "APOG": {
     "info": {
       "industry": "Building Products & Equipment",
       "sector": "Industrials"
     }
+  },
+  "APOS": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "APP": {
     "info": {
@@ -2213,11 +3580,57 @@
       "sector": "Technology"
     }
   },
+  "APPX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
   "APRE": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "APRH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "APRJ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "APRP": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "APRT": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "APRW": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "APRZ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "APT": {
     "info": {
@@ -2225,16 +3638,23 @@
       "sector": "Industrials"
     }
   },
-  "APTO": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
   "APTV": {
     "info": {
       "industry": "Auto Parts",
       "sector": "Consumer Cyclical"
+    }
+  },
+  "APUE": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "APUS": {
+    "info": {
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "sector": "Healthcare"
     }
   },
   "APVO": {
@@ -2249,6 +3669,12 @@
       "sector": "Industrials"
     }
   },
+  "APXM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "APYX": {
     "info": {
       "industry": "Medical Devices",
@@ -2259,6 +3685,12 @@
     "info": {
       "industry": "Farm Products",
       "sector": "Consumer Defensive"
+    }
+  },
+  "AQLT": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AQMS": {
@@ -2273,22 +3705,23 @@
       "sector": "Utilities"
     }
   },
+  "AQNB": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AQST": {
     "info": {
       "industry": "Drug Manufacturers - Specialty & Generic",
       "sector": "Healthcare"
     }
   },
-  "AQU": {
+  "AQWA": {
     "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AQUNU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "AR": {
@@ -2297,11 +3730,24 @@
       "sector": "Energy"
     }
   },
+  "ARAI": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
   "ARAY": {
     "info": {
       "industry": "Medical Devices",
       "sector": "Healthcare"
     }
+  },
+  "ARB": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARBB": {
     "info": {
@@ -2327,6 +3773,13 @@
       "sector": "Financial Services"
     }
   },
+  "ARBKL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ARCB": {
     "info": {
       "industry": "Trucking",
@@ -2339,10 +3792,10 @@
       "sector": "Financial Services"
     }
   },
-  "ARCH": {
+  "ARCM": {
     "info": {
-      "industry": "Coking Coal",
-      "sector": "Basic Materials"
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ARCO": {
@@ -2356,6 +3809,13 @@
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "ARCX": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARDC": {
     "info": {
@@ -2381,11 +3841,25 @@
       "sector": "Real Estate"
     }
   },
+  "AREA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AREB": {
     "info": {
       "industry": "Footwear & Accessories",
       "sector": "Consumer Cyclical"
     }
+  },
+  "AREBW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "AREC": {
     "info": {
@@ -2404,6 +3878,34 @@
       "industry": "Asset Management",
       "sector": "Financial Services"
     }
+  },
+  "ARES$B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARGD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARGO$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARGT": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARGX": {
     "info": {
@@ -2429,6 +3931,46 @@
       "sector": "Utilities"
     }
   },
+  "ARKA": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "ARKB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ARKD": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARKF": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ARKG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARKK": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ARKO": {
     "info": {
       "industry": "Specialty Retail",
@@ -2441,11 +3983,37 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "ARKQ": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ARKR": {
     "info": {
       "industry": "Restaurants",
       "sector": "Consumer Cyclical"
     }
+  },
+  "ARKW": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ARKX": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ARKZ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARL": {
     "info": {
@@ -2465,11 +4033,31 @@
       "sector": "Energy"
     }
   },
+  "ARLU": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ARM": {
     "info": {
       "industry": "Semiconductors",
       "sector": "Technology"
     }
+  },
+  "ARMG": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "ARMH": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARMK": {
     "info": {
@@ -2489,6 +4077,13 @@
       "sector": "Healthcare"
     }
   },
+  "ARMU": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AROC": {
     "info": {
       "industry": "Oil & Gas Equipment & Services",
@@ -2500,6 +4095,13 @@
       "industry": "Banks - Regional",
       "sector": "Financial Services"
     }
+  },
+  "ARP": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARQ": {
     "info": {
@@ -2531,6 +4133,13 @@
       "sector": "Real Estate"
     }
   },
+  "ARR$C": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ARRY": {
     "info": {
       "industry": "Solar",
@@ -2561,11 +4170,25 @@
       "sector": "Industrials"
     }
   },
+  "ARTY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
   "ARVN": {
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
     }
+  },
+  "ARVR": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ARW": {
     "info": {
@@ -2591,12 +4214,6 @@
       "sector": "Financial Services"
     }
   },
-  "ASAI": {
-    "info": {
-      "industry": "Grocery Stores",
-      "sector": "Consumer Defensive"
-    }
-  },
   "ASAN": {
     "info": {
       "industry": "Software - Application",
@@ -2609,13 +4226,72 @@
       "sector": "Financial Services"
     }
   },
+  "ASB$E": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASB$F": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASBA": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASBP": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ASBPW": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
   "ASC": {
     "info": {
       "industry": "Marine Shipping",
       "sector": "Industrials"
     }
   },
+  "ASCE": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASEA": {
+    "info": {
+      "industry": "N/A",
+      "sector": "N/A"
+    }
+  },
+  "ASET": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ASG": {
+    "info": {
+      "industry": "Asset Management",
+      "sector": "Financial Services"
+    }
+  },
+  "ASGI": {
     "info": {
       "industry": "Asset Management",
       "sector": "Financial Services"
@@ -2633,6 +4309,33 @@
       "sector": "Basic Materials"
     }
   },
+  "ASHR": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASHS": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASIA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ASIC": {
+    "info": {
+      "industry": "Insurance - Property & Casualty",
+      "sector": "Financial Services"
+    }
+  },
   "ASIX": {
     "info": {
       "industry": "Chemicals",
@@ -2645,6 +4348,13 @@
       "sector": "Industrials"
     }
   },
+  "ASLV": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ASM": {
     "info": {
       "industry": "Other Precious Metals & Mining",
@@ -2655,6 +4365,26 @@
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
+    }
+  },
+  "ASMF": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASMG": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ASMH": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ASML": {
@@ -2681,6 +4411,18 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "ASPC": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ASPCR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
   "ASPCU": {
     "info": {
       "industry": "Shell Companies",
@@ -2700,6 +4442,18 @@
     }
   },
   "ASPS": {
+    "info": {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate"
+    }
+  },
+  "ASPSW": {
+    "info": {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate"
+    }
+  },
+  "ASPSZ": {
     "info": {
       "industry": "Real Estate Services",
       "sector": "Real Estate"
@@ -2771,6 +4525,13 @@
       "sector": "Technology"
     }
   },
+  "ASTX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
   "ASUR": {
     "info": {
       "industry": "Software - Application",
@@ -2807,6 +4568,13 @@
       "sector": "Technology"
     }
   },
+  "ATCO$H": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ATEC": {
     "info": {
       "industry": "Medical Devices",
@@ -2825,10 +4593,44 @@
       "sector": "Consumer Cyclical"
     }
   },
+  "ATEST": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATEST.A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATEST.B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATEST.C": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ATEX": {
     "info": {
       "industry": "Telecom Services",
       "sector": "Communication Services"
+    }
+  },
+  "ATFV": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
     }
   },
   "ATGE": {
@@ -2842,6 +4644,34 @@
       "industry": "Software - Infrastructure",
       "sector": "Technology"
     }
+  },
+  "ATH$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATH$B": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATH$D": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "ATH$E": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ATHA": {
     "info": {
@@ -2861,10 +4691,41 @@
       "sector": "Communication Services"
     }
   },
+  "ATHR": {
+    "info": {
+      "industry": "Software - Application",
+      "sector": "Technology"
+    }
+  },
+  "ATHS": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ATI": {
     "info": {
       "industry": "Metal Fabrication",
       "sector": "Industrials"
+    }
+  },
+  "ATII": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ATIIU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ATIIW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
     }
   },
   "ATKR": {
@@ -2879,11 +4740,25 @@
       "sector": "Financial Services"
     }
   },
+  "ATLCL": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "ATLCP": {
     "info": {
       "industry": "Credit Services",
       "sector": "Financial Services"
     }
+  },
+  "ATLCZ": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
   },
   "ATLN": {
     "info": {
@@ -2909,6 +4784,12 @@
       "sector": "Financial Services"
     }
   },
+  "ATMCR": {
+    "info": {
+      "industry": "",
+      "sector": ""
+    }
+  },
   "ATMCU": {
     "info": {
       "industry": "Shell Companies",
@@ -2921,6 +4802,12 @@
       "sector": "Financial Services"
     }
   },
+  "ATMP": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
   "ATMU": {
     "info": {
       "industry": "Pollution & Treatment Controls",
@@ -2931,6 +4818,12 @@
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
+    }
+  },
+  "ATMVR": {
+    "info": {
+      "industry": "",
+      "sector": ""
     }
   },
   "ATMVU": {
@@ -3017,12 +4910,6 @@
       "sector": "Industrials"
     }
   },
-  "ATSG": {
-    "info": {
-      "industry": "Airlines",
-      "sector": "Industrials"
-    }
-  },
   "ATUS": {
     "info": {
       "industry": "Telecom Services",
@@ -3033,12 +4920,6 @@
     "info": {
       "industry": "Integrated Freight & Logistics",
       "sector": "Industrials"
-    }
-  },
-  "ATXI": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
     }
   },
   "ATXS": {
@@ -3065,6 +4946,13 @@
       "sector": "Financial Services"
     }
   },
+  "AUB$A": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
   "AUBN": {
     "info": {
       "industry": "Banks - Regional",
@@ -3075,6 +4963,235 @@
     "info": {
       "industry": "Communication Equipment",
       "sector": "Technology"
+    }
+  },
+  "AUGM": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AUGO": {
+    "info": {
+      "sector": "Unknown",
+      "industry": "Unknown"
+    },
+    "universe": "Stock"
+  },
+  "AUGP": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AUGT": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "MST": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "MSTB": {
+    "info": {
+      "industry": "ETF",
+      "sector": "ETF"
+    }
+  },
+  "AADI": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ACCD": {
+    "info": {
+      "industry": "Health Information Services",
+      "sector": "Healthcare"
+    }
+  },
+  "ACHL": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "AE": {
+    "info": {
+      "industry": "Oil & Gas Refining & Marketing",
+      "sector": "Energy"
+    }
+  },
+  "AFMD": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "AGS": {
+    "info": {
+      "industry": "Gambling",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "AIEV": {
+    "info": {
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical"
+    }
+  },
+  "AILE": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "AILEW": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "AIMAU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AIMAW": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AIMBU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AITR": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AITRU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AKYA": {
+    "info": {
+      "industry": "Medical Instruments & Supplies",
+      "sector": "Healthcare"
+    }
+  },
+  "ALCE": {
+    "info": {
+      "industry": "Utilities - Renewable",
+      "sector": "Utilities"
+    }
+  },
+  "ALLK": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ALRN": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "ALTM": {
+    "info": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials"
+    }
+  },
+  "ALTR": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "ALVR": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "AMLI": {
+    "info": {
+      "industry": "Other Industrial Metals & Mining",
+      "sector": "Basic Materials"
+    }
+  },
+  "AMPS": {
+    "info": {
+      "industry": "Utilities - Renewable",
+      "sector": "Utilities"
+    }
+  },
+  "APCX": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "APCXW": {
+    "info": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology"
+    }
+  },
+  "APTO": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
+    }
+  },
+  "AQU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "AQUNU": {
+    "info": {
+      "industry": "Shell Companies",
+      "sector": "Financial Services"
+    }
+  },
+  "ARCH": {
+    "info": {
+      "industry": "Coking Coal",
+      "sector": "Basic Materials"
+    }
+  },
+  "ASAI": {
+    "info": {
+      "industry": "Grocery Stores",
+      "sector": "Consumer Defensive"
+    }
+  },
+  "ATSG": {
+    "info": {
+      "industry": "Airlines",
+      "sector": "Industrials"
+    }
+  },
+  "ATXI": {
+    "info": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare"
     }
   },
   "AUID": {
@@ -37325,12 +39442,6 @@
       "sector": "Consumer Defensive"
     }
   },
-  "AAMI": {
-    "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
-    }
-  },
   "INLF": {
     "info": {
       "industry": "Specialty Industrial Machinery",
@@ -37409,24 +39520,6 @@
       "sector": "Technology"
     }
   },
-  "AAPG": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
-  "ACCS": {
-    "info": {
-      "industry": "Advertising Agencies",
-      "sector": "Communication Services"
-    }
-  },
-  "AEVAW": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
   "LAR": {
     "info": {
       "industry": "Other Industrial Metals & Mining",
@@ -37460,72 +39553,6 @@
   "PLUT": {
     "info": {
       "industry": "Capital Markets",
-      "sector": "Financial Services"
-    }
-  },
-  "AARD": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
-  "ACOG": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
-  "AGH": {
-    "info": {
-      "industry": "Leisure",
-      "sector": "Consumer Cyclical"
-    }
-  },
-  "ALDF": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ALDFU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ALDFW": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AMOD": {
-    "info": {
-      "industry": "Software - Application",
-      "sector": "Technology"
-    }
-  },
-  "AMODW": {
-    "info": {
-      "industry": "Software - Application",
-      "sector": "Technology"
-    }
-  },
-  "ANNA": {
-    "info": {
-      "industry": "Oil & Gas E&P",
-      "sector": "Energy"
-    }
-  },
-  "ANNAW": {
-    "info": {
-      "industry": "Oil & Gas E&P",
-      "sector": "Energy"
-    }
-  },
-  "ASPC": {
-    "info": {
-      "industry": "Shell Companies",
       "sector": "Financial Services"
     }
   },
@@ -38099,18 +40126,6 @@
       "sector": "Healthcare"
     }
   },
-  "ASBP": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
-  "ASBPW": {
-    "info": {
-      "industry": "Biotechnology",
-      "sector": "Healthcare"
-    }
-  },
   "BMGL": {
     "info": {
       "industry": "Medical Care Facilities",
@@ -38199,12 +40214,6 @@
     "info": {
       "industry": "Software - Application",
       "sector": "Technology"
-    }
-  },
-  "ADVB": {
-    "info": {
-      "industry": "Diagnostics & Research",
-      "sector": "Healthcare"
     }
   },
   "CAPS": {
@@ -38363,12 +40372,6 @@
       "sector": "Consumer Defensive"
     }
   },
-  "AAM": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
   "BIYA": {
     "info": {
       "industry": "Software - Application",
@@ -38433,18 +40436,6 @@
     "info": {
       "industry": "Other Industrial Metals & Mining",
       "sector": "Basic Materials"
-    }
-  },
-  "ALMU": {
-    "info": {
-      "industry": "Semiconductors",
-      "sector": "Technology"
-    }
-  },
-  "AMZE": {
-    "info": {
-      "industry": "Software - Application",
-      "sector": "Technology"
     }
   },
   "CHARU": {
@@ -38580,42 +40571,6 @@
     }
   },
   "YHNA": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AGD": {
-    "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
-    }
-  },
-  "AIFE": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AIFEU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ALF": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ALFUU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ALFUW": {
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
@@ -38813,12 +40768,6 @@
       "sector": "Industrials"
     }
   },
-  "ATIIU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
   "BRIA": {
     "info": {
       "industry": "Apparel Retail",
@@ -38970,24 +40919,6 @@
     }
   },
   "VACHW": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ATHR": {
-    "info": {
-      "industry": "Software - Application",
-      "sector": "Technology"
-    }
-  },
-  "ATII": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "ATIIW": {
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
@@ -39279,156 +41210,6 @@
     "info": {
       "industry": "Biotechnology",
       "sector": "Healthcare"
-    }
-  },
-  "ASGI": {
-    "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
-    }
-  },
-  "ASIC": {
-    "info": {
-      "industry": "Insurance - Property & Casualty",
-      "sector": "Financial Services"
-    }
-  },
-  "ASPCR": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "ASPSW": {
-    "info": {
-      "industry": "Real Estate Services",
-      "sector": "Real Estate"
-    }
-  },
-  "ASPSZ": {
-    "info": {
-      "industry": "Real Estate Services",
-      "sector": "Real Estate"
-    }
-  },
-  "ATMCR": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "ATMVR": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AACB": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AACBR": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AACBU": {
-    "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
-  },
-  "AAUC": {
-    "info": {
-      "industry": "Gold",
-      "sector": "Basic Materials"
-    }
-  },
-  "ABI": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AIRO": {
-    "info": {
-      "industry": "Aerospace & Defense",
-      "sector": "Industrials"
-    }
-  },
-  "AKAF": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AMBR": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
-  "AMRZ": {
-    "info": {
-      "industry": "Building Materials",
-      "sector": "Basic Materials"
-    }
-  },
-  "ANTA": {
-    "info": {
-      "industry": "Credit Services",
-      "sector": "Financial Services"
-    }
-  },
-  "APUS": {
-    "info": {
-      "industry": "Drug Manufacturers - Specialty & Generic",
-      "sector": "Healthcare"
-    }
-  },
-  "ARAI": {
-    "info": {
-      "industry": "Software - Infrastructure",
-      "sector": "Technology"
-    }
-  },
-  "AFJKR": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AFOS": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AHL": {
-    "info": {
-      "industry": "Insurance - Property & Casualty",
-      "sector": "Financial Services"
-    }
-  },
-  "AIFER": {
-    "info": {
-      "industry": "",
-      "sector": ""
-    }
-  },
-  "AII": {
-    "info": {
-      "industry": "Insurance - Property & Casualty",
-      "sector": "Financial Services"
-    }
-  },
-  "AIO": {
-    "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
     }
   },
   "AXINU": {
@@ -40184,12 +41965,6 @@
       "sector": "N/A"
     }
   },
-  "ASEA": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
   "IBUY": {
     "info": {
       "industry": "ETF",
@@ -40283,12 +42058,6 @@
     "universe": "N/A"
   },
   "RSSE": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
-  "ARKX": {
     "info": {
       "industry": "N/A",
       "sector": "N/A"
@@ -40459,12 +42228,6 @@
       "industry": "ETF"
     },
     "universe": "N/A"
-  },
-  "AAVM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
   },
   "AVIE": {
     "info": {
@@ -40648,12 +42411,6 @@
     "info": {
       "industry": "N/A",
       "sector": "N/A"
-    }
-  },
-  "AGGH": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
     }
   },
   "MGOV": {
@@ -40866,12 +42623,6 @@
       "sector": "ETF"
     }
   },
-  "AAPB": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
   "SPD": {
     "info": {
       "industry": "ETF",
@@ -40908,12 +42659,6 @@
       "sector": "N/A"
     }
   },
-  "ANGL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "LDRT": {
     "info": {
       "industry": "ETF",
@@ -40926,12 +42671,6 @@
       "sector": "N/A"
     }
   },
-  "AIEQ": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "RBIL": {
     "info": {
       "industry": "ETF",
@@ -40939,12 +42678,6 @@
     }
   },
   "TAGS": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AGRW": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -41764,12 +43497,6 @@
       "sector": "ETF"
     }
   },
-  "APIE": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
   "EUAD": {
     "info": {
       "industry": "N/A",
@@ -42098,12 +43825,6 @@
       "sector": "N/A"
     }
   },
-  "ALTL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "NOVP": {
     "info": {
       "industry": "ETF",
@@ -42114,12 +43835,6 @@
     "info": {
       "industry": "N/A",
       "sector": "N/A"
-    }
-  },
-  "AMZY": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
     }
   },
   "MSFU": {
@@ -42194,12 +43909,6 @@
       "sector": "ETF"
     }
   },
-  "ARKF": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
   "JDIV": {
     "info": {
       "sector": "ETF",
@@ -42223,12 +43932,6 @@
     "info": {
       "industry": "Shell Companies",
       "sector": "Financial Services"
-    }
-  },
-  "AIVI": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
     }
   },
   "TFLR": {
@@ -42400,12 +44103,6 @@
       "sector": "ETF"
     }
   },
-  "AIBD": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
-  },
   "BUFH": {
     "info": {
       "industry": "N/A",
@@ -42436,12 +44133,6 @@
       "sector": "N/A"
     }
   },
-  "AHYB": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "CLOA": {
     "info": {
       "industry": "ETF",
@@ -42458,18 +44149,6 @@
     "info": {
       "industry": "ETF",
       "sector": "ETF"
-    }
-  },
-  "AFIF": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "APPX": {
-    "info": {
-      "industry": "N/A",
-      "sector": "N/A"
     }
   },
   "BKDV": {
@@ -42735,13 +44414,6 @@
       "sector": "ETF"
     }
   },
-  "ADBG": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "PABU": {
     "info": {
       "industry": "ETF",
@@ -42846,12 +44518,6 @@
     }
   },
   "SGLC": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AAPU": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -43029,12 +44695,6 @@
     }
   },
   "SPSM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AGIH": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -43237,12 +44897,6 @@
       "sector": "ETF"
     }
   },
-  "APLU": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "EMPB": {
     "info": {
       "industry": "ETF",
@@ -43354,12 +45008,6 @@
       "sector": "ETF"
     }
   },
-  "ABNY": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "FTKI": {
     "info": {
       "industry": "ETF",
@@ -43409,12 +45057,6 @@
     }
   },
   "FVAL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AGOX": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -43730,12 +45372,6 @@
       "sector": "ETF"
     }
   },
-  "AFIX": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "IAT": {
     "info": {
       "sector": "ETF",
@@ -43835,13 +45471,6 @@
       "industry": "ETF",
       "sector": "ETF"
     }
-  },
-  "ACWV": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
   },
   "VUSE": {
     "info": {
@@ -44024,12 +45653,6 @@
       "sector": "ETF"
     }
   },
-  "MST": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "XJH": {
     "info": {
       "industry": "ETF",
@@ -44062,12 +45685,6 @@
     "universe": "N/A"
   },
   "PCMM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AIBU": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -44361,12 +45978,6 @@
       "sector": "ETF"
     }
   },
-  "AMDD": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "FMUN": {
     "info": {
       "industry": "ETF",
@@ -44380,12 +45991,6 @@
     }
   },
   "CPAI": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AMID": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -44497,12 +46102,6 @@
     }
   },
   "PIZ": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AGIX": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -44651,12 +46250,6 @@
     },
     "universe": "N/A"
   },
-  "AJAN": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "TIPZ": {
     "info": {
       "industry": "ETF",
@@ -44745,12 +46338,6 @@
     }
   },
   "BKCI": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ALTY": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -45064,12 +46651,6 @@
       "sector": "ETF"
     }
   },
-  "AFSC": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "VHT": {
     "info": {
       "sector": "ETF",
@@ -45152,12 +46733,6 @@
     }
   },
   "BKAG": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ARKQ": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -46082,12 +47657,6 @@
       "sector": "ETF"
     }
   },
-  "AFLG": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "VFH": {
     "info": {
       "industry": "ETF",
@@ -46113,12 +47682,6 @@
       "industry": "ETF"
     },
     "universe": "N/A"
-  },
-  "AFSM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
   },
   "TAXX": {
     "info": {
@@ -46150,13 +47713,6 @@
       "industry": "ETF",
       "sector": "ETF"
     }
-  },
-  "ACWX": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
   },
   "MSTQ": {
     "info": {
@@ -46255,12 +47811,6 @@
       "sector": "ETF"
     }
   },
-  "ACGR": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "FXD": {
     "info": {
       "industry": "ETF",
@@ -46348,12 +47898,6 @@
     }
   },
   "AWAY": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AESR": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -46515,12 +48059,6 @@
       "sector": "ETF"
     }
   },
-  "ASMH": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "TFI": {
     "info": {
       "industry": "ETF",
@@ -46535,12 +48073,6 @@
     "universe": "N/A"
   },
   "NFXS": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ALAI": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -46603,12 +48135,6 @@
     }
   },
   "SCHV": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ABCS": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -46831,12 +48357,6 @@
     }
   },
   "EFAS": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "APED": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -47165,12 +48685,6 @@
       "sector": "ETF"
     }
   },
-  "AGEM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "FYT": {
     "info": {
       "industry": "ETF",
@@ -47293,12 +48807,6 @@
     },
     "universe": "N/A"
   },
-  "ACTV": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "JXX": {
     "info": {
       "industry": "ETF",
@@ -47408,12 +48916,6 @@
       "sector": "ETF"
     }
   },
-  "ACLO": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "FNDX": {
     "info": {
       "industry": "ETF",
@@ -47463,12 +48965,6 @@
     }
   },
   "BCIL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ADIV": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -47613,12 +49109,6 @@
     }
   },
   "SWP": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AIVC": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -47856,12 +49346,6 @@
       "sector": "ETF"
     }
   },
-  "ATMP": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "DJAN": {
     "info": {
       "industry": "ETF",
@@ -48036,13 +49520,6 @@
       "industry": "ETF",
       "sector": "ETF"
     }
-  },
-  "AEMS": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
   },
   "BLOK": {
     "info": {
@@ -48236,12 +49713,6 @@
     },
     "universe": "N/A"
   },
-  "AOCT": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "TMB": {
     "info": {
       "industry": "ETF",
@@ -48267,12 +49738,6 @@
     }
   },
   "AVIV": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AMDG": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -48529,13 +49994,6 @@
       "sector": "ETF"
     }
   },
-  "AIPI": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "CRAK": {
     "info": {
       "industry": "ETF",
@@ -48690,12 +50148,6 @@
     }
   },
   "GSSC": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AGGA": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -49068,12 +50520,6 @@
       "sector": "ETF"
     }
   },
-  "ATFV": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "NXTI": {
     "info": {
       "industry": "ETF",
@@ -49105,12 +50551,6 @@
     }
   },
   "LCLG": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ABEQ": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -49221,12 +50661,6 @@
     "universe": "N/A"
   },
   "MIG": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AMZD": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -49347,12 +50781,6 @@
       "sector": "ETF"
     }
   },
-  "AHLT": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "DFSE": {
     "info": {
       "industry": "ETF",
@@ -49416,12 +50844,6 @@
     }
   },
   "NBET": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ADME": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -49733,12 +51155,6 @@
       "sector": "ETF"
     }
   },
-  "ACWI": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "INFL": {
     "info": {
       "industry": "ETF",
@@ -49819,12 +51235,6 @@
     },
     "universe": "N/A"
   },
-  "AMZW": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "NBSD": {
     "info": {
       "industry": "ETF",
@@ -49880,12 +51290,6 @@
       "industry": "ETF"
     },
     "universe": "N/A"
-  },
-  "AUGT": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
   },
   "IWMY": {
     "info": {
@@ -49971,13 +51375,6 @@
       "sector": "ETF"
     }
   },
-  "ASIA": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "ULTY": {
     "info": {
       "industry": "ETF",
@@ -50022,12 +51419,6 @@
     }
   },
   "TYO": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AQLT": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -50153,12 +51544,6 @@
     "info": {
       "industry": "Asset Management",
       "sector": "Financial Services"
-    }
-  },
-  "AUGP": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
     }
   },
   "RAAX": {
@@ -50288,12 +51673,6 @@
       "sector": "ETF"
     }
   },
-  "ADPV": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "NCLO": {
     "info": {
       "industry": "ETF",
@@ -50319,12 +51698,6 @@
     }
   },
   "BUG": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ARMG": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -51048,12 +52421,6 @@
       "sector": "ETF"
     }
   },
-  "AOK": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "LIAY": {
     "info": {
       "industry": "ETF",
@@ -51133,12 +52500,6 @@
     }
   },
   "LIAJ": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ABLS": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -51394,12 +52755,6 @@
       "sector": "ETF"
     }
   },
-  "AIYY": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "CGGE": {
     "info": {
       "industry": "ETF",
@@ -51527,12 +52882,6 @@
       "sector": "ETF"
     }
   },
-  "AGRH": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "ZJUL": {
     "info": {
       "industry": "ETF",
@@ -51546,12 +52895,6 @@
     },
     "universe": "N/A"
   },
-  "APXM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "CRPT": {
     "info": {
       "industry": "ETF",
@@ -51559,12 +52902,6 @@
     }
   },
   "QDF": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AUGM": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -51844,12 +53181,6 @@
       "sector": "ETF"
     }
   },
-  "AGQ": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "EDGU": {
     "info": {
       "industry": "ETF",
@@ -51926,12 +53257,6 @@
     }
   },
   "DIA": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AINP": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52059,12 +53384,6 @@
     }
   },
   "PMAP": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AMUB": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52227,19 +53546,7 @@
       "sector": "ETF"
     }
   },
-  "AGGY": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "WDTE": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "APCB": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52264,12 +53571,6 @@
     }
   },
   "CMF": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "APRW": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52361,12 +53662,6 @@
     }
   },
   "BJUL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AOM": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52699,12 +53994,6 @@
       "sector": "ETF"
     }
   },
-  "APMU": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "PFM": {
     "info": {
       "industry": "ETF",
@@ -52723,13 +54012,6 @@
       "sector": "ETF"
     }
   },
-  "AIVL": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "VEGI": {
     "info": {
       "industry": "ETF",
@@ -52737,12 +54019,6 @@
     }
   },
   "SCJ": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AMZZ": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -52767,12 +54043,6 @@
     }
   },
   "FEUS": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AADR": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -53082,12 +54352,6 @@
       "sector": "ETF"
     }
   },
-  "MSTB": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "SUPX": {
     "info": {
       "industry": "Software - Infrastructure",
@@ -53248,12 +54512,6 @@
       "sector": "ETF"
     }
   },
-  "AAPW": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "SMDD": {
     "info": {
       "industry": "ETF",
@@ -53301,13 +54559,6 @@
       "industry": "ETF",
       "sector": "ETF"
     }
-  },
-  "AIA": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
   },
   "PSCD": {
     "info": {
@@ -53627,13 +54878,6 @@
       "sector": "ETF"
     }
   },
-  "AMZU": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "SCHR": {
     "info": {
       "industry": "ETF",
@@ -53823,12 +55067,6 @@
       "sector": "ETF"
     }
   },
-  "ARCM": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "CGUI": {
     "info": {
       "sector": "ETF",
@@ -53836,24 +55074,11 @@
     },
     "universe": "N/A"
   },
-  "ALLW": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "SPWR": {
     "info": {
       "industry": "Solar",
       "sector": "Technology"
     }
-  },
-  "ARTY": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
   },
   "TSEC": {
     "info": {
@@ -53874,12 +55099,6 @@
     }
   },
   "TSLR": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AQWA": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -54094,18 +55313,6 @@
       "sector": "ETF"
     }
   },
-  "AETH": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "APRH": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "THMZ": {
     "info": {
       "industry": "ETF",
@@ -54204,12 +55411,6 @@
       "sector": "ETF"
     }
   },
-  "ARKA": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "EMTL": {
     "info": {
       "industry": "ETF",
@@ -54295,12 +55496,6 @@
       "sector": "ETF"
     }
   },
-  "ACLC": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
   "SAMT": {
     "info": {
       "industry": "ETF",
@@ -54314,12 +55509,6 @@
     }
   },
   "DIVL": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "AFMC": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -54344,12 +55533,6 @@
     }
   },
   "BOXX": {
-    "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
-  },
-  "ADVE": {
     "info": {
       "industry": "ETF",
       "sector": "ETF"
@@ -54531,13 +55714,6 @@
     "universe": "N/A"
   },
   "IBIF": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
-  "AGGS": {
     "info": {
       "sector": "ETF",
       "industry": "ETF"
@@ -54831,13 +56007,6 @@
     },
     "universe": "N/A"
   },
-  "ABLG": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "BIGY": {
     "info": {
       "sector": "ETF",
@@ -54993,13 +56162,6 @@
     "universe": "N/A"
   },
   "UXI": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
-  "ASTX": {
     "info": {
       "sector": "ETF",
       "industry": "ETF"
@@ -55342,13 +56504,6 @@
     },
     "universe": "N/A"
   },
-  "APRJ": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "VWID": {
     "info": {
       "sector": "ETF",
@@ -55573,13 +56728,6 @@
     },
     "universe": "N/A"
   },
-  "AIFD": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
   "SPIB": {
     "info": {
       "sector": "ETF",
@@ -55728,13 +56876,6 @@
     "universe": "N/A"
   },
   "GEND": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
-  "AIRR": {
     "info": {
       "sector": "ETF",
       "industry": "ETF"
@@ -55924,13 +57065,6 @@
     "universe": "N/A"
   },
   "SPEM": {
-    "info": {
-      "sector": "ETF",
-      "industry": "ETF"
-    },
-    "universe": "N/A"
-  },
-  "ARKB": {
     "info": {
       "sector": "ETF",
       "industry": "ETF"
