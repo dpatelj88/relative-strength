@@ -10,6 +10,7 @@ import random
 import yaml
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
+from retrying import retry
 
 # Set up logging
 logging.basicConfig(
@@ -53,9 +54,11 @@ def cfg(key):
     defaults = {
         "REFERENCE_TICKER": "SPY",
         "BATCH_SIZE": 20,
-        "MAX_WORKERS": 2,
+        "MAX_WORKERS": 10,  # Increased for performance
         "MAX_RETRIES": 7,
         "INITIAL_DELAY": 5,
+        "START_DATE": "1998-12-01",
+        "END_DATE": "2022-01-01"
     }
     return value if value is not None else defaults.get(key)
 
@@ -100,105 +103,95 @@ def save_failed_symbols_cache(cache_file, failed_symbols):
     except Exception as e:
         logging.error(f"Error saving failed symbols cache: {e}")
 
-def get_yf_data_batch(securities, start_date, end_date, retries=cfg("MAX_RETRIES"), initial_delay=cfg("INITIAL_DELAY")):
-    """Fetch price data for a batch of securities from Yahoo Finance."""
-    attempt = 0
-    rate_limited_tickers = []
-    failure_reasons = {}
+@retry(stop_max_attempt_number=cfg("MAX_RETRIES"), wait_fixed=cfg("INITIAL_DELAY") * 1000)
+def get_yf_data(ticker, start_date, end_date):
+    """Fetch price data for a single ticker using yf.download."""
+    try:
+        df = yf.download(
+            ticker,
+            start=start_date,
+            end=end_date,
+            interval="1d",
+            auto_adjust=True,
+            rounding=True,
+            progress=False
+        )
+        if df.empty:
+            logging.warning(f"No data for {ticker}, may be delisted")
+            return None, f"Empty data for {ticker}"
+        candles = [
+            {
+                "open": row["Open"],
+                "close": row["Close"],
+                "low": row["Low"],
+                "high": row["High"],
+                "volume": row["Volume"],
+                "datetime": int(row.name.timestamp())
+            } for _, row in df.iterrows()
+        ]
+        return candles, None
+    except Exception as e:
+        logging.warning(f"Error for {ticker}: {str(e)}")
+        return None, str(e)
+
+def get_yf_data_batch(securities, start_date, end_date):
+    """Fetch price data for a batch of securities."""
     tickers_dict = {}
-    while attempt < retries:
-        try:
-            tickers = yf.Tickers([s["ticker"] for s in securities])
-            failed_tickers = []
-            for sec in securities:
-                ticker = sec["ticker"]
-                try:
-                    df = tickers.tickers.get(ticker).history(start=start_date, end=end_date, auto_adjust=False)
-                    if df.empty:
-                        logging.warning(f"No data for {ticker}, may be delisted")
-                        failed_tickers.append(ticker)
-                        failure_reasons[ticker] = "Empty data"
-                        continue
-                    candles = [
-                        {
-                            "open": row["Open"],
-                            "close": row["Close"],
-                            "low": row["Low"],
-                            "high": row["High"],
-                            "volume": row["Volume"],
-                            "datetime": int(row.name.timestamp())
-                        } for _, row in df.iterrows()
-                    ]
-                    ticker_data = {
-                        "candles": candles,
-                        "sector": sec["sector"],
-                        "industry": sec["industry"],
-                        "universe": sec.get("universe", "N/A")
-                    }
-                    tickers_dict[ticker] = ticker_data
-                    logging.info(f"Retrieved data for {ticker}")
-                except Exception as e:
-                    if "404" in str(e):
-                        logging.error(f"HTTP 404 for {ticker}")
-                        failed_tickers.append(ticker)
-                        failure_reasons[ticker] = "HTTP 404"
-                    elif "429" in str(e) or "Too Many Requests" in str(e):
-                        logging.warning(f"Rate limit for {ticker}")
-                        rate_limited_tickers.append(ticker)
-                        failed_tickers.append(ticker)
-                        failure_reasons[ticker] = "Rate limit (HTTP 429)"
-                    else:
-                        logging.warning(f"Error for {ticker}: {str(e)}")
-                        failed_tickers.append(ticker)
-                        failure_reasons[ticker] = f"Other error: {str(e)}"
-            return tickers_dict, failed_tickers, rate_limited_tickers, failure_reasons
-        except Exception as e:
-            if "429" in str(e) or "Too Many Requests" in str(e):
-                attempt += 1
-                rate_limited_tickers.extend([s["ticker"] for s in securities])
-                if attempt < retries:
-                    delay = initial_delay * (2 ** attempt) + random.uniform(0, 0.1)
-                    logging.warning(f"Rate limit hit, retrying in {delay:.2f}s (attempt {attempt}/{retries})")
-                    sleep(delay)
-                else:
-                    logging.error(f"Failed after {retries} retries: {str(e)}")
-                    failure_reasons = {s["ticker"]: f"Batch failure: {str(e)}" for s in securities}
-                    return {}, [s["ticker"] for s in securities], rate_limited_tickers, failure_reasons
+    failed_tickers = []
+    failure_reasons = {}
+    
+    with ThreadPoolExecutor(max_workers=cfg("MAX_WORKERS")) as executor:
+        future_to_ticker = {
+            executor.submit(get_yf_data, sec["ticker"], start_date, end_date): sec
+            for sec in securities
+        }
+        for future in as_completed(future_to_ticker):
+            sec = future_to_ticker[future]
+            ticker = sec["ticker"]
+            candles, error = future.result()
+            if candles:
+                tickers_dict[ticker] = {
+                    "candles": candles,
+                    "sector": sec["sector"],
+                    "industry": sec["industry"],
+                    "universe": sec.get("universe", "N/A")
+                }
+                logging.info(f"Retrieved data for {ticker}")
             else:
-                logging.error(f"Non-retryable error: {str(e)}")
-                failure_reasons = {s["ticker"]: f"Non-retryable error: {str(e)}" for s in securities}
-                return {}, [s["ticker"] for s in securities], rate_limited_tickers, failure_reasons
+                failed_tickers.append(ticker)
+                failure_reasons[ticker] = error or "Unknown error"
+    
+    return tickers_dict, failed_tickers, failure_reasons
 
 def load_prices_from_yahoo(securities, batch_size=cfg("BATCH_SIZE"), max_workers=cfg("MAX_WORKERS")):
     """Load price data for securities from Yahoo Finance."""
     logging.info("*** Loading Stocks from Yahoo Finance ***")
-    today = dt.date.today()
-    start_date = today - dt.timedelta(days=1*365+183)  # 18 months
+    start_date = cfg("START_DATE")
+    end_date = cfg("END_DATE")
     tickers_dict = read_json(PRICE_DATA_FILE)
     failed_tickers = load_failed_symbols_cache(DATA_DIR / "failed_tickers.json")
     failure_reasons_file = DATA_DIR / "failure_reasons.json"
+    failure_reasons = read_json(failure_reasons_file) if failure_reasons_file.exists() else []
 
-    if (DATA_DIR / "failed_tickers.json").exists() and random.random() < 0.2:
-        failed_tickers = set()
-        logging.info("Cleared failed tickers cache")
+    # Disable yfinance caching to prevent database lock
+    yf.set_tz_cache(False)
 
     valid_securities = [sec for sec in securities if sec["ticker"] not in failed_tickers and sec["ticker"] not in tickers_dict]
     logging.info(f"Processing {len(valid_securities)} new tickers")
 
     batches = [valid_securities[i:i + batch_size] for i in range(0, len(valid_securities), batch_size)]
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, today): batch for batch in batches}
+        future_to_batch = {executor.submit(get_yf_data_batch, batch, start_date, end_date): batch for batch in batches}
         for future in tqdm(as_completed(future_to_batch), total=len(batches), desc="Processing batches"):
-            batch_result, batch_failed, batch_rate_limited, batch_failure_reasons = future.result()
+            batch_result, batch_failed, batch_failure_reasons = future.result()
             tickers_dict.update(batch_result)
             failed_tickers.update(batch_failed)
-            failure_reasons = read_json(failure_reasons_file) if failure_reasons_file.exists() else []
             failure_reasons.extend([{"ticker": k, "reason": v} for k, v in batch_failure_reasons.items()])
-            write_to_file(failure_reasons, failure_reasons_file)
             if batch_result:
                 write_to_file(tickers_dict, PRICE_DATA_FILE)
             sleep(cfg("INITIAL_DELAY"))
 
+    write_to_file(failure_reasons, failure_reasons_file)
     save_failed_symbols_cache(DATA_DIR / "failed_tickers.json", failed_tickers)
     logging.info(f"Processed {len(tickers_dict)} tickers, failed {len(failed_tickers)}")
     return tickers_dict
