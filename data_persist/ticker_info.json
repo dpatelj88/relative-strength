@@ -39745,9 +39745,10 @@
   },
   "OBAWU": {
     "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
   },
   "LOKVW": {
     "info": {
@@ -39769,9 +39770,10 @@
   },
   "MSDL": {
     "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Asset Management"
+    },
+    "universe": "N/A"
   },
   "MNTN": {
     "info": {
@@ -39799,9 +39801,10 @@
   },
   "EHLD": {
     "info": {
-      "industry": "Marine Shipping",
-      "sector": "Industrials"
-    }
+      "sector": "Industrials",
+      "industry": "Marine Shipping"
+    },
+    "universe": "N/A"
   },
   "SDHI": {
     "info": {
@@ -39847,21 +39850,24 @@
   },
   "PSK": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XHYC": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EVSM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PGX": {
     "info": {
@@ -40039,9 +40045,10 @@
   },
   "DFSB": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FLLA": {
     "info": {
@@ -40099,9 +40106,10 @@
   },
   "BWEB": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VYLD": {
     "info": {
@@ -40117,9 +40125,10 @@
   },
   "BDBT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HSBH": {
     "info": {
@@ -40207,9 +40216,10 @@
   },
   "MUSI": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GLDY": {
     "info": {
@@ -40267,9 +40277,10 @@
   },
   "GDXJ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RSSE": {
     "info": {
@@ -40285,9 +40296,10 @@
   },
   "OFAL": {
     "info": {
-      "industry": "Engineering & Construction",
-      "sector": "Industrials"
-    }
+      "sector": "Industrials",
+      "industry": "Engineering & Construction"
+    },
+    "universe": "N/A"
   },
   "HNDL": {
     "info": {
@@ -40387,9 +40399,10 @@
   },
   "TILT": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GBXA": {
     "info": {
@@ -40417,9 +40430,10 @@
   },
   "IDU": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EMA": {
     "info": {
@@ -40441,9 +40455,10 @@
   },
   "NUSC": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AAVM": {
     "info": {
@@ -40453,9 +40468,10 @@
   },
   "AVIE": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RZG": {
     "info": {
@@ -40495,15 +40511,17 @@
   },
   "XMAY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DDEC": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VYMI": {
     "info": {
@@ -40555,9 +40573,10 @@
   },
   "VTWG": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "COWZ": {
     "info": {
@@ -41041,9 +41060,10 @@
   },
   "UGL": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BINT": {
     "info": {
@@ -41089,15 +41109,17 @@
   },
   "SPDW": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SKRE": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MOTE": {
     "info": {
@@ -41143,9 +41165,10 @@
   },
   "IYF": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ENDW": {
     "info": {
@@ -41155,15 +41178,17 @@
   },
   "NURE": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MFEM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BNDX": {
     "info": {
@@ -41299,9 +41324,10 @@
   },
   "EPS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RND": {
     "info": {
@@ -41443,9 +41469,10 @@
   },
   "HYMB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HF": {
     "info": {
@@ -41533,9 +41560,10 @@
   },
   "JULJ": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "STCE": {
     "info": {
@@ -41713,9 +41741,10 @@
   },
   "SPYC": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IBTI": {
     "info": {
@@ -41881,9 +41910,10 @@
   },
   "ULST": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "NBCR": {
     "info": {
@@ -41947,9 +41977,10 @@
   },
   "NVII": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EWT": {
     "info": {
@@ -41959,9 +41990,10 @@
   },
   "BKCH": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "QAT": {
     "info": {
@@ -42019,9 +42051,10 @@
   },
   "BAFE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TDEC": {
     "info": {
@@ -42169,9 +42202,10 @@
   },
   "JDIV": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "KRBN": {
     "info": {
@@ -42223,9 +42257,10 @@
   },
   "ICF": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SMBS": {
     "info": {
@@ -42445,9 +42480,10 @@
   },
   "INTW": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OGSP": {
     "info": {
@@ -42457,9 +42493,10 @@
   },
   "SIXP": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DBA": {
     "info": {
@@ -42475,9 +42512,10 @@
   },
   "VGLT": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FPA": {
     "info": {
@@ -42559,9 +42597,10 @@
   },
   "GEMD": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RAAQ": {
     "info": {
@@ -42613,9 +42652,10 @@
   },
   "COWG": {
     "info": {
-      "industry": "N/A",
-      "sector": "N/A"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AVLV": {
     "info": {
@@ -42697,9 +42737,10 @@
   },
   "ADBG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PABU": {
     "info": {
@@ -42739,9 +42780,10 @@
   },
   "ONLN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RSPC": {
     "info": {
@@ -42865,9 +42907,10 @@
   },
   "LCCCU": {
     "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
   },
   "ITEQ": {
     "info": {
@@ -42883,9 +42926,10 @@
   },
   "DFSD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "KSPY": {
     "info": {
@@ -42919,9 +42963,10 @@
   },
   "PMAY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "JANJ": {
     "info": {
@@ -43117,9 +43162,10 @@
   },
   "DECM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HTEC": {
     "info": {
@@ -43129,21 +43175,24 @@
   },
   "MGV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RFMZ": {
     "info": {
-      "industry": "Asset Management",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Asset Management"
+    },
+    "universe": "N/A"
   },
   "LTTI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OCIO": {
     "info": {
@@ -43165,9 +43214,10 @@
   },
   "XLY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XFEB": {
     "info": {
@@ -43219,9 +43269,10 @@
   },
   "RGTX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "JHMB": {
     "info": {
@@ -43231,9 +43282,10 @@
   },
   "FNDF": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GMF": {
     "info": {
@@ -43291,9 +43343,10 @@
   },
   "DXD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DGRW": {
     "info": {
@@ -43387,9 +43440,10 @@
   },
   "USNZ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AVXC": {
     "info": {
@@ -43495,9 +43549,10 @@
   },
   "FMUB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EBIZ": {
     "info": {
@@ -43525,9 +43580,10 @@
   },
   "DVDN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EQTY": {
     "info": {
@@ -43537,9 +43593,10 @@
   },
   "ONEZ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MPLY": {
     "info": {
@@ -43681,9 +43738,10 @@
   },
   "IAT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "QUS": {
     "info": {
@@ -43723,9 +43781,10 @@
   },
   "EKG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PJUN": {
     "info": {
@@ -43741,15 +43800,17 @@
   },
   "ETHO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PTBD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MNBD": {
     "info": {
@@ -43777,15 +43838,17 @@
   },
   "ACWV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VUSE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PZT": {
     "info": {
@@ -43795,9 +43858,10 @@
   },
   "EJAN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FTXH": {
     "info": {
@@ -43813,9 +43877,10 @@
   },
   "NITE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "USPX": {
     "info": {
@@ -43849,9 +43914,10 @@
   },
   "USVM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "NDVG": {
     "info": {
@@ -43861,9 +43927,10 @@
   },
   "YSEP": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PBL": {
     "info": {
@@ -43879,9 +43946,10 @@
   },
   "TLCI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "LST": {
     "info": {
@@ -43909,9 +43977,10 @@
   },
   "IGPT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RITA": {
     "info": {
@@ -43987,9 +44056,10 @@
   },
   "USMC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PCMM": {
     "info": {
@@ -44107,15 +44177,17 @@
   },
   "IVV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MAXI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FVD": {
     "info": {
@@ -44131,9 +44203,10 @@
   },
   "DFGR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DXJ": {
     "info": {
@@ -44221,9 +44294,10 @@
   },
   "BOEU": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TOKE": {
     "info": {
@@ -44233,9 +44307,10 @@
   },
   "QOWZ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GRN": {
     "info": {
@@ -44275,9 +44350,10 @@
   },
   "FLN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DSTL": {
     "info": {
@@ -44317,9 +44393,10 @@
   },
   "OWNS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XHYE": {
     "info": {
@@ -44329,9 +44406,10 @@
   },
   "SCCR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MEMS": {
     "info": {
@@ -44377,9 +44455,10 @@
   },
   "GARP": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OILK": {
     "info": {
@@ -44443,9 +44522,10 @@
   },
   "HIYS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FDEV": {
     "info": {
@@ -44491,9 +44571,10 @@
   },
   "PCFI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FLCB": {
     "info": {
@@ -44533,9 +44614,10 @@
   },
   "GMOI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VV": {
     "info": {
@@ -44545,9 +44627,10 @@
   },
   "CXSE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FOPC": {
     "info": {
@@ -44563,9 +44646,10 @@
   },
   "FHYS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AJAN": {
     "info": {
@@ -44593,15 +44677,17 @@
   },
   "CVRD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SAWS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "UBR": {
     "info": {
@@ -44623,9 +44709,10 @@
   },
   "ILS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "KDEC": {
     "info": {
@@ -44701,9 +44788,10 @@
   },
   "BOND": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IQHI": {
     "info": {
@@ -44743,9 +44831,10 @@
   },
   "ELD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IONZ": {
     "info": {
@@ -44761,9 +44850,10 @@
   },
   "RJMG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "NTWOW": {
     "info": {
@@ -44797,9 +44887,10 @@
   },
   "BZQ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ZZZ": {
     "info": {
@@ -44815,15 +44906,17 @@
   },
   "TAGG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "INDA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PQDI": {
     "info": {
@@ -44917,9 +45010,10 @@
   },
   "BSCT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MILK": {
     "info": {
@@ -44959,9 +45053,10 @@
   },
   "BUFC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DGIN": {
     "info": {
@@ -44977,9 +45072,10 @@
   },
   "VHT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TFLO": {
     "info": {
@@ -44989,9 +45085,10 @@
   },
   "GCAD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CPRJ": {
     "info": {
@@ -45007,9 +45104,10 @@
   },
   "BBSC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "WDIV": {
     "info": {
@@ -45163,9 +45261,10 @@
   },
   "BBIB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "NBCE": {
     "info": {
@@ -45229,9 +45328,10 @@
   },
   "BAMV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CWEB": {
     "info": {
@@ -45241,9 +45341,10 @@
   },
   "SAFX": {
     "info": {
-      "industry": "Utilities - Renewable",
-      "sector": "Utilities"
-    }
+      "sector": "Utilities",
+      "industry": "Utilities - Renewable"
+    },
+    "universe": "N/A"
   },
   "DHSB": {
     "info": {
@@ -45361,9 +45462,10 @@
   },
   "ERTH": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SVIX": {
     "info": {
@@ -45499,9 +45601,10 @@
   },
   "BOUT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EMHY": {
     "info": {
@@ -45529,9 +45632,10 @@
   },
   "FIBR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RSPH": {
     "info": {
@@ -45589,9 +45693,10 @@
   },
   "BITS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BERZ": {
     "info": {
@@ -45625,9 +45730,10 @@
   },
   "JETS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MSMR": {
     "info": {
@@ -45643,9 +45749,10 @@
   },
   "CANQ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HUMN": {
     "info": {
@@ -45661,9 +45768,10 @@
   },
   "JMUB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "WOOD": {
     "info": {
@@ -45703,9 +45811,10 @@
   },
   "VTG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SPWO": {
     "info": {
@@ -45931,15 +46040,17 @@
   },
   "FIDU": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BATT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HIPS": {
     "info": {
@@ -45991,15 +46102,17 @@
   },
   "LFAX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BLOX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AFSM": {
     "info": {
@@ -46021,9 +46134,10 @@
   },
   "IMTB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EGGY": {
     "info": {
@@ -46039,9 +46153,10 @@
   },
   "ACWX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MSTQ": {
     "info": {
@@ -46111,9 +46226,10 @@
   },
   "VSHY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PUI": {
     "info": {
@@ -46165,9 +46281,10 @@
   },
   "MLPB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GUSH": {
     "info": {
@@ -46177,9 +46294,10 @@
   },
   "HEGD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EGG": {
     "info": {
@@ -46255,15 +46373,17 @@
   },
   "CLIX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XMAR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VTV": {
     "info": {
@@ -46273,9 +46393,10 @@
   },
   "VAW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TYD": {
     "info": {
@@ -46315,15 +46436,17 @@
   },
   "PBQQ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FEBW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RAYE": {
     "info": {
@@ -46345,9 +46468,10 @@
   },
   "VGIT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "COAL": {
     "info": {
@@ -46405,9 +46529,10 @@
   },
   "SMRI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "NFXS": {
     "info": {
@@ -46459,15 +46584,17 @@
   },
   "XHB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IRTR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DGRE": {
     "info": {
@@ -46495,9 +46622,10 @@
   },
   "SHUS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SDOG": {
     "info": {
@@ -46561,9 +46689,10 @@
   },
   "IWDL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SEPZ": {
     "info": {
@@ -46627,9 +46756,10 @@
   },
   "RNEM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FMB": {
     "info": {
@@ -46657,9 +46787,10 @@
   },
   "XXRP": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DAAQW": {
     "info": {
@@ -46669,9 +46800,10 @@
   },
   "IVRA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FTXL": {
     "info": {
@@ -46681,9 +46813,10 @@
   },
   "LIAQ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IBTL": {
     "info": {
@@ -46741,9 +46874,10 @@
   },
   "LIAX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IEUS": {
     "info": {
@@ -46819,9 +46953,10 @@
   },
   "FLAG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TNMG": {
     "info": {
@@ -46927,9 +47062,10 @@
   },
   "FXG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IDAT": {
     "info": {
@@ -46957,9 +47093,10 @@
   },
   "FTQI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TVAL": {
     "info": {
@@ -46981,9 +47118,10 @@
   },
   "HYTI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DRIV": {
     "info": {
@@ -47047,9 +47185,10 @@
   },
   "SSFI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OPPE": {
     "info": {
@@ -47149,9 +47288,10 @@
   },
   "PIT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ACTV": {
     "info": {
@@ -47245,9 +47385,10 @@
   },
   "NWLG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EVLN": {
     "info": {
@@ -47509,9 +47650,10 @@
   },
   "FISR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CWVX": {
     "info": {
@@ -47551,9 +47693,10 @@
   },
   "PSQO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ERY": {
     "info": {
@@ -47587,9 +47730,10 @@
   },
   "DWUS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MSDD": {
     "info": {
@@ -47701,9 +47845,10 @@
   },
   "SMDX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ECLN": {
     "info": {
@@ -47743,9 +47888,10 @@
   },
   "DVOL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FNY": {
     "info": {
@@ -47893,9 +48039,10 @@
   },
   "AEMS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BLOK": {
     "info": {
@@ -47959,9 +48106,10 @@
   },
   "THD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EDIV": {
     "info": {
@@ -47983,9 +48131,10 @@
   },
   "MISL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HOMZ": {
     "info": {
@@ -47995,15 +48144,17 @@
   },
   "DECU": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IFGL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IGBH": {
     "info": {
@@ -48019,9 +48170,10 @@
   },
   "PSI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "LQDI": {
     "info": {
@@ -48079,9 +48231,10 @@
   },
   "HMOP": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AOCT": {
     "info": {
@@ -48223,9 +48376,10 @@
   },
   "YSPY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OEF": {
     "info": {
@@ -48259,9 +48413,10 @@
   },
   "FIRS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BKLN": {
     "info": {
@@ -48283,9 +48438,10 @@
   },
   "DEFT": {
     "info": {
-      "industry": "Capital Markets",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Capital Markets"
+    },
+    "universe": "N/A"
   },
   "LCF": {
     "info": {
@@ -48301,15 +48457,17 @@
   },
   "CONL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GVIP": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TWM": {
     "info": {
@@ -48373,9 +48531,10 @@
   },
   "AIPI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CRAK": {
     "info": {
@@ -48409,9 +48568,10 @@
   },
   "QCOC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MLPD": {
     "info": {
@@ -48439,9 +48599,10 @@
   },
   "PFFL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FLAO": {
     "info": {
@@ -48511,9 +48672,10 @@
   },
   "BUYW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VCLN": {
     "info": {
@@ -48541,9 +48703,10 @@
   },
   "LIVR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ZTWO": {
     "info": {
@@ -48613,9 +48776,10 @@
   },
   "TBUX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SIFI": {
     "info": {
@@ -48685,9 +48849,10 @@
   },
   "MYMI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PNOV": {
     "info": {
@@ -48799,9 +48964,10 @@
   },
   "DFVE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SDS": {
     "info": {
@@ -48871,21 +49037,24 @@
   },
   "WTBN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SFYX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CPRY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FMAG": {
     "info": {
@@ -49003,9 +49172,10 @@
   },
   "KORU": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GQI": {
     "info": {
@@ -49045,9 +49215,10 @@
   },
   "EMDM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MIG": {
     "info": {
@@ -49069,9 +49240,10 @@
   },
   "ILIT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TVRD": {
     "info": {
@@ -49213,9 +49385,10 @@
   },
   "SRHR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "STXK": {
     "info": {
@@ -49225,9 +49398,10 @@
   },
   "FPXI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DLLL": {
     "info": {
@@ -49291,9 +49465,10 @@
   },
   "HYBB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BGLD": {
     "info": {
@@ -49327,9 +49502,10 @@
   },
   "FRNW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HAPI": {
     "info": {
@@ -49357,9 +49533,10 @@
   },
   "MGRO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "YFYA": {
     "info": {
@@ -49387,9 +49564,10 @@
   },
   "SNOY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XDEC": {
     "info": {
@@ -49411,9 +49589,10 @@
   },
   "PIE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FRI": {
     "info": {
@@ -49543,9 +49722,10 @@
   },
   "CVNX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EDOW": {
     "info": {
@@ -49573,9 +49753,10 @@
   },
   "XTR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PCHI": {
     "info": {
@@ -49633,9 +49814,10 @@
   },
   "PALC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AMZW": {
     "info": {
@@ -49687,15 +49869,17 @@
   },
   "TYA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BSJR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "AUGT": {
     "info": {
@@ -49789,9 +49973,10 @@
   },
   "ASIA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ULTY": {
     "info": {
@@ -49801,9 +49986,10 @@
   },
   "EDC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "UPGD": {
     "info": {
@@ -49849,9 +50035,10 @@
   },
   "TIPX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "HYBI": {
     "info": {
@@ -49885,9 +50072,10 @@
   },
   "IUSB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VTWO": {
     "info": {
@@ -50023,9 +50211,10 @@
   },
   "BNDW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "DAPP": {
     "info": {
@@ -50155,9 +50344,10 @@
   },
   "SOCL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "LVHD": {
     "info": {
@@ -50227,21 +50417,24 @@
   },
   "JRE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VGSH": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ICVT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XYZY": {
     "info": {
@@ -50365,15 +50558,17 @@
   },
   "ITDG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MYCK": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "QMOM": {
     "info": {
@@ -50383,9 +50578,10 @@
   },
   "JQUA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GLCR": {
     "info": {
@@ -50431,9 +50627,10 @@
   },
   "RAFE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SCHK": {
     "info": {
@@ -50497,9 +50694,10 @@
   },
   "EPOL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RBLD": {
     "info": {
@@ -50515,9 +50713,10 @@
   },
   "VTC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IPO": {
     "info": {
@@ -50569,15 +50768,17 @@
   },
   "DFIV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BOTZ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OARK": {
     "info": {
@@ -50587,9 +50788,10 @@
   },
   "NAPR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OAEM": {
     "info": {
@@ -50665,9 +50867,10 @@
   },
   "RSHO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SPHD": {
     "info": {
@@ -50815,9 +51018,10 @@
   },
   "WTFCN": {
     "info": {
-      "industry": "Banks - Regional",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Banks - Regional"
+    },
+    "universe": "N/A"
   },
   "BPI": {
     "info": {
@@ -50827,9 +51031,10 @@
   },
   "FAAR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FUTY": {
     "info": {
@@ -50947,9 +51152,10 @@
   },
   "SMLV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IEFA": {
     "info": {
@@ -51019,9 +51225,10 @@
   },
   "IBGL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RSMR": {
     "info": {
@@ -51055,9 +51262,10 @@
   },
   "PLTM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FEAT": {
     "info": {
@@ -51109,9 +51317,10 @@
   },
   "FTWO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "UNOV": {
     "info": {
@@ -51199,9 +51408,10 @@
   },
   "NPAC": {
     "info": {
-      "industry": "Shell Companies",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
   },
   "MEM": {
     "info": {
@@ -51331,9 +51541,10 @@
   },
   "WNTR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "APXM": {
     "info": {
@@ -51361,9 +51572,10 @@
   },
   "BSR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TRIO": {
     "info": {
@@ -51409,9 +51621,10 @@
   },
   "IWR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SCHE": {
     "info": {
@@ -51499,9 +51712,10 @@
   },
   "CUT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RSSX": {
     "info": {
@@ -51535,9 +51749,10 @@
   },
   "HQGO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "UYSC": {
     "info": {
@@ -51661,15 +51876,17 @@
   },
   "IDLV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VICE": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EGUS": {
     "info": {
@@ -51691,9 +51908,10 @@
   },
   "DEUS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MQQQ": {
     "info": {
@@ -51793,9 +52011,10 @@
   },
   "IBDW": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IBDV": {
     "info": {
@@ -51877,9 +52096,10 @@
   },
   "DJIA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PABD": {
     "info": {
@@ -52111,9 +52331,10 @@
   },
   "IVES": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FMET": {
     "info": {
@@ -52237,9 +52458,10 @@
   },
   "SDD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "USXF": {
     "info": {
@@ -52345,9 +52567,10 @@
   },
   "TMH": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CLOX": {
     "info": {
@@ -52381,9 +52604,10 @@
   },
   "CDC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IBD": {
     "info": {
@@ -52501,9 +52725,10 @@
   },
   "AIVL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VEGI": {
     "info": {
@@ -52555,9 +52780,10 @@
   },
   "JDST": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TLT": {
     "info": {
@@ -52669,9 +52895,10 @@
   },
   "FLRN": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EUDV": {
     "info": {
@@ -52753,9 +52980,10 @@
   },
   "AZNH": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MFUT": {
     "info": {
@@ -52783,9 +53011,10 @@
   },
   "JMSI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "MDIV": {
     "info": {
@@ -52867,9 +53096,10 @@
   },
   "FEMR": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PSFM": {
     "info": {
@@ -52945,15 +53175,17 @@
   },
   "XHYH": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PRXV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "RB": {
     "info": {
@@ -52963,9 +53195,10 @@
   },
   "WDNA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CTEF": {
     "info": {
@@ -53071,9 +53304,10 @@
   },
   "AIA": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PSCD": {
     "info": {
@@ -53083,9 +53317,10 @@
   },
   "IEI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "XTEN": {
     "info": {
@@ -53119,9 +53354,10 @@
   },
   "HDG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "CDL": {
     "info": {
@@ -53227,9 +53463,10 @@
   },
   "NZAC": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SAPH": {
     "info": {
@@ -53269,9 +53506,10 @@
   },
   "OOQB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "BUFB": {
     "info": {
@@ -53299,9 +53537,10 @@
   },
   "CEFD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "FGD": {
     "info": {
@@ -53311,9 +53550,10 @@
   },
   "SCHO": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "URNM": {
     "info": {
@@ -53389,9 +53629,10 @@
   },
   "AMZU": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SCHR": {
     "info": {
@@ -53455,9 +53696,10 @@
   },
   "HYSD": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PICK": {
     "info": {
@@ -53485,15 +53727,17 @@
   },
   "BWX": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GBFH": {
     "info": {
-      "industry": "Banks - Regional",
-      "sector": "Financial Services"
-    }
+      "sector": "Financial Services",
+      "industry": "Banks - Regional"
+    },
+    "universe": "N/A"
   },
   "NFLP": {
     "info": {
@@ -53587,9 +53831,10 @@
   },
   "CGUI": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "ALLW": {
     "info": {
@@ -53605,9 +53850,10 @@
   },
   "ARTY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "TSEC": {
     "info": {
@@ -53647,15 +53893,17 @@
   },
   "IAGG": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "SPMV": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "GSEE": {
     "info": {
@@ -53701,9 +53949,10 @@
   },
   "SDEM": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PBJN": {
     "info": {
@@ -53749,15 +53998,17 @@
   },
   "XDQQ": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "OKLL": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EAOR": {
     "info": {
@@ -53899,9 +54150,10 @@
   },
   "CVSB": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "PFFR": {
     "info": {
@@ -53917,9 +54169,10 @@
   },
   "LOCT": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "VTI": {
     "info": {
@@ -54007,9 +54260,10 @@
   },
   "DIVY": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "IEF": {
     "info": {
@@ -54157,9 +54411,10 @@
   },
   "SPXS": {
     "info": {
-      "industry": "ETF",
-      "sector": "ETF"
-    }
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   },
   "EQL": {
     "info": {
@@ -54232,5 +54487,1461 @@
       "industry": "ETF",
       "sector": "ETF"
     }
+  },
+  "SPY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "Reference"
+  },
+  "GJUL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "RAYJ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SIMS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "RHRX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MTUL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IBIF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AGGS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ICOW": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPYV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IBDZ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XCEM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "VUSB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XCLR": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BKF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SETM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DVYE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "UPV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BLES": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FXI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BUFI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IPAV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IBLC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "STRV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BTCC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PFF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPYX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LIAG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "VO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PFI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DBEM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "UTWO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XPND": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "OCTM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DYLD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IOPP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FNGS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FLRG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ULE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NFXL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PMMY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HOLA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CSHP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IGV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "JFLI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BAMG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CARY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TYLD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KSA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ABLG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BIGY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NAMM": {
+    "info": {
+      "sector": "Basic Materials",
+      "industry": "Gold"
+    },
+    "universe": "N/A"
+  },
+  "EFU": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HSMV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LDRR": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LIAT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PRIV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPTB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TMF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QQWZ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TEMT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KPRO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "WEAT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TILL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NACP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LFAO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LCAP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KOMP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XHLF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IMFL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "YB": {
+    "info": {
+      "sector": "Technology",
+      "industry": "Software - Application"
+    },
+    "universe": "N/A"
+  },
+  "BEEX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "UXI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ASTX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LIMN": {
+    "info": {
+      "sector": "Healthcare",
+      "industry": "Biotechnology"
+    },
+    "universe": "N/A"
+  },
+  "QSEAU": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
+  },
+  "TSDD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LFBB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "JPIE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HYUP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "JGLO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "GLOW": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CMDY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XLF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CRBN": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FHLC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MVPA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FLAX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TVA": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
+  },
+  "LDRH": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PSCC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BOCT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "EHLS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TMFM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KCE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KG": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Insurance Brokers"
+    },
+    "universe": "N/A"
+  },
+  "MBCC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "URAN": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TUA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BITQ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PMIO": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TSPX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IPOD": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
+  },
+  "BBH": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QCJL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "COMB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SCHH": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DGRS": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IYG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MDCX": {
+    "info": {
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - General"
+    },
+    "universe": "N/A"
+  },
+  "DUSL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IBBQ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SAA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TSMY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "EZA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "EMB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HYBX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NVDX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IPPP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AVMA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BOTT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QTJA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "APRJ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "VWID": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XRT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NVBU": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PLTU": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NFEB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QPX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PSCE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPXV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "VETZ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XMAG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FUNL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FCSH": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QRMI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "JEM": {
+    "info": {
+      "sector": "Consumer Cyclical",
+      "industry": "Apparel Retail"
+    },
+    "universe": "N/A"
+  },
+  "AVGB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "RDAGW": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Shell Companies"
+    },
+    "universe": "N/A"
+  },
+  "NDAA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IPAY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XOP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NAKAW": {
+    "info": {
+      "sector": "Healthcare",
+      "industry": "Medical Care Facilities"
+    },
+    "universe": "N/A"
+  },
+  "KWM": {
+    "info": {
+      "sector": "Communication Services",
+      "industry": "Entertainment"
+    },
+    "universe": "N/A"
+  },
+  "CDX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HART": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MOTG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CAFG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "WEEL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DVY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IWL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "RSEE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MARW": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LSEQ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPYQ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AIFD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPIB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "QPFF": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "BSMW": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "RDVI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IYH": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SEIE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "COMT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TAN": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IBDT": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "HEFA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IGM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ETHE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DRUP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ROPE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LCTD": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "VUG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "MUNI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "WTRE": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DIVN": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KJUL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XSLV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "GEND": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "AIRR": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "LIAB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "XTL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CVLC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "EQWL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "KMAY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TINY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PSBD": {
+    "info": {
+      "sector": "Financial Services",
+      "industry": "Asset Management"
+    },
+    "universe": "N/A"
+  },
+  "SDFI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SMIN": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "TSLY": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "GII": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "DDFL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "JMTG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "IWX": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPXL": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SNPG": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "PSP": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "OUNZ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "OALC": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "NANR": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "CEFA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "OSCV": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FID": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FLMI": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "EFZ": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "FLSA": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "SPEM": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "ARKB": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
+  },
+  "USDU": {
+    "info": {
+      "sector": "ETF",
+      "industry": "ETF"
+    },
+    "universe": "N/A"
   }
 }

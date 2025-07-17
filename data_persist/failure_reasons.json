@@ -486,5 +486,157 @@
   {
     "symbol": "DTW",
     "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "IBACR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "RAC",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "DHCNI",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "DLXY",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "CEF",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "GJT",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "BFRGW",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "GSRTR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "GECCH",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "UZD",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "TBB",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "CCZ",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "RILYZ",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "GJO",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "KTN",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "ZTEST",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "OYSE",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "TALKW",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "ZTR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "HOVNP",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "WENNU",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "SPEGU",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "PRH",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "ZXZZT",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "EMCGR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "QSEAR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "SWKHL",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "SAZ",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "IPCXR",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "BWSN",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "KTH",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "RILYG",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "FGSN",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "SREA",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "RZC",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "UNMA",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "GECCI",
+    "reason": "Missing or invalid sector/industry"
+  },
+  {
+    "symbol": "CURR",
+    "reason": "Missing or invalid sector/industry"
   }
 ]
