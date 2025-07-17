@@ -26,7 +26,7 @@ jobs:
             echo "MAX_WORKERS: 10" > data_persist/config.yaml
             echo "INITIAL_DELAY: 0.5" >> data_persist/config.yaml
             echo "NASDAQ_URL: \"https://www.nasdaqtrader.com/dynamic/symdir/nasdaqtraded.txt\"" >> data_persist/config.yaml
-            echo "RETRY_ATTEMPTS: 3" >> data_persist/config.yaml
+            echo "RETRY_ATTEMPTS: 7" >> data_persist/config.yaml
           fi
       - name: Run update_stocks.py
         run: |
