@@ -1,4 +1,4 @@
-name: Build
+name: update_stock_weekly_NASDAQ
 on:
   push:
     branches: [main]
